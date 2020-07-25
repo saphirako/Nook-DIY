@@ -1,0 +1,10 @@
+# Directories
+venv/
+.vscode/
+__pycache__/
+
+# Files
+**/*.pyc
+**/*.todo
+**/mpmignore_*
+.env
