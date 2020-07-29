@@ -7,4 +7,6 @@ __pycache__/
 **/*.pyc
 **/*.todo
 **/mpmignore_*
+**/*.xlsx
 .env
+**/*.db

@@ -1,0 +1,6 @@
+flask-sqlalchemy
+flask-admin
+flask-restx
+gdown
+pandas
+xlrd
