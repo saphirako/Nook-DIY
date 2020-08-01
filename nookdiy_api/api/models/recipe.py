@@ -1,5 +1,6 @@
 from sqlalchemy.orm import relationship
 
+from nookdiy_api.api.models import RecipeComponentModel
 from nookdiy_api.db import db
 
 
@@ -17,8 +18,23 @@ class RecipeModel(db.Model):
         db.session.add(self)
         db.session.commit()
 
+    def json(self, verbose=False):
+        if verbose:
+            recipe_components = [
+                RecipeComponentModel.find_individual_component(self.id, mat.id)
+                for mat in self.materials
+            ]
+            return {
+                "name": self.name,
+                "id": self.id,
+                "item_id": self.item_id,
+                "materials": [comp.json() for comp in recipe_components],
+            }
+        else:
+            return {"name": self.name, "id": self.id, "item_id": self.item_id}
+
     def __repr__(self):
-        return f"{self.name} ({self.id})"
+        return self.name
 
     # Model functions
     @classmethod
@@ -28,3 +44,8 @@ class RecipeModel(db.Model):
     @classmethod
     def find_by_id(cls, recipe_id):
         return cls.query.filter_by(id=recipe_id).first()
+
+    @classmethod
+    def get_all_recipes(cls):
+        all_recipes = [recipe.json() for recipe in cls.query.all()]
+        return all_recipes

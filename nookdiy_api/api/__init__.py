@@ -1,6 +1,8 @@
 from flask import Blueprint
 from flask_restx import Api, fields
 
+import nookdiy_api.api.resources as res
+
 # Create a Blueprint object which will handle all of the Swagger documentation loading
 blueprint = Blueprint("api", __name__)
 
@@ -15,3 +17,5 @@ api = Api(
 
 # Add the namespaces we create in each resource with a specified path
 api.namespaces = []
+api.add_namespace(res.item, path="/item")
+api.add_namespace(res.recipe, path="/recipe")
