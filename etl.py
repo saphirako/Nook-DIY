@@ -6,8 +6,8 @@ import gdown
 import pandas as pd
 import pymysql
 from dotenv import load_dotenv
-from sqlalchemy import create_engine
 from numpy import NaN as NULL_VALUE
+from sqlalchemy import create_engine
 
 from nookdiy_api.api import models
 from nookdiy_api.main import create_app
@@ -49,36 +49,38 @@ def check_update_needed():
     else:
         os.remove("theirs.xlsx")
 
-    # if we get here, double check that we aren't running 
-    return str(os.environ.get("TEST_ETL", False)).lower() == 'true'
+    # if we get here, double check that we aren't running
+    return str(os.environ.get("TEST_ETL", False)).lower() == "true"
+
 
 def extract():
     return pd.read_excel(open("ours.xlsx", "rb"), "Recipes")[
-                [
-                    "Name",
-                    "#1",
-                    "Material 1",
-                    "#2",
-                    "Material 2",
-                    "#3",
-                    "Material 3",
-                    "#4",
-                    "Material 4",
-                    "#5",
-                    "Material 5",
-                    "#6",
-                    "Material 6",
-                    "Buy",
-                    "Sell",
-                ]
-            ]
+        [
+            "Name",
+            "#1",
+            "Material 1",
+            "#2",
+            "Material 2",
+            "#3",
+            "Material 3",
+            "#4",
+            "Material 4",
+            "#5",
+            "Material 5",
+            "#6",
+            "Material 6",
+            "Buy",
+            "Sell",
+        ]
+    ]
+
 
 def transform(raw_data):
     # Remove unsupported 'NFS' from int column 'Buy'
     raw_data["Buy"] = raw_data["Buy"].apply(lambda y: -1 if y == "NFS" else y)
 
     # Remove currently known recipes from raw_data:
-    existing_recipes_query = pd.read_sql_query('SELECT * FROM DB_MARUKOCHAN.recipe', dbc)
+    existing_recipes_query = pd.read_sql_query("SELECT * FROM recipe", dbc)
     existing_recipes = pd.DataFrame(existing_recipes_query)
     df = raw_data[~raw_data["Name"].isin(existing_recipes["name"])]
 
@@ -146,10 +148,10 @@ if __name__ == "__main__":
 
         logging.info(" TRANSFORM")
         formatted_data = transform(raw_data)
-        
+
         logging.info(" LOADING DATA")
         load(formatted_data)
-        
+
         logging.info(" DONE!")
 
     else:
