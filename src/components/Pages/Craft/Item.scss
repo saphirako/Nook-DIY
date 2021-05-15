@@ -13,6 +13,69 @@
     box-shadow: 0px 13px 10px -8px rgba(41,40,35,0.56);
 }
 
+.diyrecipe-red {
+    background-color: #d8595a;
+}
+
+.diyrecipe-yellow {
+    background-color: #e7da77;
+}
+
+.diyrecipe-green {
+    background-color: #95d57c;
+}
+
+.diyrecipe-blue {
+    background-color: #bad5eb;
+}
+
+.diyrecipe-brick {
+    background-color: #bc9e6e;
+}
+
+.diyrecipe-light-gray {
+    background-color: #b9babe;
+}
+
+.diyrecipe-pink {
+    background-color: #f9b9ba;
+}
+
+.diyrecipe-beige {
+    background-color: #e5daac;
+}
+
+.diyrecipe-brown {
+    background-color: #94693c;
+}
+
+.diyrecipe-orange {
+    background-color: #f6c568;
+}
+
+.diyrecipe-dark-gray {
+    background-color: #6a6a6e;
+}
+
+.diyrecipe-white {
+    background-color: #e8e8e6;
+}
+
+.diyrecipe-gold {
+    border-color: #ae9846;
+    background-color: #d6c574;
+}
+
+.diyrecipe-silver {
+    border-color: #787b7a;
+    background-color: #9e9fa3;
+}
+
+.diyrecipe-NaN {
+    border-color: black;
+    background-color: white;
+}
+
 @media(hover: hover) {
     .diyrecipe:hover,
     .diyrecipe:focus {

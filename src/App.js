@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Header from 'components/Header/Header'
 import CraftPage from 'components/Pages/Craft/CraftPage'
 import './App.css'
+import card_colors from 'data/colors.json' 
 
 const NOOKIPEDIA_TOKEN = process.env.REACT_APP_NOOKIPEDIA_TOKEN;
 
@@ -14,6 +15,14 @@ export default class App extends React.Component {
 			nookipediaDataRetrieved: false,
 			recipes: null,
 		}
+	}
+
+	// Add in color data to recipes
+	attachLocallyProcessedData(recipes) {
+		recipes.forEach((recipe) => {
+			recipe.card_color = card_colors[recipe.name.toLowerCase()]
+		})
+		return recipes
 	}
 
 	componentDidMount() {
@@ -30,9 +39,10 @@ export default class App extends React.Component {
 			}
 		)
 		.then(response => response.json())
-		.then(recipes => this.setState(prevState => ({
+		.then(recipesFromAPI => this.attachLocallyProcessedData(recipesFromAPI))
+		.then (ourCompleteRecipes => this.setState(prevState => ({
 			...prevState,
-			recipes: recipes,
+			recipes: ourCompleteRecipes,
 			nookipediaDataRetrieved: true
 		})))
 	}
