@@ -18,11 +18,18 @@ export default class App extends React.Component {
 	}
 
 	// Add in color data to recipes
-	attachLocallyProcessedData(recipes) {
+	cleanseAPIAndAddLocalData(recipes) {
+		let cleanedData = []
+		let alreadySeen = {}
+
 		recipes.forEach((recipe) => {
 			recipe.card_color = card_colors[recipe.name.toLowerCase()]
+			if (!alreadySeen[recipe.name]) {
+				cleanedData.push(recipe)
+				alreadySeen[recipe.name] = true
+			}
 		})
-		return recipes
+		return cleanedData
 	}
 
 	componentDidMount() {
@@ -39,7 +46,7 @@ export default class App extends React.Component {
 			}
 		)
 		.then(response => response.json())
-		.then(recipesFromAPI => this.attachLocallyProcessedData(recipesFromAPI))
+		.then(recipesFromAPI => this.cleanseAPIAndAddLocalData(recipesFromAPI))
 		.then (ourCompleteRecipes => this.setState(prevState => ({
 			...prevState,
 			recipes: ourCompleteRecipes,
