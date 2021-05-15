@@ -1,0 +1,55 @@
+.panel {
+    background: #dfd7ac;
+    border-radius: 30px;
+}
+
+.vertical-center {
+    margin: auto 0;
+    position: relative;
+    top: 20%;
+}
+
+.menu-checkbox {
+    display: inline-block;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-left: 1.2vw;
+    margin-bottom: 1.2vh;
+    padding-left: 11%;
+    vertical-align: middle;
+    font-size: 2vh;
+    font-family: 'Nunito';
+    font-weight: 600;
+}
+
+.menu-checkbox input{
+    opacity: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 1.6vw;
+    background-color: transparent;
+    text-align: center;
+    border-radius: 5px;
+    border: 2px solid #855d2d;
+  }
+
+  .menu-checkbox > input:checked + span::before {
+    content: "✔";
+    color: #E6DFC4;
+    background-color: #855d2d;
+    border: none;
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+  }

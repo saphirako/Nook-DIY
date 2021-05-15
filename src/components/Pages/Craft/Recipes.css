@@ -1,0 +1,11 @@
+.self-contained {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 100%;
+}
+
+#recipes {
+    -webkit-box-shadow: inset 0px -50px 9px -30px rgba(41,40,35,0.01); 
+    box-shadow: inset 0px -50px 9px -30px rgba(41,40,35,0.01);
+    background: #e6dfc4;
+}

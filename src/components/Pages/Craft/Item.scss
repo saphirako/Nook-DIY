@@ -1,0 +1,34 @@
+.diyrecipe {
+    height: 28vh;
+    position: relative;
+    background: url('../../../static/image/diyBackground.png');
+    border: .55vw solid #f5f0e2;
+    background-size: cover;
+    transition: transform .1s;
+}
+
+.diyrecipe.card {
+    border-radius: 16px;
+    -webkit-box-shadow: 0px 13px 10px -8px rgba(41,40,35,0.56); 
+    box-shadow: 0px 13px 10px -8px rgba(41,40,35,0.56);
+}
+
+@media(hover: hover) {
+    .diyrecipe:hover,
+    .diyrecipe:focus {
+      transform: rotate(-2deg) scale(1.1);
+    }
+}
+
+.diyrecipe img {
+    position: absolute;
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
