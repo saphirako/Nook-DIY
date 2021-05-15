@@ -29,6 +29,10 @@ export default class MenuItem extends React.Component {
         }
     }
 
+    removeFromList() {
+        this.updateMaterialQuantity(this.state.materialName, 0)
+    }
+
     render() {
         let classes = "row menu-item exisiting-menu-item";
 
@@ -38,7 +42,8 @@ export default class MenuItem extends React.Component {
         return (
             <div className={classes}>
                 <img className="col col-md-2" src={this.state.materialImage} alt={"Inventory icon for " + this.state.materialName + " material."} />
-                <p className="col col-md-8 vertical-center">{this.state.materialName}</p>
+                <p className="col col-md-6 vertical-center">{this.state.materialName}</p>
+                <button className="button-outlined button-small button-round vertical-center" onClick={this.removeFromList.bind(this)}>✖</button>
                 <input ref={this.inputField} className="col col-md-2" type="number" placeholder=""  onBlur={this.onBlur.bind(this)}/>
             </div>
         )

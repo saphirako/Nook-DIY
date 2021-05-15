@@ -4,6 +4,10 @@
     padding: 2% 6% 2% 4%;
 }
 
+.menu-item button {
+    margin-right: 1vw;
+}
+
 .menu-item  p {
     text-transform: capitalize;
 }
