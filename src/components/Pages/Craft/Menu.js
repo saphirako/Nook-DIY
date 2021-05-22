@@ -84,6 +84,14 @@ export default class Menu extends React.Component {
 
 
     render() {
+        // Create the list of filters to show below the material list
+        const filterList = []
+        Object.keys(this.props.filterPresets).forEach(filter => 
+            filterList.push(<label key={filter} className="menu-checkbox" htmlFor={filter}>{this.props.filterPresets[filter].desc}
+            <input id={filter} type="checkbox" onChange={ev => this.props.toggleFilter(filter)}/>
+            <span className="checkmark"></span>
+        </label>))
+
         return (
             <div className="col col-md-4">
                 <div className="panel">
@@ -92,14 +100,7 @@ export default class Menu extends React.Component {
                 </div>
 
                 {/* Checkbox options for further filtering query results */}
-                <label className="menu-checkbox" htmlFor="exact-match">Exact matches only
-                    <input id="exact-match" type="checkbox" />
-                    <span className="checkmark"></span>
-                </label>
-                <label className="menu-checkbox" htmlFor="seasonal-match">Resources seasonally available
-                    <input id="seasonal-match" type="checkbox" />
-                    <span className="checkmark"></span>
-                </label>
+                {filterList}
             </div>
 
         )

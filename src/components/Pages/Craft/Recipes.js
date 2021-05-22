@@ -6,12 +6,26 @@ import './Recipes.css'
 // const local_testing = true;
 
 export default class Recipes extends Component {
-    filterRecipes(materials) {
-        return this.props.recipes.filter(
-            recipe => recipe.materials.map(material => ({name: material.name.toLowerCase(), count: material.count})).filter(
-                material => materials.includes(material.name)
-            ).length === materials.length
+    helper(filterMaterials, recipe) {
+        let tmp = Object.keys(recipe.materials).filter(material => Object.keys(filterMaterials).includes(material))
+        return tmp.length >= Object.keys(filterMaterials).length && tmp.length > 0
+    }
+
+    filterRecipes(materialsToFilter) {
+        // Get recipes that have the provided materials in them at all
+        let filtered = this.props.recipes.filter(
+            recipe => this.helper(materialsToFilter, recipe)
         )
+
+        // Craftable preset filter:
+        if (this.props.filterPresets.craftable.value) {
+            Object.keys(materialsToFilter).forEach(nnm => {
+                if (!!materialsToFilter[nnm]) {
+                    filtered = filtered.filter(recipe => recipe.materials[nnm] <= materialsToFilter[nnm] && Object.keys(materialsToFilter).some(material => Object.keys(recipe.materials).includes(material)))
+                }
+            })
+        }
+        return filtered
     }
 
     componentDidMount() {
@@ -42,7 +56,7 @@ export default class Recipes extends Component {
 
         // We HAVE filtered, use the subset of the complete list
         else {
-            renderChoice = this.filterRecipes(Object.keys(filterBy));
+            renderChoice = this.filterRecipes(filterBy);
         }
         // ------------- Beyond this point, we have the Nookipedia data -------------------------
         // List of all items to display

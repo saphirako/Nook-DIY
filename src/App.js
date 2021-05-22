@@ -21,11 +21,17 @@ export default class App extends React.Component {
 	cleanseAPIAndAddLocalData(recipes) {
 		let cleanedData = []
 		let alreadySeen = {}
+		let recipe_materials = {}
 
 		recipes.forEach((recipe) => {
 			recipe.card_color = card_colors[recipe.name.toLowerCase()]
 			if (!alreadySeen[recipe.name]) {
-				cleanedData.push(recipe)
+				recipe_materials = {}
+				recipe.materials.map(material => (recipe_materials[material.name.toLowerCase()] = material.count))
+				cleanedData.push({
+					...recipe,
+					materials: recipe_materials
+				})
 				alreadySeen[recipe.name] = true
 			}
 		})

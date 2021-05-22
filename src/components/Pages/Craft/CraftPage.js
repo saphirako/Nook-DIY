@@ -11,7 +11,13 @@ export default class CraftPage extends React.Component {
         super(props);
         this.state = {
             recipes: this.props.recipes,
-            selectedMaterials: {}
+            selectedMaterials: {},
+            filterPresets: {
+                craftable: {
+                    desc: "Only show craftable recipes",
+                    value: false
+                }
+            }
         }
     }
 
@@ -52,10 +58,24 @@ export default class CraftPage extends React.Component {
                 <Recipes
                     recipes={this.props.recipes}
                     filterBy={this.state.selectedMaterials}
+                    filterPresets={this.state.filterPresets}
                 />
                 <Menu
                     addMaterialToFilterList={this.addMaterialToFilterList.bind(this)}
                     updateMaterialFilterList={this.updateMaterialFilterList.bind(this)}
+                    filterPresets={this.state.filterPresets}
+                    toggleFilter={filterToToggle => {
+                        // Update the state to match the values in the form
+                        this.setState(prevState=>({
+                            filterPresets: {
+                                ...prevState.filterPresets,
+                                [filterToToggle]: {
+                                    desc: prevState.filterPresets[filterToToggle].desc,
+                                    value: !prevState.filterPresets[filterToToggle].value
+                                }
+                            }
+                        }))
+                    }}
                 />
             </div>
         )
