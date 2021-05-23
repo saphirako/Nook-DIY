@@ -40,64 +40,51 @@ export default class App extends React.Component {
 
 	componentDidMount() {
 		console.log("making request to Nookipedia API for recipes")
-		fetch(
-			"https://api.nookipedia.com/nh/recipes",
-			{
-				method: "GET",
-				headers: {
-					"X-API-KEY": NOOKIPEDIA_TOKEN,
-					"Accept-Version": "1.0.0"
-				},
-				redirect: 'follow',
-			}
-		)
-		.then(response => response.json())
-		.then(recipesFromAPI => this.cleanseAPIAndAddLocalData(recipesFromAPI))
-		.then (ourCompleteRecipes => this.setState(prevState => ({
-			...prevState,
-			recipes: ourCompleteRecipes,
-			nookipediaDataRetrieved: true
-		})))
+		// fetch(
+		// 	"https://api.nookipedia.com/nh/recipes",
+		// 	{
+		// 		method: "GET",
+		// 		headers: {
+		// 			"X-API-KEY": NOOKIPEDIA_TOKEN,
+		// 			"Accept-Version": "1.0.0"
+		// 		},
+		// 		redirect: 'follow',
+		// 	}
+		// )
+		// .then(response => response.json())
+		// .then(recipesFromAPI => this.cleanseAPIAndAddLocalData(recipesFromAPI))
+		// .then (ourCompleteRecipes => this.setState(prevState => ({
+		// 	...prevState,
+		// 	recipes: ourCompleteRecipes,
+		// 	nookipediaDataRetrieved: true
+		// })))
 	}
 
 	render() {
 		return (
-			<div className="container container-large">
+			<div className="container">
 				<Router>
 					<Header />
 					<Route exact path="/" render={props => (
-						<CraftPage recipes={this.state.recipes} nookipediaDataRetrieved={this.state.nookipediaDataRetrieved}/>
+						// <CraftPage recipes={this.state.recipes} nookipediaDataRetrieved={this.state.nookipediaDataRetrieved}/>
+						<></>
 					)} />
 					<Route exact path="/plan" render={props => (
-						<>
-							<p>You're on the PLAN page.</p>
-							{/* This is where the PLAN page will be rendered */}
-						</>
+						// <>
+						// 	<p>You're on the PLAN page.</p>
+						// 	{/* This is where the PLAN page will be rendered */}
+						// </>
+						<></>
 					)} />
 					<Route exact path="/about" render={props => (
 						<>
-							<p>You're on the ABOUT page.</p>
+							{/* <p>You're on the ABOUT page.</p> */}
 							{/* This is where the ABOUT page will be rendered */}
 						</>
 					)} />
-					<h5 className="footer align-center">a project by <a href="https://www.saphirako.com">saphirako</a></h5>
+					{/* <h5 className="footer align-center">a project by <a href="https://www.saphirako.com">saphirako</a></h5> */}
 				</Router>
 			</div>
 		)
 	}
 }
-
-// Define the Material themes of the application
-// const nookdiy_theme = createMuiTheme({
-//   palette: {
-//     primary: {
-//       main: "#734F3D"
-//     },
-//     secondary: {
-//       main: "#734F3D"
-//     }
-//   },
-//   background: {
-//     paper: "#f9f0e7"
-//   }
-// })
