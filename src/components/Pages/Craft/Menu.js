@@ -93,7 +93,7 @@ export default class Menu extends React.Component {
         </label>))
 
         return (
-            <div className="col col-md-4">
+            <div className="hidden lg:flex">
                 <div className="panel">
                     {this.state.addedMaterials}
                     <MenuAutoComplete addMaterialToList={this.addMaterialToList.bind(this)} />

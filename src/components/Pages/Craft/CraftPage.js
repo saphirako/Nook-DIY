@@ -42,7 +42,7 @@ export default class CraftPage extends React.Component {
 
     updateMaterialFilterList(material) {
         let { selectedMaterials } = this.state;
-        
+
         if (material.count === 0) delete selectedMaterials[material.name]
         else selectedMaterials[material.name] = material.count
 
@@ -54,7 +54,8 @@ export default class CraftPage extends React.Component {
 
     render() {
         return (
-            <div className="row" style={{ height: "70vh", overflow: "hidden" }}>
+            <div>
+                <p className="h-screen text-center font-bold flex flex-col px-8 justify-center lg:hidden">The craft page is currently unavailable for mobile users. Please use the Desktop verison or try again later!</p>
                 <Recipes
                     recipes={this.props.recipes}
                     filterBy={this.state.selectedMaterials}
@@ -66,7 +67,7 @@ export default class CraftPage extends React.Component {
                     filterPresets={this.state.filterPresets}
                     toggleFilter={filterToToggle => {
                         // Update the state to match the values in the form
-                        this.setState(prevState=>({
+                        this.setState(prevState => ({
                             filterPresets: {
                                 ...prevState.filterPresets,
                                 [filterToToggle]: {
@@ -77,7 +78,7 @@ export default class CraftPage extends React.Component {
                         }))
                     }}
                 />
-            </div>
+            </div >
         )
     }
 }

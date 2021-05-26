@@ -62,12 +62,11 @@ export default class App extends React.Component {
 
 	render() {
 		return (
-			<div className="container">
+			<div className="font-semibold">
 				<Router>
 					<Header />
 					<Route exact path="/" render={props => (
-						// <CraftPage recipes={this.state.recipes} nookipediaDataRetrieved={this.state.nookipediaDataRetrieved}/>
-						<></>
+						<CraftPage recipes={this.state.recipes} nookipediaDataRetrieved={this.state.nookipediaDataRetrieved}/>
 					)} />
 					<Route exact path="/plan" render={props => (
 						// <>
@@ -82,7 +81,7 @@ export default class App extends React.Component {
 							{/* This is where the ABOUT page will be rendered */}
 						</>
 					)} />
-					{/* <h5 className="footer align-center">a project by <a href="https://www.saphirako.com">saphirako</a></h5> */}
+				<p className="absolute inset-x-0 bottom-8 text-center">a project by <a href="https://www.saphirako.com">saphirako</a></p>
 				</Router>
 			</div>
 		)

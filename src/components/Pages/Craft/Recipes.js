@@ -43,7 +43,7 @@ export default class Recipes extends Component {
         // If this is the initial render, we shouldn't show anything
         if (!recipes) {
             return (
-                <div className="col col-md-8">
+                <div className="hidden lg:block">
                     <p>Loading data from Nookipedia...</p>
                 </div>
             );
@@ -67,7 +67,7 @@ export default class Recipes extends Component {
         })
 
         return (
-            <div id="recipes" className="col col-md-8 self-contained">
+            <div id="recipes" className="hidden lg:flex">
                 <div className="row">
                     {list_of_items}
                 </div>
