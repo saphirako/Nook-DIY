@@ -1,9 +1,5 @@
 import React, { Component } from 'react'
 import Item from './Item'
-import './Recipes.css'
-// import local_recipes from './temp_recipes.json' 
-
-// const local_testing = true;
 
 export default class Recipes extends Component {
     helper(filterMaterials, recipe) {
@@ -40,24 +36,18 @@ export default class Recipes extends Component {
         const { recipes, filterBy } = this.props;
         let renderChoice = null
 
-        // If this is the initial render, we shouldn't show anything
+        // If this is the initial render, show the loading screen
         if (!recipes) {
             return (
-                <div className="hidden lg:block">
+                <div className="hidden lg:flex">
                     <p>Loading data from Nookipedia...</p>
                 </div>
             );
         }
 
-        // If we haven't filtered yet, use the complete list of recipes
-        else if (Object.keys(filterBy).length === 0) {
-            renderChoice = recipes
-        }
+        // If we haven't filtered yet, use the complete list of recipes, otherwise use the subset of the complete list
+        renderChoice = Object.keys(filterBy).length === 0 ? recipes : this.filterRecipes(filterBy)
 
-        // We HAVE filtered, use the subset of the complete list
-        else {
-            renderChoice = this.filterRecipes(filterBy);
-        }
         // ------------- Beyond this point, we have the Nookipedia data -------------------------
         // List of all items to display
         const list_of_items = []
@@ -67,10 +57,8 @@ export default class Recipes extends Component {
         })
 
         return (
-            <div id="recipes" className="hidden lg:flex">
-                <div className="row">
-                    {list_of_items}
-                </div>
+            <div id="recipes" className="hidden p-4 lg:grid grid-cols-5 gap-8 overflow-auto">
+                {list_of_items}
             </div>
         )
     }

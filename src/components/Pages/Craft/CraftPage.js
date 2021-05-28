@@ -2,10 +2,6 @@ import React from 'react'
 import Menu from './Menu'
 import Recipes from './Recipes';
 
-// Dummy data to delete once we have access to the Nookipedia API
-// For dummy data, see temp_recipes.json
-
-
 export default class CraftPage extends React.Component {
     constructor(props) {
         super(props);
@@ -54,7 +50,7 @@ export default class CraftPage extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="flex flex-row justify-center place-items-stretch h-3/4 gap-x-16">
                 <p className="h-screen text-center font-bold flex flex-col px-8 justify-center lg:hidden">The craft page is currently unavailable for mobile users. Please use the Desktop verison or try again later!</p>
                 <Recipes
                     recipes={this.props.recipes}
