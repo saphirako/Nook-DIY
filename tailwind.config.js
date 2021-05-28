@@ -23,11 +23,14 @@ module.exports = {
       backgroundImage: theme => ({
         'diyrecipe': "url('static/image/diyBackground.png')"
       }),
+      boxShadow: {
+        'recipecard': '0px 13px 10px -8px rgba(41,40,35,0.56)'
+      },
       colors: {
         highlight: "#13c5cb"
       },
-      boxShadow: {
-        'recipecard': '0px 13px 10px -8px rgba(41,40,35,0.56)'
+      screens: {
+        'hd': '1920px'
       }
     },
   },
