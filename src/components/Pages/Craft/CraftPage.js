@@ -50,7 +50,7 @@ export default class CraftPage extends React.Component {
 
     render() {
         return (
-            <div className="flex flex-row justify-center place-items-stretch h-3/4 gap-x-16">
+            <div className="flex flex-row justify-center place-items-stretch h-3/4 gap-x-8">
                 <p className="h-screen text-center font-bold flex flex-col px-8 justify-center lg:hidden">The craft page is currently unavailable for mobile users. Please use the Desktop verison or try again later!</p>
                 <Recipes
                     recipes={this.props.recipes}

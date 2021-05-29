@@ -2,6 +2,12 @@
     cursor: url('./static/image/Cursor.png'), auto !important;
 }
 
+* input::-webkit-outer-spin-button,
+* input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .footer {
     position: absolute;
     bottom: 0;

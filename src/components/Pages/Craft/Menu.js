@@ -1,7 +1,8 @@
 import React from 'react'
-import './Menu.css'
 import MenuAutoComplete from './MenuAutocomplete'
 import MenuItem from './MenuItem';
+import { Switch } from '@headlessui/react'
+
 
 
 export default class Menu extends React.Component {
@@ -44,7 +45,7 @@ export default class Menu extends React.Component {
         // If we're adding a new item, update the state and return count+1 to AutoComplete
         if (updateNeeded) {
             // Add the item to the materialList
-            materialList[materialName] = {image: materialImage, quantity: 0}
+            materialList[materialName] = { image: materialImage, quantity: 0 }
 
             // Update the Menu's visual representation
             let newAddedMaterials = this.generateMaterialList(materialList, materialName);
@@ -67,7 +68,7 @@ export default class Menu extends React.Component {
     // Used to add change material quanities in Recipe filtering (and remove )
     updateMaterialQuantity(materialName, quantity) {
         // Update CraftPage's list (for Recipes)
-        this.updateCraftPageMaterialFilter({name: materialName, count: quantity})
+        this.updateCraftPageMaterialFilter({ name: materialName, count: quantity })
 
         // Update the Menu's visual representation
         let { materialList } = this.state;
@@ -85,16 +86,31 @@ export default class Menu extends React.Component {
 
     render() {
         // Create the list of filters to show below the material list
-        const filterList = []
-        Object.keys(this.props.filterPresets).forEach(filter => 
-            filterList.push(<label key={filter} className="menu-checkbox" htmlFor={filter}>{this.props.filterPresets[filter].desc}
-            <input id={filter} type="checkbox" onChange={ev => this.props.toggleFilter(filter)}/>
-            <span className="checkmark"></span>
-        </label>))
+        const filterList = <div>
+            <p className="text-2xl my-4">Filter Options</p>
+            {Object.keys(this.props.filterPresets).map(filter =>
+                <div key={filter} className="w-full flex flex-row items-center gap-4">
+                    <Switch
+                        checked={this.props.filterPresets[filter].value}
+                        onChange={ev => this.props.toggleFilter(filter)}
+                        className={`${this.props.filterPresets[filter].value ? 'bg-brown-dark' : 'bg-brown'} relative inline-flex items-center h-6 rounded-full w-11 focus:outline-none`}
+                    >
+                        <span className="sr-only" />
+                        <span className={`${this.props.filterPresets[filter].value ? 'translate-x-6' : 'translate-x-1'} inline-block w-4 h-4 transform transition ease-in-out duration-200 bg-gray-100 rounded-full`} />
+                    </Switch>
+                    <p className="w-auto font-light max-w-md">{this.props.filterPresets[filter].desc}</p>
+                </div>
+            )}
+        </div>
+
+        // <label key={filter} className="menu-checkbox" htmlFor={filter}>{this.props.filterPresets[filter].desc}
+        //     <input id={filter} type="checkbox" onChange={ev => this.props.toggleFilter(filter)} />
+        //     <span className="checkmark"></span>
+
 
         return (
-            <div className="hidden flex-col lg:flex">
-                <div className="panel">
+            <div className="hidden h-3/5 justify-between lg:flex flex-col gap-y-4 justify-items-start w-full max-w-xs 2xl:max-w-lg my-4">
+                <div className="rounded-xl bg-brown">
                     {this.state.addedMaterials}
                     <MenuAutoComplete addMaterialToList={this.addMaterialToList.bind(this)} />
                 </div>

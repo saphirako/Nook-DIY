@@ -1,5 +1,4 @@
 import React from 'react'
-import "./MenuItem.css"
 
 export default class MenuItem extends React.Component {
     constructor(props) {
@@ -34,17 +33,14 @@ export default class MenuItem extends React.Component {
     }
 
     render() {
-        let classes = "row menu-item exisiting-menu-item";
-
-        if (this.state.isOffset % 2 === 1)
-            classes += " exisiting-menu-item-offset"
-
         return (
-            <div className={classes}>
-                <img className="col col-md-2" src={this.state.materialImage} alt={"Inventory icon for " + this.state.materialName + " material."} />
-                <p className="col col-md-6 vertical-center">{this.state.materialName}</p>
-                <button className="button-outlined button-small button-round vertical-center" onClick={this.removeFromList.bind(this)}>✖</button>
-                <input ref={this.inputField} className="col col-md-2" type="number" placeholder=""  onBlur={this.onBlur.bind(this)}/>
+            <div className={"flex rounded-xl " + (this.state.isOffset % 2 === 1 ? "bg-brown-lighter" : "")}>
+                <img className="w-16 h-auto" src={this.state.materialImage} alt={"Inventory icon for " + this.state.materialName + " material."} />
+                <div className="flex items-center justify-start gap-4 w-full mx-4">
+                    <p>{this.state.materialName}</p>
+                    <p className="flex-grow-0" onClick={this.removeFromList.bind(this)}>✖</p>
+                </div>
+                <input className="w-1/6 my-2 mr-4 bg-brown-light text-center rounded focus:outline-none" ref={this.inputField} type="number" placeholder="" onBlur={this.onBlur.bind(this)} />
             </div>
         )
     }
