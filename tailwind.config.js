@@ -29,6 +29,9 @@ module.exports = {
       colors: {
         highlight: "#13c5cb"
       },
+      gridAutoRows: {
+        'recipes': '15rem'
+      },
       screens: {
         'hd': '1920px'
       }
