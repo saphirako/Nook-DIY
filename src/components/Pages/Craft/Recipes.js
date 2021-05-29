@@ -57,7 +57,7 @@ export default class Recipes extends Component {
         })
 
         return (
-            <div id="recipes" className="hidden p-4 auto-rows-recipes lg:grid grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-8 overflow-auto">
+            <div id="recipes" className="hidden w-3/5 p-4 auto-rows-recipes lg:grid grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-8 overflow-auto">
                 {list_of_items}
             </div>
         )
