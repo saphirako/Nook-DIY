@@ -5,6 +5,7 @@
   "dependencies": {
     "@craco/craco": "^6.1.2",
     "@headlessui/react": "^1.2.0",
+    "@tippyjs/react": "^4.2.5",
     "axios": "^0.21.1",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",

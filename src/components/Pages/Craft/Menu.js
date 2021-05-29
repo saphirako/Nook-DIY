@@ -17,6 +17,7 @@ export default class Menu extends React.Component {
         }
     }
 
+    
     // Used to create the list of materials added by the user
     generateMaterialList(materialList, targetMaterial) {
         return Object.keys(materialList).map((material, index) => (
