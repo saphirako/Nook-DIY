@@ -80,13 +80,7 @@ export default class App extends React.Component {
 					<Route exact path="/" render={props => (
 						<CraftPage recipes={this.state.recipes} nookipediaDataRetrieved={this.state.nookipediaDataRetrieved} />
 					)} />
-					<Route exact path="/plan" render={props => (
-						// <>
-						// 	<p>You're on the PLAN page.</p>
-						// 	{/* This is where the PLAN page will be rendered */}
-						// </>
-						<></>
-					)} />
+					{/* <Route exact path="/plan" render={props => ()} /> */}
 					<Route exact path="/about" render={props => (
 						<>
 							{/* <p>You're on the ABOUT page.</p> */}
