@@ -27,7 +27,15 @@ module.exports = {
         'recipecard': '0px 13px 10px -8px rgba(41,40,35,0.56)'
       },
       colors: {
-        highlight: "#13c5cb"
+        highlight: "#13c5cb",
+        brown: {
+          lightest: "#e6dfc4",
+          lighter: "#d3cda5",
+          light: "#D8C791",
+          DEFAULT: "#dfd7ac",
+          dark: "#855d2d",
+          darker: "#734F3D",
+        }
       },
       gridAutoRows: {
         'recipes': '15rem'

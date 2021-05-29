@@ -1,5 +1,5 @@
 * {
-    cursor: url('./static/image/Cursor.png'), auto;
+    cursor: url('./static/image/Cursor.png'), auto !important;
 }
 
 .footer {

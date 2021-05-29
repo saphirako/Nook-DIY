@@ -74,7 +74,7 @@ export default class App extends React.Component {
 
 	render() {
 		return (
-			<div className="font-semibold w-full h-screen">
+			<div className="font-semibold text-brown-dark w-full h-screen">
 				<Router>
 					<Header />
 					<Route exact path="/" render={props => (
