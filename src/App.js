@@ -8,7 +8,7 @@ import card_colors from 'data/colors.json'
 import local_recipes from 'data/temp_recipes.json' // Dummy data to test locally without hitting Nookipedia API
 
 const NOOKIPEDIA_TOKEN = process.env.REACT_APP_NOOKIPEDIA_TOKEN;
-const isLocalTest = process.env.REACT_APP_USE_LOCAL_DATA;
+const isLocalTest = (process.env.REACT_APP_USE_LOCAL_DATA === 'true');
 
 export default class App extends React.Component {
 	constructor(props) {
