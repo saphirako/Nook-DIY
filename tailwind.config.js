@@ -33,7 +33,7 @@ module.exports = {
           500: "#D8C791",
           DEFAULT: "#dfd7ac",
           600: "#855d2d",
-          700: "#734F3D",
+          700: "#604320",
         }
       },
       gridAutoRows: {
