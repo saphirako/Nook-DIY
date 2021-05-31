@@ -11,7 +11,7 @@ This project project would *not* be possible without the following resources:
 Seriously, these folks are all incredible! I can't count how many hours were saved by asking questions from the amazing devs and spreasheet maintainers out there. THANK YOU.  
 <br/>  
 
-* **Mariusz Dabrowski of [AC Miles](https://acmiles.com/)**<br/>
+* **[Mariusz Dabrowski](https://github.com/MariuszDabrowski) of [AC Miles](https://acmiles.com/)**<br/>
 This tool is *seriously* clean! I definitely used this as a reference for what a web-based, authentic Nintendo-like UI would look like. My scrollbar and animations of cards came from him. Seriously, check out this cool project if you have a moment.  
 <br/>  
 
