@@ -72,7 +72,8 @@ const sourceMap = {
     "DIY": "https://acnhcdn.com/latest/MenuIcon/BookRecipe.png",
     "Egg Bottle": "https://acnhcdn.com/latest/MenuIcon/MessageBottleEgg.png",
     "Egg Balloon": "https://acnhcdn.com/latest/MenuIcon/EggSky.png",
-    "Snowboy": "https://acnhcdn.com/latest/MenuIcon/SnowCrystal.png"
+    "Snowboy": "https://acnhcdn.com/latest/MenuIcon/SnowCrystal.png",
+    "Fishing": "https://acnhcdn.com/latest/FtrIcon/ToolAngling_Remake_0_0.png"
 }
 
 export default class ItemFocusScreen extends Component {
@@ -96,7 +97,7 @@ export default class ItemFocusScreen extends Component {
 
                     {/* If there's an unlock pre-req, display it here*/}
                     {this.state.recipes_to_unlock > 0 ? (
-                        <Banner className="bg-brown-600" tooltip="The required number of recipes known needed to unlock this DIY reciepe.">
+                        <Banner className="bg-brown-600" tooltip="The required number of recipes you need to know to be able to unlock this DIY reciepe. (Unless you unlocked it from Tom Nook in early-game.)">
                             <Hammer className="w-12 fill-current" alt="Hammer" />
                             <p className="text-5xl">{this.state.recipes_to_unlock}</p>
                         </Banner>
