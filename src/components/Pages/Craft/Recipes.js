@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import Item from './Item'
+import SimpleBar from 'simplebar-react';
+import 'simplebar/dist/simplebar.min.css';
 
 export default class Recipes extends Component {
     helper(filterMaterials, recipe) {
@@ -53,17 +55,12 @@ export default class Recipes extends Component {
         renderChoice = Object.keys(filterBy).length === 0 ? recipes : this.filterRecipes(filterBy)
 
         // ------------- Beyond this point, we have the Nookipedia data -------------------------
-        // List of all items to display
-        const list_of_items = []
-
-        renderChoice.forEach((recipe) => {
-            list_of_items.push(<Item key={recipe.name} focusMe={this.props.focusItem} itemData={recipe} />); /* eslint-disable-line */
-        })
-
         return (
-            <div id="recipes" className="hidden w-3/5 p-4 auto-rows-recipes lg:grid grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-8 overflow-auto">
-                {list_of_items}
-            </div>
+            <SimpleBar className="w-3/5 p-4">
+                <div id="recipes" className=" auto-rows-recipes lg:grid grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-8">
+                    {renderChoice.map(recipe => <Item key={recipe.name} focusMe={this.props.focusItem} itemData={recipe} />)}
+                </div>
+            </SimpleBar>
         )
     }
 }
