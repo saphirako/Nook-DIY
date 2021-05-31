@@ -2,10 +2,6 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    borderColor: theme => ({
-      ...theme('colors'),
-      'diycard': "#f5f0e2"
-    }),
     borderWidth: theme => ({
       DEFAULT: '1px',
       '0': '0',
@@ -28,13 +24,16 @@ module.exports = {
       },
       colors: {
         highlight: "#13c5cb",
+        nookipedia: "#67af40",
         brown: {
-          lightest: "#e6dfc4",
-          lighter: "#d3cda5",
-          light: "#D8C791",
+          100: "#FFFBEE",
+          200: "#F0EBDA",
+          300: "#e6dfc4",
+          400: "#d3cda5",
+          500: "#D8C791",
           DEFAULT: "#dfd7ac",
-          dark: "#855d2d",
-          darker: "#734F3D",
+          600: "#855d2d",
+          700: "#734F3D",
         }
       },
       gridAutoRows: {

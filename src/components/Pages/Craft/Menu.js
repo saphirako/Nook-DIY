@@ -17,7 +17,6 @@ export default class Menu extends React.Component {
         }
     }
 
-    
     // Used to create the list of materials added by the user
     generateMaterialList(materialList, targetMaterial) {
         return Object.keys(materialList).map((material, index) => (
@@ -94,7 +93,7 @@ export default class Menu extends React.Component {
                     <Switch
                         checked={this.props.filterPresets[filter].value}
                         onChange={ev => this.props.toggleFilter(filter)}
-                        className={`${this.props.filterPresets[filter].value ? 'bg-brown-dark' : 'bg-brown'} relative inline-flex items-center h-6 rounded-full w-11 hover:bg-brown-light  focus:outline-none`}
+                        className={`${this.props.filterPresets[filter].value ? 'bg-brown-600' : 'bg-brown'} relative inline-flex items-center h-6 rounded-full w-11 hover:bg-brown-400  focus:outline-none`}
                     >
                         <span className="sr-only" />
                         <span className={`${this.props.filterPresets[filter].value ? 'translate-x-6' : 'translate-x-1'} inline-block w-4 h-4 transform transition ease-in-out duration-200 bg-gray-100 rounded-full`} />

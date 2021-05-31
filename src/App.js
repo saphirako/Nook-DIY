@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 import Header from 'components/Header'
 import CraftPage from 'components/Pages/Craft/CraftPage'
+import ItemFocusScreen from 'components/Pages/ItemFocus/ItemFocusScreen';
+
 import './App.css'
 import card_colors from 'data/colors.json'
 import local_recipes from 'data/temp_recipes.json' // Dummy data to test locally without hitting Nookipedia API
@@ -74,12 +76,16 @@ export default class App extends React.Component {
 
 	render() {
 		return (
-			<div className="font-semibold text-brown-dark w-full h-screen">
+			<div className="font-semibold text-brown-600 w-full h-screen">
 				<Router>
 					<Header />
 					<Route exact path="/" render={props => (
-						<CraftPage recipes={this.state.recipes} nookipediaDataRetrieved={this.state.nookipediaDataRetrieved} />
+						<CraftPage
+							recipes={this.state.recipes}
+							nookipediaDataRetrieved={this.state.nookipediaDataRetrieved}
+						/>
 					)} />
+					<Route exact path="/item" component={ItemFocusScreen}/>
 					{/* <Route exact path="/plan" render={props => ()} /> */}
 					<Route exact path="/about" render={props => (
 						<>
