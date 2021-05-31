@@ -76,7 +76,7 @@ const sourceMap = {
     "Fishing": "https://acnhcdn.com/latest/FtrIcon/ToolAngling_Remake_0_0.png"
 }
 
-export default class ItemFocusScreen extends Component {
+export default class Item extends Component {
     constructor(props) {
         super(props)
         this.state = props.location.state

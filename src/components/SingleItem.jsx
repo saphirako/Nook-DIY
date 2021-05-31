@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import "./Item.scss"
 import 'tippy.js/dist/tippy.css'
 
-export default class Item extends React.Component {
+export default class SingleItem extends React.Component {
     render() {
         return (
             <Tippy className="font-bold" content={this.props.itemData.name} delay={[100, 0]} duration={0}>

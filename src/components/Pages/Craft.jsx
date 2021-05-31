@@ -1,11 +1,11 @@
 import React from 'react'
-import Menu from './Menu'
-import Recipes from './Recipes';
+import Menu from 'components/Menu'
+import Recipes from 'components/Recipes';
 import SimpleBar from 'simplebar-react';
 import 'static/stylesheets/simplebar.css';
 
 
-export default class CraftPage extends React.Component {
+export default class Craft extends React.Component {
     constructor(props) {
         super(props);
         this.state = {

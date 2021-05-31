@@ -2,8 +2,9 @@ import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 import Header from 'components/Header'
-import CraftPage from 'components/Pages/Craft/CraftPage'
-import ItemFocusScreen from 'components/Pages/ItemFocus/ItemFocusScreen';
+import Craft from 'components/Pages/Craft'
+import About from 'components/Pages/About'
+import Item from 'components/Pages/Item';
 
 import './App.css'
 import card_colors from 'data/colors.json'
@@ -80,19 +81,14 @@ export default class App extends React.Component {
 				<Router>
 					<Header />
 					<Route exact path="/" render={props => (
-						<CraftPage
+						<Craft
 							recipes={this.state.recipes}
 							nookipediaDataRetrieved={this.state.nookipediaDataRetrieved}
 						/>
 					)} />
-					<Route exact path="/item" component={ItemFocusScreen}/>
+					<Route exact path="/item" component={Item}/>
 					{/* <Route exact path="/plan" render={props => ()} /> */}
-					<Route exact path="/about" render={props => (
-						<>
-							{/* <p>You're on the ABOUT page.</p> */}
-							{/* This is where the ABOUT page will be rendered */}
-						</>
-					)} />
+					<Route exact path="/about" component={About} />
 					<p className="absolute inset-x-0 bottom-8 text-center">a project by <a className="text-highlight" href="https://www.saphirako.com">saphirako</a></p>
 				</Router>
 			</div>
