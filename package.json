@@ -3,18 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@craco/craco": "^6.1.2",
+    "@headlessui/react": "^1.2.0",
+    "@tippyjs/react": "^4.2.5",
     "axios": "^0.21.1",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.3",
-    "simplebar": "^5.3.0"
+    "simplebar-react": "^2.3.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "eject": "react-scripts eject"
+    "start": "craco start",
+    "build": "craco build",
+    "eject": "craco eject"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -30,5 +33,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.8.6",
+    "postcss": "^7.0.35",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.2"
   }
 }

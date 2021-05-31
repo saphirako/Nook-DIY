@@ -1,9 +1,11 @@
 * {
-    cursor: url('./static/image/Cursor.png'), auto;
+    cursor: url('./static/image/Cursor.png'), auto !important;
 }
 
-.container {
-    padding: 10px 0 0
+* input::-webkit-outer-spin-button,
+* input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .footer {
@@ -12,17 +14,6 @@
     margin: 0;
     left: 0;
     background: transparent;
-}
-
-h1, h2, h3, h4, h5, h6, p, label {
-    font-family: "Nunito", sans-serif;
-    color: #855E2D;
-}
-h1, h2, h3 {
-    font-weight: 800;
-}
-p {
-    font-weight: 600;
 }
 
 a {

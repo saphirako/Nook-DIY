@@ -1,5 +1,4 @@
 import React, { Component, createRef } from 'react'
-import './MenuAutocomplete.css'
 import materials from 'data/materials.json'
 
 
@@ -47,19 +46,15 @@ export default class MenuAutocomplete extends Component {
 
     render() {
         let matches = [];
-        let classes = "menu-item new-menu-item"
-
-        if (this.state.hasMargin) {
-            classes += " new-menu-item-margin"
-        }
-
-        if (this.state.possibleMatches) {
-            matches = this.state.possibleMatches.map((match) => <p key={match} onClick={this.selectMaterial.bind(this)}>{match}</p>)
+        if (this.state.possibleMatches && this.state.possibleMatches.length > 0) {
+            matches = <div className="p-4 pt-0 max-h-56 overflow-y-auto">
+                {this.state.possibleMatches.map((match) => <p className="font-light py-2 capitalize" key={match} onClick={this.selectMaterial.bind(this)}>{match}</p>)}
+            </div>
         }
 
         return (
             <>
-                <input ref={this.inputObject} className={classes} type="text" placeholder="+&nbsp;&nbsp;&nbsp;add a material" onChange={this.onChange.bind(this)} />
+                <input className="w-full p-4 rounded-2xl font-bold bg-brown placeholder-brown-600 text-brown-600 focus:outline-none" ref={this.inputObject} type="text" placeholder="+&nbsp;&nbsp;&nbsp;Add a material" onChange={this.onChange.bind(this)} />
                 {matches}
             </>
 

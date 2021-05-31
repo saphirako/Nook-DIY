@@ -1,9 +1,8 @@
 import React from 'react'
 import Menu from './Menu'
 import Recipes from './Recipes';
-
-// Dummy data to delete once we have access to the Nookipedia API
-// For dummy data, see temp_recipes.json
+import SimpleBar from 'simplebar-react';
+import 'static/stylesheets/simplebar.css';
 
 
 export default class CraftPage extends React.Component {
@@ -11,7 +10,17 @@ export default class CraftPage extends React.Component {
         super(props);
         this.state = {
             recipes: this.props.recipes,
-            selectedMaterials: {}
+            selectedMaterials: {},
+            filterPresets: {
+                craftable: {
+                    desc: "Only show craftable recipes",
+                    value: false
+                }
+            },
+            itemHasFocus: {
+                value: false,
+                item: null
+            }
         }
     }
 
@@ -36,7 +45,7 @@ export default class CraftPage extends React.Component {
 
     updateMaterialFilterList(material) {
         let { selectedMaterials } = this.state;
-        
+
         if (material.count === 0) delete selectedMaterials[material.name]
         else selectedMaterials[material.name] = material.count
 
@@ -46,18 +55,48 @@ export default class CraftPage extends React.Component {
         }));
     }
 
+    focusItem(item) {
+        this.setState(prevState => ({
+            ...prevState,
+            itemHasFocus: {
+                value: true,
+                item: item
+            }
+        }))
+    }
+
     render() {
         return (
-            <div className="row" style={{ height: "70vh", overflow: "hidden" }}>
-                <Recipes
-                    recipes={this.props.recipes}
-                    filterBy={this.state.selectedMaterials}
-                />
-                <Menu
-                    addMaterialToFilterList={this.addMaterialToFilterList.bind(this)}
-                    updateMaterialFilterList={this.updateMaterialFilterList.bind(this)}
-                />
-            </div>
+            window.screen.width >= 1024 ? 
+            <SimpleBar className="h-3/4" autoHide={false}>
+                <div className="flex flex-row justify-center place-items-stretch gap-x-10 mx-16 xl:mx-0">
+                    <Recipes
+                        recipes={this.props.recipes}
+                        filterBy={this.state.selectedMaterials}
+                        filterPresets={this.state.filterPresets}
+                        focusItem={this.focusItem.bind(this)}
+                    />
+                    <Menu
+                        addMaterialToFilterList={this.addMaterialToFilterList.bind(this)}
+                        updateMaterialFilterList={this.updateMaterialFilterList.bind(this)}
+                        filterPresets={this.state.filterPresets}
+                        toggleFilter={filterToToggle => {
+                            // Update the state to match the values in the form
+                            this.setState(prevState => ({
+                                filterPresets: {
+                                    ...prevState.filterPresets,
+                                    [filterToToggle]: {
+                                        desc: prevState.filterPresets[filterToToggle].desc,
+                                        value: !prevState.filterPresets[filterToToggle].value
+                                    }
+                                }
+                            }))
+                        }}
+                    />
+                </div>
+            </SimpleBar>
+            :
+            <p className="h-screen text-center font-bold flex flex-col px-8 justify-center">The craft page is currently unavailable for mobile users. Please use the Desktop verison or try again later!</p>
         )
     }
 }

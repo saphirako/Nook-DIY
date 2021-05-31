@@ -107,7 +107,7 @@ def transform(recipes_df, materials_df, tools_df, furniture_df, misc_df):
     for _, row in recipes_df.iterrows():
         if row["Name"] not in recipe_color_data:
             no_new_recipes = False
-            recipe_color_data[row["Name"]] = row["Card Color"]
+            recipe_color_data[row["Name"].lower()] = row["Card Color"] if row["Card Color"] is not NULL_VALUE else "NaN"
 
         # Process individual materials
         for c in range(1, 7):

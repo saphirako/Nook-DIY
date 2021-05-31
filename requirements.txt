@@ -1,6 +1,4 @@
-flask-sqlalchemy
-flask-admin
-flask-restx
 gdown
 pandas
-xlrd
+xlrd==1.2.0
+python-dotenv
