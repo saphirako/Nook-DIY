@@ -1,6 +1,9 @@
 import React from 'react'
 import Menu from './Menu'
 import Recipes from './Recipes';
+import SimpleBar from 'simplebar-react';
+import 'static/stylesheets/simplebar.css';
+
 
 export default class CraftPage extends React.Component {
     constructor(props) {
@@ -63,31 +66,37 @@ export default class CraftPage extends React.Component {
     }
 
     render() {
-        return <div className="flex flex-row justify-center place-items-stretch h-3/4 gap-x-8">
-            <p className="h-screen text-center font-bold flex flex-col px-8 justify-center lg:hidden">The craft page is currently unavailable for mobile users. Please use the Desktop verison or try again later!</p>
-            <Recipes
-                recipes={this.props.recipes}
-                filterBy={this.state.selectedMaterials}
-                filterPresets={this.state.filterPresets}
-                focusItem={this.focusItem.bind(this)}
-            />
-            <Menu
-                addMaterialToFilterList={this.addMaterialToFilterList.bind(this)}
-                updateMaterialFilterList={this.updateMaterialFilterList.bind(this)}
-                filterPresets={this.state.filterPresets}
-                toggleFilter={filterToToggle => {
-                    // Update the state to match the values in the form
-                    this.setState(prevState => ({
-                        filterPresets: {
-                            ...prevState.filterPresets,
-                            [filterToToggle]: {
-                                desc: prevState.filterPresets[filterToToggle].desc,
-                                value: !prevState.filterPresets[filterToToggle].value
-                            }
-                        }
-                    }))
-                }}
-            />
-        </div >
+        return (
+            window.screen.width >= 1024 ? 
+            <SimpleBar className="h-3/4" autoHide={false}>
+                <div className="flex flex-row justify-center place-items-stretch gap-x-10 mx-16 xl:mx-0">
+                    <Recipes
+                        recipes={this.props.recipes}
+                        filterBy={this.state.selectedMaterials}
+                        filterPresets={this.state.filterPresets}
+                        focusItem={this.focusItem.bind(this)}
+                    />
+                    <Menu
+                        addMaterialToFilterList={this.addMaterialToFilterList.bind(this)}
+                        updateMaterialFilterList={this.updateMaterialFilterList.bind(this)}
+                        filterPresets={this.state.filterPresets}
+                        toggleFilter={filterToToggle => {
+                            // Update the state to match the values in the form
+                            this.setState(prevState => ({
+                                filterPresets: {
+                                    ...prevState.filterPresets,
+                                    [filterToToggle]: {
+                                        desc: prevState.filterPresets[filterToToggle].desc,
+                                        value: !prevState.filterPresets[filterToToggle].value
+                                    }
+                                }
+                            }))
+                        }}
+                    />
+                </div>
+            </SimpleBar>
+            :
+            <p className="h-screen text-center font-bold flex flex-col px-8 justify-center">The craft page is currently unavailable for mobile users. Please use the Desktop verison or try again later!</p>
+        )
     }
 }
