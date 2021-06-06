@@ -39,6 +39,10 @@ module.exports = {
       gridAutoRows: {
         'recipes': '15rem'
       },
+      lineHeight: {
+        '11': '2.75rem',
+        '12': '3rem'
+      },
       screens: {
         'hd': '1920px'
       }

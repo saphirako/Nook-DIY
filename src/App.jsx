@@ -89,7 +89,6 @@ export default class App extends React.Component {
 					<Route exact path="/item" component={Item}/>
 					{/* <Route exact path="/plan" render={props => ()} /> */}
 					<Route exact path="/about" component={About} />
-					<p className="absolute inset-x-0 bottom-8 text-center">a project by <a className="text-highlight" href="https://www.saphirako.com">saphirako</a></p>
 				</Router>
 			</div>
 		)
