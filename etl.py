@@ -20,6 +20,8 @@ def check_update_needed():
     # Make sure we we want to run with newest possible
     if str(os.environ.get("TEST_ETL", False)).lower() == "true":
         logging.info(" downloading latest spreadsheet")
+        file_not_found = False
+
         # download the files
         gdown.download(os.environ["REACT_APP_ACNHAPI_SHEET_URI"], "theirs.xlsx", quiet=True)
 
@@ -27,13 +29,21 @@ def check_update_needed():
         with open("theirs.xlsx", "rb") as f:
             their_hash = hashlib.md5(f.read()).hexdigest()
 
-        with open("ours.xlsx", "rb") as f:
-            our_hash = hashlib.md5(f.read()).hexdigest()
+        try:
+            with open("ours.xlsx", "rb") as f:
+                our_hash = hashlib.md5(f.read()).hexdigest()
+        except FileNotFoundError:
+            file_not_found = True
+
 
         # if they are different, we need to update ours
-        if their_hash != our_hash:
+        if file_not_found or their_hash != our_hash:
             logging.info("Changes detected! Overwriting our saved file to be the most recent.")
-            os.remove("ours.xlsx")
+            
+            # only remove if it exists... duh.
+            if not file_not_found:
+                os.remove("ours.xlsx")
+            
             os.rename("theirs.xlsx", "ours.xlsx")
             return True
 
@@ -52,7 +62,7 @@ def extract():
 
     # generate dataframes
     with open("ours.xlsx", "rb") as f:
-        recipes_df = pd.read_excel(f, "Recipes")[
+        recipes_df = pd.read_excel(f, "Recipes", engine="openpyxl")[
             [
                 "Name",
                 "Material 1",
@@ -64,10 +74,10 @@ def extract():
                 "Card Color",
             ]
         ]
-        materials_df = pd.read_excel(f, "Other")[["Name", "Inventory Filename",]]
-        tools_df = pd.read_excel(f, "Tools")[["Name", "Filename",]]
-        furniture_df = pd.read_excel(f, "Housewares")[["Name", "Filename",]]
-        misc_df = pd.read_excel(f, "Miscellaneous")[["Name", "Filename",]]
+        materials_df = pd.read_excel(f, "Other", engine="openpyxl")[["Name", "Inventory Filename",]]
+        tools_df = pd.read_excel(f, "Tools", engine="openpyxl")[["Name", "Filename",]]
+        furniture_df = pd.read_excel(f, "Housewares", engine="openpyxl")[["Name", "Filename",]]
+        misc_df = pd.read_excel(f, "Miscellaneous", engine="openpyxl")[["Name", "Filename",]]
 
     # sanitize naming for sanity
     for i in range(1, 7):

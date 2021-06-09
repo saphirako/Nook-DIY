@@ -1,4 +1,4 @@
 gdown
-pandas
-xlrd==1.2.0
+pandas>=1.2
+openpyxl
 python-dotenv
