@@ -9,6 +9,7 @@ import Item from 'components/Pages/Item';
 import './App.css'
 import card_colors from 'data/colors.json'
 import local_recipes from 'data/temp_recipes.json' // Dummy data to test locally without hitting Nookipedia API
+import { defaultTransitionTime } from 'utils'
 
 const NOOKIPEDIA_TOKEN = process.env.REACT_APP_NOOKIPEDIA_TOKEN;
 const isLocalTest = (process.env.REACT_APP_USE_LOCAL_DATA === 'true');
@@ -19,6 +20,7 @@ export default class App extends React.Component {
 		this.state = {
 			nookipediaDataRetrieved: false,
 			recipes: null,
+			pageIsShowing: true
 		}
 	}
 
@@ -75,20 +77,55 @@ export default class App extends React.Component {
 		}
 	}
 
+
+	cueTransition(delay, event) {
+		let targetURL = null
+
+		if (event) {
+			event.preventDefault()
+			targetURL = event.currentTarget.href
+		}
+
+		if (targetURL === document.URL)
+			return
+
+		// Cause the transition
+		this.setState(prevState => ({
+			...prevState,
+			pageIsShowing: false
+		}));
+		
+		// This is so the exit animation has time to show
+		setTimeout(() => {this.setState(prevState => ({
+			...prevState,
+			pageIsShowing: true
+		}), () => {
+			if (targetURL) {
+				window.location.href = targetURL
+			}	
+		})}, delay === undefined ? defaultTransitionTime : delay)
+
+		
+	}
+
 	render() {
 		return (
 			<div className="font-semibold text-brown-600 w-full h-screen">
 				<Router>
-					<Header />
+					<Header transition={this.cueTransition.bind(this)} />
 					<Route exact path="/" render={props => (
 						<Craft
 							recipes={this.state.recipes}
 							nookipediaDataRetrieved={this.state.nookipediaDataRetrieved}
+							isShowing={this.state.pageIsShowing}
+							transition={this.cueTransition.bind(this)}
 						/>
 					)} />
-					<Route exact path="/item" component={Item}/>
+					<Route exact path="/item" component={Item} />
 					{/* <Route exact path="/plan" render={props => ()} /> */}
-					<Route exact path="/about" component={About} />
+					<Route exact path="/about" render={props => (
+						<About isShowing={this.state.pageIsShowing} />
+					)} />
 				</Router>
 			</div>
 		)

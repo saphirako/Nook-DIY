@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { defaultTransitionTime } from 'utils'
 
 export class Header extends React.Component {
     constructor(props) {
@@ -15,6 +16,14 @@ export class Header extends React.Component {
         }));
     }
 
+    triggerPageTransition(delay, event) {
+        // Always close the navdrawert after interaction
+        this.setState(prevState => ({ ...prevState, mobileNavbarIsOpen: false }))
+
+        // Cue that sweet, sweet transition
+        this.props.transition(delay, event)
+    }
+
     render() {
         var mobileMenuSandwich = "M4 6h16M4 12h16M4 18h16"
         var mobileMenuClose = "M6 18L18 6M6 6l12 12"
@@ -25,9 +34,15 @@ export class Header extends React.Component {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={this.state.mobileNavbarIsOpen ? mobileMenuClose : mobileMenuSandwich} />
                 </svg>
                 <nav className={"font-bold text-2xl text-brown-700 w-full h-screen text-center justify-center flex-col justify-items-end lg:h-auto lg:justify-end lg:flex-row " + ((this.state.mobileNavbarIsOpen || window.innerWidth >= 1024) ? "flex" : "hidden")}>
-                    <Link className="py-16 w-screen lg:w-2/12 " onClick={() => this.setState(prevState => ({ ...prevState, mobileNavbarIsOpen: false}))} to="/">craft</Link>
+                    <Link
+                        className="py-16 w-screen lg:w-2/12 "
+                        onClick={(event) => this.triggerPageTransition(100, event)}
+                        to="/">craft</Link>
+                    <Link
+                        className="py-16 w-screen lg:w-2/12 "
+                        onClick={(event) => this.triggerPageTransition(defaultTransitionTime, event)}
+                        to="/about">about</Link>
                     {/* <Link className="py-16 w-screen lg:w-2/12 " onClick={() => this.setState(prevState => ({ ...prevState, mobileNavbarIsOpen: false}))} to="/plan">plan</Link> */}
-                    <Link className="py-16 w-screen lg:w-2/12 " onClick={() => this.setState(prevState => ({ ...prevState, mobileNavbarIsOpen: false}))} to="/about">about</Link>
                 </nav>
             </div>
         )
