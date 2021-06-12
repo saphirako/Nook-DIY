@@ -11,7 +11,7 @@ function Banner(props) {
     const bannerInternals = <div className={"flex flex-row justify-end -ml-4 py-4 px-8 text-white rounded-2xl min-w-min max-w-max items-center gap-4 transition transform hover:scale-110 hover:text-4xl " + props.className}>{props.children}</div>
 
     return props.tooltip ?
-        <Tippy className="font-bold text-2xl" content={props.tooltip ? props.tooltip : ""} placement="right" delay={[100, 0]} duration={0}>
+        <Tippy className="font-bold text-xl" content={props.tooltip ? props.tooltip : ""} placement="right" delay={[100, 0]} duration={0}>
             {bannerInternals}
         </Tippy>
         :
