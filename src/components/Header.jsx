@@ -38,7 +38,7 @@ export class Header extends React.Component {
                 <nav className={"font-bold text-2xl text-brown-700 w-full h-screen text-center justify-center flex-col justify-items-end lg:h-auto lg:justify-end lg:flex-row " + ((this.state.mobileNavbarIsOpen || window.innerWidth >= 1024) ? "flex" : "hidden")}>
                     <Link
                         className="py-16 w-screen lg:w-2/12 "
-                        onClick={(event) => this.triggerPageTransition(100, event)}
+                        onClick={(event) => this.triggerPageTransition(defaultTransitionTime, event)}
                         to="/">craft</Link>
                     <Link
                         className="py-16 w-screen lg:w-2/12 "
