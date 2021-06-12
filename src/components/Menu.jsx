@@ -54,7 +54,7 @@ export default class Menu extends React.Component {
                 ...prevState,
                 materialList: materialList,
                 addedMaterials: newAddedMaterials,
-                itemCount: prevState.itemCount + 1
+                itemCount: Object.keys(materialList).length
             }));
 
             return itemCount + 1;
@@ -78,6 +78,7 @@ export default class Menu extends React.Component {
 
         this.setState(prevState => ({
             ...prevState,
+            itemCount: Object.keys(materialList).length,
             materialList: materialList,
             addedMaterials: newAddedMaterials
         }));
