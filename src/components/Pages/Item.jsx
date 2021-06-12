@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { ReactComponent as Hammer } from 'static/image/Hammer.svg'
-import { ReactComponent as NookipediaLogo } from 'static/image/Nookipedia.svg'
 import { Transition } from '@headlessui/react'
 import Tippy from '@tippyjs/react'
 import 'tippy.js/dist/tippy.css'
@@ -119,7 +118,7 @@ export default class Item extends Component {
 
                                 {/* If there's an unlock pre-req, display it here*/}
                                 {this.state.recipes_to_unlock > 0 ? (
-                                    <Banner className="bg-brown-600" tooltip="The required number of recipes you need to know to be able to unlock this DIY reciepe. (Unless you unlocked it from Tom Nook in early-game.)">
+                                    <Banner className="bg-brown-600" tooltip="The required number of recipes you need to know to be able to unlock this DIY recipe. (Unless you unlocked it from Tom Nook in early-game.)">
                                         <Hammer className="w-12 fill-current" alt="Hammer" />
                                         <p className="text-5xl">{this.state.recipes_to_unlock}</p>
                                     </Banner>
@@ -127,8 +126,8 @@ export default class Item extends Component {
 
                                 {/* Nookipedia Link */}
                                 <Link to={{ pathname: this.state.url }} target="_blank">
-                                    <Banner className="bg-nookipedia" tooltip="View this items article on Nookipedia">
-                                        <NookipediaLogo className="w-20" alt="Nookipedia Logo" />
+                                    <Banner className="bg-nookipedia pb-3" tooltip="View this item's article on Nookipedia">
+                                        <img src="https://dodo.ac/np/images/1/1e/Nookipedia_Logo_Outlined.png" className="w-32" alt="Nookipedia Logo" />
                                     </Banner>
                                 </Link>
                                 {/* <a className="w-4/5" href={this.state.url}><img src="https://dodo.ac/np/images/1/1e/Nookipedia_Logo_Outlined.png" alt="Nookipedia logo" /></a> */}
