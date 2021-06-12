@@ -23,9 +23,7 @@ export default class MenuItem extends React.Component {
     // Whenever the TextField for this material loses document focus
     onBlur() {
         // If the field has anything in it, we need to update the request to Nookipedia (even if removing)
-        if (this.inputField.current.value) {
             this.updateMaterialQuantity(this.state.materialName, parseInt(this.inputField.current.value))
-        }
     }
 
     removeFromList() {
@@ -40,7 +38,9 @@ export default class MenuItem extends React.Component {
                     <p className="capitalize">{this.state.materialName}</p>
                     <p className="flex-grow-0 font-bold transition transform hover:scale-125 hover:text-red-500" onClick={this.removeFromList.bind(this)}>✖</p>
                 </div>
-                <input className="w-1/6 my-2 mr-4 bg-brown-500 text-center rounded focus:outline-none" ref={this.inputField} type="number" placeholder="" onBlur={this.onBlur.bind(this)} />
+                <input className="w-1/6 my-2 mr-4 bg-brown-500 text-center rounded focus:outline-none" ref={this.inputField} type="number" placeholder="" onBlur={this.onBlur.bind(this)} onKeyUp={(event) => {
+                    if (event.key === 'Enter') this.onBlur()
+                    }}/>
             </div>
         )
     }
