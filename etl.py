@@ -111,6 +111,7 @@ def transform(recipes_df, materials_df, tools_df, furniture_df, misc_df):
     known_materials = material_data.keys()
     new_materials = []
     no_new_recipes = True
+    unfound_materials = False
 
     # TODO: Use a better pandas-like solution for the love of god.
     # Go through row-for-row 🤮 looking for new recipe/items & materials:
@@ -165,6 +166,10 @@ def transform(recipes_df, materials_df, tools_df, furniture_df, misc_df):
             continue
 
         logging.info(f" \tcannot find entry for '{material}'... And we tried extensively!")
+        unfound_materials = True
+
+    if unfound_materials:
+        raise Exception("NOOK_ERROR: Unable to find all matching materials. This needs to be handled locally!")
 
     return material_data, recipe_color_data
 
