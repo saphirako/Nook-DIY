@@ -111,7 +111,7 @@ export default class Craft extends React.Component {
                             </div>
                         </Transition>
                     </SimpleBar>
-                    <p className="absolute inset-x-0 bottom-8 text-center">a project by <a className="text-highlight" href="https://www.saphirako.com">saphirako</a></p>
+                    <p className="absolute inset-x-0 bottom-8 text-center">a project by <a className="text-highlight" href="https://www.twitch.tv/saphirako">saphirako</a></p>
                 </div>
                 :
                 <p className="h-screen text-center font-bold flex flex-col px-8 justify-center">The craft page is currently unavailable for mobile users. Please use the Desktop verison or try again later!</p>
