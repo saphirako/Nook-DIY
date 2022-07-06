@@ -37,7 +37,23 @@ module.exports = {
           DEFAULT: "#dfd7ac",
           600: "#855d2d",
           700: "#604320",
-        }
+        },
+        "acnh-red": "#d8595a",
+        "acnh-yellow": "#e7da77",
+        "acnh-green": "#95d57c",
+        "acnh-blue": "#bad5eb",
+        "acnh-brick": "#bc9e6e",
+        "acnh-light": "#b9babe",
+        "acnh-pink": "#f9b9ba",
+        "acnh-beige": "#e5daac",
+        "acnh-brown": "#94693c",
+        "acnh-orange": "#f6c568",
+        "acnh-dark": "#6a6a6e",
+        "acnh-white": "#e8e8e6",
+        "acnh-gold": "#d6c574",
+        "acnh-gold-border": "#AE9846",
+        "acnh-silver": "#9e9fa3",
+        "acnh-silver-border": "#787B7A"
       },
       gridAutoRows: {
         'recipes': '15rem'
