@@ -1,8 +1,8 @@
 {
-  "compilerOptions": {
-    "baseUrl": "src",
-    "outDir": "./build",
-    "target": "es5"
-  },
-  "include": ["./src/**/*"]
+    "compilerOptions": {
+        "baseUrl": "src",
+        "outDir": "./build",
+        "target": "es5"
+    },
+    "include": ["./src/**/*"]
 }

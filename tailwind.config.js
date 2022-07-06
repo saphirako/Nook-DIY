@@ -1,30 +1,30 @@
 module.exports = {
-  content:  [
-    './src/**/*.html',
-    './src/**/*.jsx',
-    './src/**/*.tsx',
-    './src/**/*.ts',
+  content: [
+    "./src/**/*.html",
+    "./src/**/*.jsx",
+    "./src/**/*.tsx",
+    "./src/**/*.ts",
   ],
   theme: {
-    borderWidth: theme => ({
-      DEFAULT: '1px',
-      '0': '0',
-      '2': '2px',
-      '3': '3px',
-      '4': '4px',
-      '6': '6px',
-      '8': '8px',
-      '12': '12px'
+    borderWidth: (theme) => ({
+      DEFAULT: "1px",
+      0: "0",
+      2: "2px",
+      3: "3px",
+      4: "4px",
+      6: "6px",
+      8: "8px",
+      12: "12px",
     }),
     fontFamily: {
-      sans: ['Nunito', 'sans-serif'],
+      sans: ["Nunito", "sans-serif"],
     },
     extend: {
-      backgroundImage: theme => ({
-        'diyrecipe': "url('static/image/diyBackground.png')"
+      backgroundImage: (theme) => ({
+        diyrecipe: "url('static/image/diyBackground.png')",
       }),
       boxShadow: {
-        'recipecard': '0px 13px 10px -8px rgba(41,40,35,0.56)'
+        recipecard: "0px 13px 10px -8px rgba(41,40,35,0.56)",
       },
       colors: {
         highlight: "#13c5cb",
@@ -54,22 +54,22 @@ module.exports = {
         "acnh-gold": "#d6c574",
         "acnh-gold-border": "#AE9846",
         "acnh-silver": "#9e9fa3",
-        "acnh-silver-border": "#787B7A"
+        "acnh-silver-border": "#787B7A",
       },
       gridAutoRows: {
-        'recipes': '15rem'
+        recipes: "15rem",
       },
       lineHeight: {
-        '11': '2.75rem',
-        '12': '3rem'
+        11: "2.75rem",
+        12: "3rem",
       },
       screens: {
-        'hd': '1920px'
-      }
+        hd: "1920px",
+      },
     },
   },
   variants: {
     extend: {},
   },
   plugins: [],
-}
+};
