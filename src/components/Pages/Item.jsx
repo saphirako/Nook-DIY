@@ -1,28 +1,28 @@
-import React, { useState } from "react";
-import { ReactComponent as Hammer } from "static/image/Hammer.svg";
-import { Transition } from "@headlessui/react";
-import Tippy from "@tippyjs/react";
-import "tippy.js/dist/tippy.css";
-import { Link } from "react-router-dom";
-import MaterialIcons from "data/materials.json";
-import { useLocation } from "react-router-dom";
+import React, { useState } from 'react'
+import { ReactComponent as Hammer } from 'static/image/Hammer.svg'
+import { Transition } from '@headlessui/react'
+import Tippy from '@tippyjs/react'
+import 'tippy.js/dist/tippy.css'
+import { Link } from 'react-router-dom'
+import MaterialIcons from 'data/materials.json'
+import { useLocation } from 'react-router-dom'
 
 function Banner(props) {
     const bannerInternals = (
         <div
             className={
-                "flex flex-row justify-end -ml-4 py-4 px-8 text-white rounded-2xl min-w-min max-w-max items-center gap-4 transition transform hover:scale-110 " +
+                'flex flex-row justify-end -ml-4 py-4 px-8 text-white rounded-2xl min-w-min max-w-max items-center gap-4 transition transform hover:scale-110 ' +
                 props.className
             }
         >
             {props.children}
         </div>
-    );
+    )
 
     return props.tooltip ? (
         <Tippy
             className="font-bold text-xl"
-            content={props.tooltip ? props.tooltip : ""}
+            content={props.tooltip ? props.tooltip : ''}
             placement="right"
             delay={[100, 0]}
             duration={0}
@@ -31,7 +31,7 @@ function Banner(props) {
         </Tippy>
     ) : (
         bannerInternals
-    );
+    )
 }
 
 function ItemBuySell(props) {
@@ -41,15 +41,15 @@ function ItemBuySell(props) {
             <img
                 className="w-1/2"
                 src={
-                    props.currency === "Bells"
-                        ? "https://acnhcdn.com/latest/MenuIcon/MoneyBag010.png"
-                        : "https://dodo.ac/np/images/1/10/Nook_Miles_NH_Icon.png"
+                    props.currency === 'Bells'
+                        ? 'https://acnhcdn.com/latest/MenuIcon/MoneyBag010.png'
+                        : 'https://dodo.ac/np/images/1/10/Nook_Miles_NH_Icon.png'
                 }
                 alt={`${props.type} ${props.currency} icon}`}
             />
             <p className="font-light">{props.value}</p>
         </div>
-    );
+    )
 }
 
 function RecipeIngredient(props) {
@@ -63,48 +63,48 @@ function RecipeIngredient(props) {
             <p className="pl-16 capitalize">{props.name}</p>
             <p className="w-12 text-center">x{props.quantity}</p>
         </div>
-    );
+    )
 }
 
 const sourceMap = {
-    "Tom Nook": "https://acnhcdn.com/latest/NpcIcon/rco.png",
-    Blathers: "https://acnhcdn.com/latest/NpcIcon/owl.png",
-    Balloons: "https://acnhcdn.com/latest/MenuIcon/Present.png",
-    Reese: "https://acnhcdn.com/latest/NpcIcon/alw.png",
-    Cyrus: "https://acnhcdn.com/latest/NpcIcon/alp.png",
-    Leif: "https://acnhcdn.com/latest/NpcIcon/slo.png",
-    Gulliver: "https://acnhcdn.com/latest/NpcIcon/gul.png",
-    Gullivarrr: "https://acnhcdn.com/latest/NpcIcon/gul.png",
-    Harvey: "https://acnhcdn.com/latest/NpcIcon/spn.png",
-    Jack: "https://acnhcdn.com/latest/NpcIcon/pkn.png",
-    Jingle: "https://acnhcdn.com/latest/NpcIcon/rei.png",
-    Franklin: "https://acnhcdn.com/latest/NpcIcon/tuk.png",
-    Celeste: "https://acnhcdn.com/latest/NpcIcon/ows.png",
-    Pavé: "https://acnhcdn.com/latest/NpcIcon/pck.png",
-    Saharah: "https://acnhcdn.com/latest/NpcIcon/cml.png",
-    Timmy: "https://acnhcdn.com/latest/NpcIcon/rcm.png",
-    Tommy: "https://acnhcdn.com/latest/NpcIcon/rct.png",
-    Zipper: "https://acnhcdn.com/latest/NpcIcon/pyn.png",
-    "K.K.": "https://acnhcdn.com/latest/NpcIcon/tkkA.png",
-    Pascal: "https://acnhcdn.com/latest/NpcIcon/seo.png",
-    Isabelle: "https://acnhcdn.com/latest/NpcIcon/sza.png",
-    "Lazy villager": "https://acnhcdn.com/latest/ManpuIcon/Sleepy.png",
-    "Jock villager": "https://acnhcdn.com/latest/ManpuIcon/SmugFace.png",
-    "Cranky villager": "https://acnhcdn.com/latest/ManpuIcon/Outraged.png",
-    "Smug villager": "https://acnhcdn.com/latest/ManpuIcon/Grin.png",
-    "Big sister villager": "https://acnhcdn.com/latest/ManpuIcon/Scheming.png",
-    "Normal villager": "https://acnhcdn.com/latest/ManpuIcon/Smiling.png",
-    "Peppy villager": "https://acnhcdn.com/latest/ManpuIcon/Cheering.png",
-    "Snooty villager": "https://acnhcdn.com/latest/ManpuIcon/Negative.png",
-    "Any villager": "https://acnhcdn.com/latest/ManpuIcon/AddViva.png",
-    "Egg bottle": "https://acnhcdn.com/latest/MenuIcon/MessageBottleEgg.png",
-    DEFAULT: "https://acnhcdn.com/latest/MenuIcon/SeedPitfall.png",
-    DIY: "https://acnhcdn.com/latest/MenuIcon/BookRecipe.png",
-    "Egg Bottle": "https://acnhcdn.com/latest/MenuIcon/MessageBottleEgg.png",
-    "Egg Balloon": "https://acnhcdn.com/latest/MenuIcon/EggSky.png",
-    Snowboy: "https://acnhcdn.com/latest/MenuIcon/SnowCrystal.png",
-    Fishing: "https://acnhcdn.com/latest/FtrIcon/ToolAngling_Remake_0_0.png",
-};
+    'Tom Nook': 'https://acnhcdn.com/latest/NpcIcon/rco.png',
+    Blathers: 'https://acnhcdn.com/latest/NpcIcon/owl.png',
+    Balloons: 'https://acnhcdn.com/latest/MenuIcon/Present.png',
+    Reese: 'https://acnhcdn.com/latest/NpcIcon/alw.png',
+    Cyrus: 'https://acnhcdn.com/latest/NpcIcon/alp.png',
+    Leif: 'https://acnhcdn.com/latest/NpcIcon/slo.png',
+    Gulliver: 'https://acnhcdn.com/latest/NpcIcon/gul.png',
+    Gullivarrr: 'https://acnhcdn.com/latest/NpcIcon/gul.png',
+    Harvey: 'https://acnhcdn.com/latest/NpcIcon/spn.png',
+    Jack: 'https://acnhcdn.com/latest/NpcIcon/pkn.png',
+    Jingle: 'https://acnhcdn.com/latest/NpcIcon/rei.png',
+    Franklin: 'https://acnhcdn.com/latest/NpcIcon/tuk.png',
+    Celeste: 'https://acnhcdn.com/latest/NpcIcon/ows.png',
+    Pavé: 'https://acnhcdn.com/latest/NpcIcon/pck.png',
+    Saharah: 'https://acnhcdn.com/latest/NpcIcon/cml.png',
+    Timmy: 'https://acnhcdn.com/latest/NpcIcon/rcm.png',
+    Tommy: 'https://acnhcdn.com/latest/NpcIcon/rct.png',
+    Zipper: 'https://acnhcdn.com/latest/NpcIcon/pyn.png',
+    'K.K.': 'https://acnhcdn.com/latest/NpcIcon/tkkA.png',
+    Pascal: 'https://acnhcdn.com/latest/NpcIcon/seo.png',
+    Isabelle: 'https://acnhcdn.com/latest/NpcIcon/sza.png',
+    'Lazy villager': 'https://acnhcdn.com/latest/ManpuIcon/Sleepy.png',
+    'Jock villager': 'https://acnhcdn.com/latest/ManpuIcon/SmugFace.png',
+    'Cranky villager': 'https://acnhcdn.com/latest/ManpuIcon/Outraged.png',
+    'Smug villager': 'https://acnhcdn.com/latest/ManpuIcon/Grin.png',
+    'Big sister villager': 'https://acnhcdn.com/latest/ManpuIcon/Scheming.png',
+    'Normal villager': 'https://acnhcdn.com/latest/ManpuIcon/Smiling.png',
+    'Peppy villager': 'https://acnhcdn.com/latest/ManpuIcon/Cheering.png',
+    'Snooty villager': 'https://acnhcdn.com/latest/ManpuIcon/Negative.png',
+    'Any villager': 'https://acnhcdn.com/latest/ManpuIcon/AddViva.png',
+    'Egg bottle': 'https://acnhcdn.com/latest/MenuIcon/MessageBottleEgg.png',
+    DEFAULT: 'https://acnhcdn.com/latest/MenuIcon/SeedPitfall.png',
+    DIY: 'https://acnhcdn.com/latest/MenuIcon/BookRecipe.png',
+    'Egg Bottle': 'https://acnhcdn.com/latest/MenuIcon/MessageBottleEgg.png',
+    'Egg Balloon': 'https://acnhcdn.com/latest/MenuIcon/EggSky.png',
+    Snowboy: 'https://acnhcdn.com/latest/MenuIcon/SnowCrystal.png',
+    Fishing: 'https://acnhcdn.com/latest/FtrIcon/ToolAngling_Remake_0_0.png',
+}
 
 // export default class Item extends Component {
 //     constructor(props) {
@@ -279,17 +279,17 @@ const sourceMap = {
 // }
 
 export default function Item() {
-    const props = useLocation();
-    const [show, setShow] = useState(true);
+    const props = useLocation()
+    const [show, setShow] = useState(true)
 
     const forceTransition = (event) => {
         if (props.state.transition === undefined) {
-            window.location.href = event.currentTarget.origin;
+            window.location.href = event.currentTarget.origin
         }
 
-        setShow(false);
-        props.state.transition(0, event);
-    };
+        setShow(false)
+        props.state.transition(0, event)
+    }
 
     return (
         <Transition
@@ -314,7 +314,7 @@ export default function Item() {
                             onClick={(event) => forceTransition(event)}
                         >
                             <Banner className="bg-red-500">
-                                <p>{"<- Back to the craft page"}</p>
+                                <p>{'<- Back to the craft page'}</p>
                             </Banner>
                         </Link>
 
@@ -364,13 +364,13 @@ export default function Item() {
                                     placement="bottom-end"
                                     content={
                                         [
-                                            "Tom Nook",
-                                            "Balloons",
-                                            "Cyrus",
-                                            "Gulliver",
-                                            "Gullivarrr",
-                                            "Harvey",
-                                            "Reese",
+                                            'Tom Nook',
+                                            'Balloons',
+                                            'Cyrus',
+                                            'Gulliver',
+                                            'Gullivarrr',
+                                            'Harvey',
+                                            'Reese',
                                         ].includes(source.from)
                                             ? `${source.from} (${source.note})`
                                             : source.from
@@ -385,14 +385,14 @@ export default function Item() {
                                                 ? sourceMap[source.from]
                                                 : source.from
                                                       .toLowerCase()
-                                                      .includes(" diy") ||
+                                                      .includes(' diy') ||
                                                   source.from
                                                       .toLowerCase()
-                                                      .includes("recipe")
+                                                      .includes('recipe')
                                                 ? sourceMap.DIY
                                                 : sourceMap.DEFAULT
                                         }
-                                        alt={source.from + " icon"}
+                                        alt={source.from + ' icon'}
                                     />
                                 </Tippy>
                             ))}
@@ -424,7 +424,7 @@ export default function Item() {
                                 currency="Bells"
                             />
                         ) : (
-                            ""
+                            ''
                         )}
                     </div>
                 </div>
@@ -441,5 +441,5 @@ export default function Item() {
                 </div>
             </div>
         </Transition>
-    );
+    )
 }
