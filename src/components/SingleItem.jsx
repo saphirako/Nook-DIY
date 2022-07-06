@@ -30,12 +30,12 @@ export default function SingleItem(props) {
         >
             <Link
                 to={{
-                    history: {pathname: "/item"},
+                    pathname: "item",
                     search: props.itemData.name,
-                    state: props.itemData,
                     isShowing: props.isShowing,
                     transition: props.transition,
                 }}
+                state={{...props.itemData}}
                 className={
                     "border-8 border-brown-100 shadow-recipecard rounded-xl w-44 relative bg-cover bg-diyrecipe transition-transform transform hover:-rotate-3 hover:scale-110 hover:z-50 " +
                     mapACNHDataToTailwind[props.itemData.card_color]

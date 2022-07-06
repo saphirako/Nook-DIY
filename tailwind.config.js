@@ -1,9 +1,8 @@
 module.exports = {
-  purge:  [
+  content:  [
     './src/**/*.html',
     './src/**/*.jsx',
   ],
-  darkMode: false, // or 'media' or 'class'
   theme: {
     borderWidth: theme => ({
       DEFAULT: '1px',

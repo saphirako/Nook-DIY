@@ -6,7 +6,6 @@ import Craft from "components/Pages/Craft";
 import About from "components/Pages/About";
 import Item from "components/Pages/Item";
 
-import "./App.css";
 import card_colors from "data/colors.json";
 import local_recipes from "data/temp_recipes.json"; // Dummy data to test locally without hitting Nookipedia API
 import { defaultTransitionTime } from "utils";
@@ -135,7 +134,7 @@ export default class App extends React.Component {
                                 />
                             }
                         />
-                        <Route path="item" component={<Item />} />
+                        <Route path="item" element={<Item />} />
                         {/* <Route exact path="/plan" render={props => ()} /> */}
                         <Route
                             path="about"

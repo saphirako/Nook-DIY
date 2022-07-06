@@ -37,11 +37,11 @@ export class Header extends React.Component {
                 </svg>
                 <nav className={"font-bold text-2xl text-brown-700 w-full h-screen text-center justify-center flex-col justify-items-end lg:h-auto lg:justify-end lg:flex-row " + ((this.state.mobileNavbarIsOpen || window.innerWidth >= 1024) ? "flex" : "hidden")}>
                     <Link
-                        className="py-16 w-screen lg:w-2/12 "
+                        className="py-16 w-screen lg:w-2/12  transition transform scale-90 hover:scale-100"
                         onClick={(event) => this.triggerPageTransition(defaultTransitionTime, event)}
                         to="/">craft</Link>
                     <Link
-                        className="py-16 w-screen lg:w-2/12 "
+                        className="py-16 w-screen lg:w-2/12 transition transform scale-90 hover:scale-100"
                         onClick={(event) => this.triggerPageTransition(defaultTransitionTime, event)}
                         to="/about">about</Link>
                     {/* <Link className="py-16 w-screen lg:w-2/12 " onClick={() => this.setState(prevState => ({ ...prevState, mobileNavbarIsOpen: false}))} to="/plan">plan</Link> */}
