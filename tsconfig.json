@@ -2,7 +2,10 @@
     "compilerOptions": {
         "baseUrl": "src",
         "outDir": "./build",
-        "target": "es5"
+        "target": "es5",
+        "jsx": "react-jsx",
+        "noImplicitAny": true,
+        "resolveJsonModule": true
     },
     "include": ["./src/**/*"]
 }
