@@ -335,9 +335,10 @@ export default function Item() {
                         ) : null}
 
                         {/* Nookipedia Link */}
-                        <Link
-                            to={{ pathname: props.state.url }}
+                        <a
+                            href={props.state.url}
                             target="_blank"
+                            rel="noreferrer"
                         >
                             <Banner
                                 className="bg-nookipedia pb-3"
@@ -349,7 +350,7 @@ export default function Item() {
                                     alt="Nookipedia Logo"
                                 />
                             </Banner>
-                        </Link>
+                        </a>
                         {/* <a className="w-4/5" href={props.state.url}><img src="https://dodo.ac/np/images/1/1e/Nookipedia_Logo_Outlined.png" alt="Nookipedia logo" /></a> */}
                     </div>
 
