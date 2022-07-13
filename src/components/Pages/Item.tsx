@@ -12,9 +12,7 @@ import {
     RecipeSource,
 } from 'components/Recipe'
 import { sourceMap, Transaction } from 'components/Item'
-// import { ReactComponent as Hammer} from 'static/image/Hammer.svg';
-
-const Hammer = require('static/image/Hammer.svg') as string
+import { ReactComponent as Hammer } from 'static/image/Hammer.svg'
 
 interface BannerProps {
     className: string
@@ -136,11 +134,7 @@ export default function Item() {
                                 className="bg-brown-600"
                                 tooltip="The required number of recipes you need to know to be able to unlock this DIY recipe. (Unless you unlocked it from Tom Nook in early-game.)"
                             >
-                                <img
-                                    src={Hammer}
-                                    className="w-12 fill-current"
-                                    alt="Hammer"
-                                />
+                                <Hammer className="w-12 fill-current" />
                                 <p className="text-5xl">
                                     {state.recipes_to_unlock.toString()}
                                 </p>
