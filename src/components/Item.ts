@@ -45,3 +45,8 @@ export type Item = {
     card_color?: Color
     image_url: string
 }
+
+export type Transaction = {
+    price: number
+    currency: string
+}

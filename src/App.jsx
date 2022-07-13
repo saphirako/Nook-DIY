@@ -134,7 +134,7 @@ export default class App extends React.Component {
                                 />
                             }
                         />
-                        <Route path="item/:id" render={<Item />} />
+                        <Route path="item" element={<Item />} />
                         {/* <Route exact path="/plan" render={props => ()} /> */}
                         <Route
                             path="about"

@@ -167,7 +167,7 @@ export type MaterialName =
     | 'gold armor'
     | 'sandy-beach flooring'
 
-type RecipeSource =
+export type RecipeSource =
     | 'Tom Nook'
     | 'Balloons'
     | 'Cyrus'
@@ -181,6 +181,7 @@ export interface Recipe {
     recipes_to_unlock: number
     availability: {}
     image_url: string
+    sell: number
 }
 
 export interface Currency {

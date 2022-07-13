@@ -1,17 +1,31 @@
-import React, { useState } from 'react'
-import { ReactComponent as Hammer } from 'static/image/Hammer.svg'
+import { Fragment, ReactElement, useState } from 'react'
 import { Transition } from '@headlessui/react'
 import Tippy from '@tippyjs/react'
 import 'tippy.js/dist/tippy.css'
 import { Link } from 'react-router-dom'
-import MaterialIcons from 'data/materials.json'
+import * as MaterialIcon from 'data/materials.json'
 import { useLocation } from 'react-router-dom'
+import {
+    Currency,
+    Ingredient,
+    MaterialName,
+    RecipeSource,
+} from 'components/Recipe'
+import { sourceMap, Transaction } from 'components/Item'
+// import { ReactComponent as Hammer} from 'static/image/Hammer.svg';
 
-function Banner(props) {
+const Hammer = require('static/image/Hammer.svg') as string
+
+interface BannerProps {
+    className: string
+    children: ReactElement | ReactElement[]
+    tooltip?: string
+}
+function Banner(props: BannerProps) {
     const bannerInternals = (
         <div
             className={
-                'flex flex-row justify-end -ml-4 py-4 px-8 text-white rounded-2xl min-w-min max-w-max items-center gap-4 transition transform hover:scale-110 ' +
+                'flex flex-row justify-end -ml-4 py-4 px-8 h-16 text-white rounded-2xl min-w-min max-w-max items-center gap-4 transition transform hover:scale-110 ' +
                 props.className
             }
         >
@@ -19,6 +33,7 @@ function Banner(props) {
         </div>
     )
 
+    // If this Banner has a tooltip, wrap it. Otherwise just display the banner.
     return props.tooltip ? (
         <Tippy
             className="font-bold text-xl"
@@ -34,7 +49,7 @@ function Banner(props) {
     )
 }
 
-function ItemBuySell(props) {
+function ItemBuySell(props: Currency) {
     return (
         <div className="flex flex-col w-32 h-32 -m-4 rounded-full bg-brown-100 p-2 text-center items-center justify-center">
             <p className="font-extrabold">{props.type}</p>
@@ -52,12 +67,12 @@ function ItemBuySell(props) {
     )
 }
 
-function RecipeIngredient(props) {
+function RecipeIngredient(props: Ingredient) {
     return (
         <div className="flex flex-row w-5/6 hd:w-3/5 justify-between items-center text-xl">
             <img
                 className="absolute w-16 h-auto"
-                src={MaterialIcons[props.name.toLowerCase()]}
+                src={MaterialIcon[props.name]}
                 alt={`${props.name} menu icon`}
             />
             <p className="pl-16 capitalize">{props.name}</p>
@@ -66,64 +81,33 @@ function RecipeIngredient(props) {
     )
 }
 
-const sourceMap = {
-    'Tom Nook': 'https://acnhcdn.com/latest/NpcIcon/rco.png',
-    Blathers: 'https://acnhcdn.com/latest/NpcIcon/owl.png',
-    Balloons: 'https://acnhcdn.com/latest/MenuIcon/Present.png',
-    Reese: 'https://acnhcdn.com/latest/NpcIcon/alw.png',
-    Cyrus: 'https://acnhcdn.com/latest/NpcIcon/alp.png',
-    Leif: 'https://acnhcdn.com/latest/NpcIcon/slo.png',
-    Gulliver: 'https://acnhcdn.com/latest/NpcIcon/gul.png',
-    Gullivarrr: 'https://acnhcdn.com/latest/NpcIcon/gul.png',
-    Harvey: 'https://acnhcdn.com/latest/NpcIcon/spn.png',
-    Jack: 'https://acnhcdn.com/latest/NpcIcon/pkn.png',
-    Jingle: 'https://acnhcdn.com/latest/NpcIcon/rei.png',
-    Franklin: 'https://acnhcdn.com/latest/NpcIcon/tuk.png',
-    Celeste: 'https://acnhcdn.com/latest/NpcIcon/ows.png',
-    Pavé: 'https://acnhcdn.com/latest/NpcIcon/pck.png',
-    Saharah: 'https://acnhcdn.com/latest/NpcIcon/cml.png',
-    Timmy: 'https://acnhcdn.com/latest/NpcIcon/rcm.png',
-    Tommy: 'https://acnhcdn.com/latest/NpcIcon/rct.png',
-    Zipper: 'https://acnhcdn.com/latest/NpcIcon/pyn.png',
-    'K.K.': 'https://acnhcdn.com/latest/NpcIcon/tkkA.png',
-    Pascal: 'https://acnhcdn.com/latest/NpcIcon/seo.png',
-    Isabelle: 'https://acnhcdn.com/latest/NpcIcon/sza.png',
-    'Lazy villager': 'https://acnhcdn.com/latest/ManpuIcon/Sleepy.png',
-    'Jock villager': 'https://acnhcdn.com/latest/ManpuIcon/SmugFace.png',
-    'Cranky villager': 'https://acnhcdn.com/latest/ManpuIcon/Outraged.png',
-    'Smug villager': 'https://acnhcdn.com/latest/ManpuIcon/Grin.png',
-    'Big sister villager': 'https://acnhcdn.com/latest/ManpuIcon/Scheming.png',
-    'Normal villager': 'https://acnhcdn.com/latest/ManpuIcon/Smiling.png',
-    'Peppy villager': 'https://acnhcdn.com/latest/ManpuIcon/Cheering.png',
-    'Snooty villager': 'https://acnhcdn.com/latest/ManpuIcon/Negative.png',
-    'Any villager': 'https://acnhcdn.com/latest/ManpuIcon/AddViva.png',
-    'Egg bottle': 'https://acnhcdn.com/latest/MenuIcon/MessageBottleEgg.png',
-    DEFAULT: 'https://acnhcdn.com/latest/MenuIcon/SeedPitfall.png',
-    DIY: 'https://acnhcdn.com/latest/MenuIcon/BookRecipe.png',
-    'Egg Bottle': 'https://acnhcdn.com/latest/MenuIcon/MessageBottleEgg.png',
-    'Egg Balloon': 'https://acnhcdn.com/latest/MenuIcon/EggSky.png',
-    Snowboy: 'https://acnhcdn.com/latest/MenuIcon/SnowCrystal.png',
-    Fishing: 'https://acnhcdn.com/latest/FtrIcon/ToolAngling_Remake_0_0.png',
+interface ItemPageDefaultState {
+    isShowing: boolean
+    recipes_to_unlock: number
+    url: string // Nookipedia URL
+    availability: Array<{
+        from: RecipeSource
+        note: string
+    }>
+    image_url: string
+    name: string
+    buy: Transaction | Array<Transaction>
+    sell: number
+    materials: { [K in MaterialName]: number }
+    rendered: boolean
 }
 
 export default function Item() {
-    const props = useLocation()
-    const [show, setShow] = useState(true)
+    let location = useLocation()
+    const [state, _] = useState({
+        ...(location.state as ItemPageDefaultState),
+    })
 
-    const forceTransition = (event) => {
-        if (props.state.transition === undefined) {
-            window.location.href = event.currentTarget.origin
-        }
-
-        setShow(false)
-        props.state.transition(0, event)
-    }
-
-    return (
+    return location.state ? (
         <Transition
-            as={React.Fragment}
+            as={Fragment}
             appear={true}
-            show={show}
+            show={state.isShowing}
             enter="transform transition duration-300"
             enterFrom="opacity-0 scale-125"
             enterTo="opacity-100 scale-100"
@@ -139,7 +123,7 @@ export default function Item() {
                         {/*  Go back banner */}
                         <Link
                             to="/"
-                            onClick={(event) => forceTransition(event)}
+                            // onClick={(event) => forceTransition(event)}
                         >
                             <Banner className="bg-red-500">
                                 <p>{'<- Back to the craft page'}</p>
@@ -147,27 +131,24 @@ export default function Item() {
                         </Link>
 
                         {/* If there's an unlock pre-req, display it here*/}
-                        {props.state.recipes_to_unlock > 0 ? (
+                        {state.recipes_to_unlock > 0 ? (
                             <Banner
                                 className="bg-brown-600"
                                 tooltip="The required number of recipes you need to know to be able to unlock this DIY recipe. (Unless you unlocked it from Tom Nook in early-game.)"
                             >
-                                <Hammer
+                                <img
+                                    src={Hammer}
                                     className="w-12 fill-current"
                                     alt="Hammer"
                                 />
                                 <p className="text-5xl">
-                                    {props.state.recipes_to_unlock}
+                                    {state.recipes_to_unlock.toString()}
                                 </p>
                             </Banner>
                         ) : null}
 
                         {/* Nookipedia Link */}
-                        <a
-                            href={props.state.url}
-                            target="_blank"
-                            rel="noreferrer"
-                        >
+                        <a href={state.url} target="_blank" rel="noreferrer">
                             <Banner
                                 className="bg-nookipedia pb-3"
                                 tooltip="View this item's article on Nookipedia"
@@ -186,7 +167,7 @@ export default function Item() {
                     <div className="w-5/6 rounded-2xl -ml-4 p-4 pl-8 bg-brown-100">
                         <p className="text-xl">Obtained from:</p>
                         <div className="flex flex-row gap-2">
-                            {props.state.availability.map((source) => (
+                            {state.availability.map((source) => (
                                 <Tippy
                                     key={source.from}
                                     className="font-bold"
@@ -232,24 +213,29 @@ export default function Item() {
                 {/*  Middle: Item image and purchase/sell info */}
                 <div className="w-1/2 xl:w-3/5 h-auto flex flex-col justify-center items-center">
                     <p className="font-extrabold text-4xl text-center py-4">
-                        {props.state.name}
+                        {state.name}
                     </p>
-                    <img
-                        src={props.state.image_url}
-                        alt={`${props.state.name} in-game`}
-                    />
+                    <img src={state.image_url} alt={`${state.name} in-game`} />
                     <div className="p-16 flex flex-row">
-                        {props.state.buy.map((transaction) => (
+                        {Array.isArray(state.buy) ? (
+                            state.buy.map((transaction: Transaction) => (
+                                <ItemBuySell
+                                    type="Buy"
+                                    value={transaction.price}
+                                    currency={transaction.currency}
+                                />
+                            ))
+                        ) : (
                             <ItemBuySell
                                 type="Buy"
-                                value={transaction.price}
-                                currency={transaction.currency}
+                                value={state.buy.price}
+                                currency={state.buy.currency}
                             />
-                        ))}
-                        {props.state.sell > 0 ? (
+                        )}
+                        {state.sell > 0 ? (
                             <ItemBuySell
                                 type="Sell"
-                                value={props.state.sell}
+                                value={state.sell}
                                 currency="Bells"
                             />
                         ) : (
@@ -260,15 +246,19 @@ export default function Item() {
 
                 {/* Right: Item build info */}
                 <div className="w-1/4 xl:w-1/5 flex flex-col -mr-2 xl:-mr-8 gap-10 rounded-2xl p-4 pr-0 bg-brown-100 self-center justify-center items-start h-auto">
-                    {Object.keys(props.state.materials).map((ingredient) => (
-                        <RecipeIngredient
-                            name={ingredient}
-                            key={ingredient}
-                            quantity={props.state.materials[ingredient]}
-                        />
-                    ))}
+                    {Object.keys(state.materials).map(
+                        (ingredient: MaterialName) => (
+                            <RecipeIngredient
+                                name={ingredient}
+                                key={ingredient}
+                                quantity={state.materials[ingredient]}
+                            />
+                        )
+                    )}
                 </div>
             </div>
         </Transition>
+    ) : (
+        <></>
     )
 }

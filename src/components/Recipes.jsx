@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import SingleItem from './SingleItem'
+import ItemCard from './ItemCard'
 
 export default class Recipes extends Component {
     helper(filterMaterials, recipe) {
@@ -88,7 +88,7 @@ export default class Recipes extends Component {
                 className="hidden w-3/5 p-4 auto-rows-recipes place-items-center items-stretch lg:grid grid-cols-2 xl:grid-cols-4 2xl:grid-cols-5 gap-8"
             >
                 {renderChoice.map((recipe) => (
-                    <SingleItem
+                    <ItemCard
                         key={recipe.name}
                         focusMe={this.props.focusItem}
                         itemData={recipe}
