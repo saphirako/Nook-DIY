@@ -2,7 +2,7 @@ import { Fragment, ReactElement, useState } from 'react'
 import { Transition } from '@headlessui/react'
 import Tippy from '@tippyjs/react'
 import 'tippy.js/dist/tippy.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import * as MaterialIcon from 'data/materials.json'
 import { useLocation } from 'react-router-dom'
 import {
@@ -18,6 +18,7 @@ interface BannerProps {
     className: string
     children: ReactElement | ReactElement[]
     tooltip?: string
+    onClick?: Function
 }
 function Banner(props: BannerProps) {
     const bannerInternals = (
@@ -96,12 +97,20 @@ interface ItemPageDefaultState {
 }
 
 export default function Item() {
-    let location = useLocation()
-    const [state, _] = useState({
+    const location = useLocation()
+    const navigate = useNavigate()
+    const [state, setState] = useState({
         ...(location.state as ItemPageDefaultState),
     })
 
-    return location.state ? (
+    // Prevent state-less render
+    if (!location.state) return <></>
+
+    if (!state.isShowing) {
+        navigate(-1)
+    }
+
+    return (
         <Transition
             as={Fragment}
             appear={true}
@@ -123,7 +132,12 @@ export default function Item() {
                             to="/"
                             // onClick={(event) => forceTransition(event)}
                         >
-                            <Banner className="bg-red-500">
+                            <Banner
+                                className="bg-red-500"
+                                onClick={() =>
+                                    setState({ ...state, isShowing: false })
+                                }
+                            >
                                 <p>{'<- Back to the craft page'}</p>
                             </Banner>
                         </Link>
@@ -252,7 +266,5 @@ export default function Item() {
                 </div>
             </div>
         </Transition>
-    ) : (
-        <></>
     )
 }

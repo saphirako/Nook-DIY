@@ -9,7 +9,6 @@ import { Item } from './Item'
 interface ItemCardProps {
     itemData: Item
     isShowing: boolean
-    focusMe: (arg0: Item, arg1: MouseEvent<HTMLAnchorElement>) => null
 }
 
 export default function ItemCard(props: ItemCardProps) {

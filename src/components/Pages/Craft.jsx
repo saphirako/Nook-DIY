@@ -55,19 +55,6 @@ export default class Craft extends React.Component {
         }))
     }
 
-    focusItem(item, event) {
-        this.setState(
-            (prevState) => ({
-                ...prevState,
-                itemHasFocus: {
-                    value: true,
-                    item: item,
-                },
-            }),
-            this.props.transition()
-        )
-    }
-
     render() {
         return window.screen.width >= 1024 ? (
             <div className="h-3/4">
@@ -88,9 +75,6 @@ export default class Craft extends React.Component {
                                 recipes={this.props.recipes}
                                 filterBy={this.state.selectedMaterials}
                                 filterPresets={this.state.filterPresets}
-                                focusItem={this.focusItem.bind(this)}
-                                isShowing={this.props.isShowing}
-                                transition={this.props.transition}
                             />
                             <Menu
                                 addMaterialToFilterList={this.addMaterialToFilterList.bind(
