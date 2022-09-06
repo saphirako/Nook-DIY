@@ -5,12 +5,7 @@ import 'tippy.js/dist/tippy.css'
 import { Link, useNavigate } from 'react-router-dom'
 import * as MaterialIcon from 'data/materials.json'
 import { useLocation } from 'react-router-dom'
-import {
-    Currency,
-    Ingredient,
-    MaterialName,
-    RecipeSource,
-} from 'components/Recipe'
+import { Currency, Ingredient, MaterialName, RecipeSource } from 'components/Recipe'
 import { sourceMap, Transaction } from 'components/Item'
 import { ReactComponent as Hammer } from 'static/image/Hammer.svg'
 
@@ -134,9 +129,7 @@ export default function Item() {
                         >
                             <Banner
                                 className="bg-red-500"
-                                onClick={() =>
-                                    setState({ ...state, isShowing: false })
-                                }
+                                onClick={() => setState({ ...state, isShowing: false })}
                             >
                                 <p>{'<- Back to the craft page'}</p>
                             </Banner>
@@ -149,9 +142,7 @@ export default function Item() {
                                 tooltip="The required number of recipes you need to know to be able to unlock this DIY recipe. (Unless you unlocked it from Tom Nook in early-game.)"
                             >
                                 <Hammer className="w-12 fill-current" />
-                                <p className="text-5xl">
-                                    {state.recipes_to_unlock.toString()}
-                                </p>
+                                <p className="text-5xl">{state.recipes_to_unlock.toString()}</p>
                             </Banner>
                         ) : null}
 
@@ -197,16 +188,10 @@ export default function Item() {
                                     <img
                                         className="w-1/4"
                                         src={
-                                            Object.keys(sourceMap).includes(
-                                                source.from
-                                            )
+                                            Object.keys(sourceMap).includes(source.from)
                                                 ? sourceMap[source.from]
-                                                : source.from
-                                                      .toLowerCase()
-                                                      .includes(' diy') ||
-                                                  source.from
-                                                      .toLowerCase()
-                                                      .includes('recipe')
+                                                : source.from.toLowerCase().includes(' diy') ||
+                                                  source.from.toLowerCase().includes('recipe')
                                                 ? sourceMap.DIY
                                                 : sourceMap.DEFAULT
                                         }
@@ -220,9 +205,7 @@ export default function Item() {
 
                 {/*  Middle: Item image and purchase/sell info */}
                 <div className="w-1/2 xl:w-3/5 h-auto flex flex-col justify-center items-center">
-                    <p className="font-extrabold text-4xl text-center py-4">
-                        {state.name}
-                    </p>
+                    <p className="font-extrabold text-4xl text-center py-4">{state.name}</p>
                     <img src={state.image_url} alt={`${state.name} in-game`} />
                     <div className="p-16 flex flex-row">
                         {Array.isArray(state.buy) ? (
@@ -241,11 +224,7 @@ export default function Item() {
                             />
                         )}
                         {state.sell > 0 ? (
-                            <ItemBuySell
-                                type="Sell"
-                                value={state.sell}
-                                currency="Bells"
-                            />
+                            <ItemBuySell type="Sell" value={state.sell} currency="Bells" />
                         ) : (
                             ''
                         )}
@@ -254,15 +233,13 @@ export default function Item() {
 
                 {/* Right: Item build info */}
                 <div className="w-1/4 xl:w-1/5 flex flex-col -mr-2 xl:-mr-8 gap-10 rounded-2xl p-4 pr-0 bg-brown-100 self-center justify-center items-start h-auto">
-                    {Object.keys(state.materials).map(
-                        (ingredient: MaterialName) => (
-                            <RecipeIngredient
-                                name={ingredient}
-                                key={ingredient}
-                                quantity={state.materials[ingredient]}
-                            />
-                        )
-                    )}
+                    {Object.keys(state.materials).map((ingredient: MaterialName) => (
+                        <RecipeIngredient
+                            name={ingredient}
+                            key={ingredient}
+                            quantity={state.materials[ingredient]}
+                        />
+                    ))}
                 </div>
             </div>
         </Transition>

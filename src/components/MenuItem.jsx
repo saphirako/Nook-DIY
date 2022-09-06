@@ -36,18 +36,13 @@ export default class MenuItem extends React.Component {
         return (
             <div
                 className={
-                    'flex rounded-xl p-2 ' +
-                    (this.props.offset % 2 === 1 ? 'bg-brown-300' : '')
+                    'flex rounded-xl p-2 ' + (this.props.offset % 2 === 1 ? 'bg-brown-300' : '')
                 }
             >
                 <img
                     className="w-16 h-auto"
                     src={this.state.materialImage}
-                    alt={
-                        'Inventory icon for ' +
-                        this.state.materialName +
-                        ' material.'
-                    }
+                    alt={'Inventory icon for ' + this.state.materialName + ' material.'}
                 />
                 <div className="flex items-center justify-start gap-4 w-full mx-4">
                     <p className="capitalize">{this.state.materialName}</p>

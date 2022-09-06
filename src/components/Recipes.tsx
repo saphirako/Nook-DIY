@@ -36,23 +36,18 @@ export default function Recipes(props: RecipesProps) {
 
         // Craftable preset filter:
         if (filterPresets.craftable.value) {
-            Object.keys(materialsToFilter).forEach(
-                (mtfMaterialName: MaterialName) => {
-                    if (typeof mtfMaterialName !== 'undefined') {
-                        filtered = filtered.filter(
-                            (recipe) =>
-                                recipe.materials[mtfMaterialName] <=
-                                    materialsToFilter[mtfMaterialName] &&
-                                Object.keys(materialsToFilter).some(
-                                    (material) =>
-                                        Object.keys(recipe.materials).includes(
-                                            material
-                                        )
-                                )
-                        )
-                    }
+            Object.keys(materialsToFilter).forEach((mtfMaterialName: MaterialName) => {
+                if (typeof mtfMaterialName !== 'undefined') {
+                    filtered = filtered.filter(
+                        (recipe) =>
+                            recipe.materials[mtfMaterialName] <=
+                                materialsToFilter[mtfMaterialName] &&
+                            Object.keys(materialsToFilter).some((material) =>
+                                Object.keys(recipe.materials).includes(material)
+                            )
+                    )
                 }
-            )
+            })
         }
         return filtered
     }
@@ -72,11 +67,7 @@ export default function Recipes(props: RecipesProps) {
             className="hidden w-3/5 p-4 auto-rows-recipes place-items-center items-stretch lg:grid grid-cols-2 xl:grid-cols-4 2xl:grid-cols-5 gap-8"
         >
             {renderChoice.map((recipe) => (
-                <ItemCard
-                    key={recipe.name}
-                    itemData={recipe}
-                    isShowing={true}
-                />
+                <ItemCard key={recipe.name} itemData={recipe} isShowing={true} />
             ))}
         </div>
     ) : (

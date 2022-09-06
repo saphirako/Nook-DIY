@@ -37,10 +37,7 @@ export default class MenuAutocomplete extends Component {
         this.setState((prevState) => ({
             ...prevState,
             hasMargin:
-                this.addMaterialToList(
-                    selectedMaterial,
-                    prevState.materials[selectedMaterial]
-                ) > 0,
+                this.addMaterialToList(selectedMaterial, prevState.materials[selectedMaterial]) > 0,
             possibleMatches: null,
         }))
         this.inputObject.current.value = ''
@@ -52,10 +49,7 @@ export default class MenuAutocomplete extends Component {
 
     render() {
         let matches = []
-        if (
-            this.state.possibleMatches &&
-            this.state.possibleMatches.length > 0
-        ) {
+        if (this.state.possibleMatches && this.state.possibleMatches.length > 0) {
             matches = (
                 <div className="p-4 pt-0 max-h-56 overflow-y-auto">
                     {this.state.possibleMatches.map((match) => (

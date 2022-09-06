@@ -15,9 +15,7 @@ export default function Header() {
             <NookDIYLogo
                 className={
                     'absolute w-2/5 left-10 lg:left-24 hd:left-56 top-5 lg:top-0 lg:w-1/5 ' +
-                    (!mobileNavbarIsOpen || window.innerWidth > 1024
-                        ? 'visible'
-                        : 'invisible')
+                    (!mobileNavbarIsOpen || window.innerWidth > 1024 ? 'visible' : 'invisible')
                 }
             />
             <svg
@@ -32,19 +30,13 @@ export default function Header() {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="2"
-                    d={
-                        mobileNavbarIsOpen
-                            ? mobileMenuClose
-                            : mobileMenuSandwich
-                    }
+                    d={mobileNavbarIsOpen ? mobileMenuClose : mobileMenuSandwich}
                 />
             </svg>
             <nav
                 className={
                     'font-bold text-2xl text-brown-700 w-full h-screen text-center justify-center flex-col justify-items-end lg:h-auto lg:justify-end lg:flex-row ' +
-                    (mobileNavbarIsOpen || window.innerWidth >= 1024
-                        ? 'flex'
-                        : 'hidden')
+                    (mobileNavbarIsOpen || window.innerWidth >= 1024 ? 'flex' : 'hidden')
                 }
             >
                 <Link

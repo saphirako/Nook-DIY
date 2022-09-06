@@ -1,10 +1,5 @@
 module.exports = {
-    content: [
-        './src/**/*.html',
-        './src/**/*.jsx',
-        './src/**/*.tsx',
-        './src/**/*.ts',
-    ],
+    content: ['./src/**/*.html', './src/**/*.jsx', './src/**/*.tsx', './src/**/*.ts'],
     theme: {
         borderWidth: (theme) => ({
             DEFAULT: '1px',

@@ -34,9 +34,7 @@ export default class App extends React.Component {
             if (!alreadySeen[recipe.name]) {
                 recipe_materials = {}
                 recipe.materials.map(
-                    (material) =>
-                        (recipe_materials[material.name.toLowerCase()] =
-                            material.count)
+                    (material) => (recipe_materials[material.name.toLowerCase()] = material.count)
                 )
                 cleanedData.push({
                     ...recipe,
@@ -67,9 +65,7 @@ export default class App extends React.Component {
                 redirect: 'follow',
             })
                 .then((response) => response.json())
-                .then((recipesFromAPI) =>
-                    this.cleanseAPIAndAddLocalData(recipesFromAPI)
-                )
+                .then((recipesFromAPI) => this.cleanseAPIAndAddLocalData(recipesFromAPI))
                 .then((ourCompleteRecipes) =>
                     this.setState((prevState) => ({
                         ...prevState,
@@ -126,9 +122,7 @@ export default class App extends React.Component {
                             element={
                                 <Craft
                                     recipes={this.state.recipes}
-                                    nookipediaDataRetrieved={
-                                        this.state.nookipediaDataRetrieved
-                                    }
+                                    nookipediaDataRetrieved={this.state.nookipediaDataRetrieved}
                                     isShowing={this.state.pageIsShowing}
                                     transition={this.cueTransition.bind(this)}
                                 />
@@ -138,9 +132,7 @@ export default class App extends React.Component {
                         {/* <Route exact path="/plan" render={props => ()} /> */}
                         <Route
                             path="about"
-                            element={
-                                <About isShowing={this.state.pageIsShowing} />
-                            }
+                            element={<About isShowing={this.state.pageIsShowing} />}
                         />
                     </Routes>
                 </Router>

@@ -23,12 +23,7 @@ export default function ItemCard(props: ItemCardProps) {
     }
 
     return (
-        <Tippy
-            className="font-bold"
-            content={props.itemData.name}
-            delay={[100, 0]}
-            duration={0}
-        >
+        <Tippy className="font-bold" content={props.itemData.name} delay={[100, 0]} duration={0}>
             <div
                 className={
                     'border-8 border-brown-100 shadow-recipecard rounded-xl w-44 relative bg-cover bg-diyrecipe transition-transform transform hover:-rotate-3 hover:scale-110 hover:z-50 ' +
