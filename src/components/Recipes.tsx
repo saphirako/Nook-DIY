@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react'
 import ItemCard from './ItemCard'
-import { Ingredient, MaterialName, Recipe } from './Recipe'
+import { MaterialName, Recipe } from './Recipe'
 
-type RecipeFilterPresests = 'craftable' | 'other'
+export type RecipeFilterPresests = 'craftable' | 'other'
 
 interface RecipesProps {
     recipes: Array<Recipe>
     filterBy: { [K in MaterialName]: number }
     filterPresets: // | { desc: string; value: string }
-    { [K in RecipeFilterPresests]: { desc: string; value: string } }
+    { [K in RecipeFilterPresests]: { desc: string; value: boolean } }
 }
 
 const includesMaterialFilter = (

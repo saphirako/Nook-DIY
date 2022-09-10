@@ -77,7 +77,6 @@ export default class Craft extends React.Component {
                                 filterPresets={this.state.filterPresets}
                             />
                             <Menu
-                                addMaterialToFilterList={this.addMaterialToFilterList.bind(this)}
                                 updateMaterialFilterList={this.updateMaterialFilterList.bind(this)}
                                 filterPresets={this.state.filterPresets}
                                 toggleFilter={(filterToToggle) => {
