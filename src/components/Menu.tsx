@@ -263,7 +263,6 @@ export default function Menu(props: MenuProps) {
                         setMatch(material)
                         setPossibleMatches(materialsList)
                     }}
-                    nullable
                 >
                     <div className="relative mt-1">
                         <div className="relative w-full cursor-default overflow-hidden rounded-lg text-left shadow-sm outline-none focus:outline-none sm:text-sm">

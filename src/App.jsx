@@ -113,7 +113,7 @@ export default class App extends React.Component {
 
     render() {
         return (
-            <div className="font-semibold text-brown-600 w-full h-screen">
+            <div className="font-semibold text-brown-600 w-full h-screen bg-brown-300">
                 <Router>
                     <Header transition={this.cueTransition.bind(this)} />
                     <Routes>
