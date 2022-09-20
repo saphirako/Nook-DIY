@@ -182,7 +182,7 @@ export interface Recipe {
     availability: {}
     image_url: string
     sell: number
-    materials: Array<Ingredient>
+    materials: Record<MaterialName, number | null>
 }
 
 export interface Currency {

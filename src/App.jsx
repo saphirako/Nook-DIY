@@ -122,9 +122,7 @@ export default class App extends React.Component {
                             element={
                                 <Craft
                                     recipes={this.state.recipes}
-                                    nookipediaDataRetrieved={this.state.nookipediaDataRetrieved}
-                                    isShowing={this.state.pageIsShowing}
-                                    transition={this.cueTransition.bind(this)}
+                                    // isShowing={this.state.pageIsShowing}
                                 />
                             }
                         />

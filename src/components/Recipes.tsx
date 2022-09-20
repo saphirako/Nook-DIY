@@ -1,18 +1,15 @@
-import { useEffect, useState } from 'react'
+import { FilterPresetType } from './filters'
 import ItemCard from './ItemCard'
 import { MaterialName, Recipe } from './Recipe'
 
-export type RecipeFilterPresests = 'craftable' | 'other'
-
 interface RecipesProps {
     recipes: Array<Recipe>
-    filterBy: { [K in MaterialName]: number }
-    filterPresets: // | { desc: string; value: string }
-    { [K in RecipeFilterPresests]: { desc: string; value: boolean } }
+    filterBy: Partial<Record<MaterialName, number | null>>
+    filterPresets: FilterPresetType
 }
 
 const includesMaterialFilter = (
-    filterMaterials: { [K in MaterialName]: number },
+    filterMaterials: Partial<Record<MaterialName, number | null>>,
     recipe: Recipe
 ) => {
     let tmp = Object.keys(recipe.materials).filter((material) =>
@@ -23,12 +20,9 @@ const includesMaterialFilter = (
 
 export default function Recipes(props: RecipesProps) {
     // Detect if we have Nookipedia data or if we should render a loading screen
-    const { filterBy, filterPresets } = props
-    const [recipes, setRecipes] = useState([])
+    const { recipes, filterBy, filterPresets } = props
 
-    const filterRecipes = (materialsToFilter: {
-        [K in MaterialName]: number
-    }) => {
+    const filterRecipes = (materialsToFilter: Partial<Record<MaterialName, number | null>>) => {
         // Get recipes that have the provided materials in them at all
         let filtered = recipes.filter((recipe: Recipe) =>
             includesMaterialFilter(materialsToFilter, recipe)
@@ -55,11 +49,6 @@ export default function Recipes(props: RecipesProps) {
     // If we haven't filtered yet, use the complete list of recipes, otherwise use the subset of the complete list
     let renderChoice: Array<Recipe> =
         Object.keys(filterBy).length === 0 ? recipes : filterRecipes(filterBy)
-
-    // Load in recipes from props on component mount
-    useEffect(() => {
-        setRecipes(props.recipes)
-    })
 
     return recipes ? (
         <div
