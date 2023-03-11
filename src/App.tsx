@@ -68,7 +68,7 @@ export default function App() {
     }, [])
 
     return (
-        <div className="font-semibold text-brown-600 w-full h-screen bg-brown-300">
+        <div className="font-semibold text-brown-600 w-full max-w-screen-hd h-screen mx-auto">
             <Router>
                 <Header />
                 <Routes>
