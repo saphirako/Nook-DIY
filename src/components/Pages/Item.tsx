@@ -70,7 +70,7 @@ function RecipeIngredient(props: Ingredient) {
                 alt={`${props.name} menu icon`}
             />
             <p className="pl-16 capitalize">{props.name}</p>
-            <p className="w-12 text-center">x{props.quantity}</p>
+            <p className="w-12 text-center">x{props.count}</p>
         </div>
     )
 }
@@ -237,7 +237,7 @@ export default function Item() {
                         <RecipeIngredient
                             name={ingredient}
                             key={ingredient}
-                            quantity={state.materials[ingredient]}
+                            count={state.materials[ingredient]}
                         />
                     ))}
                 </div>

@@ -50,7 +50,7 @@ export default function Recipes(props: RecipesProps) {
     let renderChoice: Array<Recipe> =
         Object.keys(filterBy).length === 0 ? recipes : filterRecipes(filterBy)
 
-    return recipes ? (
+    return recipes.length ? (
         <div
             id="recipes"
             className="hidden w-3/5 p-4 auto-rows-recipes place-items-center items-stretch lg:grid grid-cols-2 xl:grid-cols-4 2xl:grid-cols-5 gap-8"

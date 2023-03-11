@@ -182,9 +182,12 @@ export interface Recipe {
     availability: {}
     image_url: string
     sell: number
-    materials: Record<MaterialName, number | null>
+    materials: Partial<Record<MaterialName, number | null>>
 }
 
+export interface NookipediaRecipe extends Omit<Recipe, 'materials'> {
+    materials: Array<Ingredient>
+}
 export interface Currency {
     type: 'Buy' | 'Sell'
     value: number
@@ -193,5 +196,5 @@ export interface Currency {
 
 export interface Ingredient {
     name: MaterialName
-    quantity?: number
+    count?: number
 }
