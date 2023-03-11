@@ -1,1472 +1,1472 @@
 [
-  {
-    "url": "https://nookipedia.com/wiki/Item:Aquarius_Urn_(New_Horizons)",
-    "name": "Aquarius Urn",
-    "image_url": "https://dodo.ac/np/images/1/14/Aquarius_Urn_NH_DIY_Icon.png",
-    "serial_id": 2310,
-    "sell": 200,
-    "recipes_to_unlock": 0,
-    "materials": [
-      {
-        "name": "Star Fragment",
-        "count": 3
-      },
-      {
-        "name": "Aquarius Fragment",
-        "count": 2
-      },
-      {
-        "name": "Gold Nugget",
-        "count": 2
-      },
-      {
-        "name": "Stone",
-        "count": 5
-      }
-    ],
-    "availability": [
-      {
-        "from": "Celeste",
-        "note": ""
-      }
-    ],
-    "buy": []
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Aries_Rocking_Chair_(New_Horizons)",
-    "name": "Aries Rocking Chair",
-    "image_url": "https://dodo.ac/np/images/1/1b/Aries_Rocking_Chair_NH_DIY_Icon.png",
-    "serial_id": 2300,
-    "sell": 200,
-    "recipes_to_unlock": 0,
-    "materials": [
-      {
-        "name": "Star Fragment",
-        "count": 3
-      },
-      {
-        "name": "Aries Fragment",
-        "count": 2
-      },
-      {
-        "name": "Gold Nugget",
-        "count": 1
-      },
-      {
-        "name": "Stone",
-        "count": 5
-      }
-    ],
-    "availability": [
-      {
-        "from": "Celeste",
-        "note": ""
-      }
-    ],
-    "buy": []
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Asteroid_(New_Horizons)",
-    "name": "Asteroid",
-    "image_url": "https://dodo.ac/np/images/6/67/Asteroid_NH_DIY_Icon.png",
-    "serial_id": 2203,
-    "sell": 200,
-    "recipes_to_unlock": 0,
-    "materials": [
-      {
-        "name": "Star Fragment",
-        "count": 5
-      },
-      {
-        "name": "Stone",
-        "count": 10
-      }
-    ],
-    "availability": [
-      {
-        "from": "Celeste",
-        "note": ""
-      }
-    ],
-    "buy": []
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Bamboo_Partition_(New_Horizons)",
-    "name": "Bamboo Partition",
-    "image_url": "https://dodo.ac/np/images/e/ed/Bamboo_Partition_NH_DIY_Icon.png",
-    "serial_id": 2403,
-    "sell": 200,
-    "recipes_to_unlock": 50,
-    "materials": [
-      {
-        "name": "Bamboo Piece",
-        "count": 7
-      },
-      {
-        "name": "Stone",
-        "count": 6
-      }
-    ],
-    "availability": [
-      {
-        "from": "Cranky villager",
-        "note": ""
-      }
-    ],
-    "buy": []
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Basement_Flooring_(New_Horizons)",
-    "name": "Basement Flooring",
-    "image_url": "https://dodo.ac/np/images/3/3d/Basement_Flooring_NH_DIY_Icon.png",
-    "serial_id": 860,
-    "sell": 200,
-    "recipes_to_unlock": 0,
-    "materials": [
-      {
-        "name": "Stone",
-        "count": 10
-      }
-    ],
-    "availability": [
-      {
-        "from": "Smug villager",
-        "note": ""
-      }
-    ],
-    "buy": []
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Birdbath_(New_Horizons)",
-    "name": "Birdbath",
-    "image_url": "https://dodo.ac/np/images/a/aa/Birdbath_NH_DIY_Icon.png",
-    "serial_id": 802,
-    "sell": 200,
-    "recipes_to_unlock": 0,
-    "materials": [
-      {
-        "name": "Stone",
-        "count": 6
-      }
-    ],
-    "availability": [
-      {
-        "from": "Tom Nook",
-        "note": "50% chance of being obtained during the main storyline during the villager house development quest"
-      },
-      {
-        "from": "Snooty villager",
-        "note": ""
-      }
-    ],
-    "buy": []
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Bridge_Construction_Kit_(New_Horizons)",
-    "name": "Bridge Construction Kit",
-    "image_url": "https://dodo.ac/np/images/7/71/Bridge_Construction_Kit_NH_DIY_Icon.png",
-    "serial_id": 0,
-    "sell": 200,
-    "recipes_to_unlock": 0,
-    "materials": [
-      {
-        "name": "Log Stakes",
-        "count": 4
-      },
-      {
-        "name": "Clay",
-        "count": 4
-      },
-      {
-        "name": "Stone",
-        "count": 4
-      }
-    ],
-    "availability": [
-      {
-        "from": "Tom Nook",
-        "note": "after [[Nook's Cranny]] is opened"
-      }
-    ],
-    "buy": []
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Cancer_Table_(New_Horizons)",
-    "name": "Cancer Table",
-    "image_url": "https://dodo.ac/np/images/8/8f/Cancer_Table_NH_DIY_Icon.png",
-    "serial_id": 2303,
-    "sell": 200,
-    "recipes_to_unlock": 0,
-    "materials": [
-      {
-        "name": "Star Fragment",
-        "count": 3
-      },
-      {
-        "name": "Cancer Fragment",
-        "count": 2
-      },
-      {
-        "name": "Gold Nugget",
-        "count": 2
-      },
-      {
-        "name": "Stone",
-        "count": 3
-      }
-    ],
-    "availability": [
-      {
-        "from": "Celeste",
-        "note": ""
-      }
-    ],
-    "buy": []
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Capricorn_Ornament_(New_Horizons)",
-    "name": "Capricorn Ornament",
-    "image_url": "https://dodo.ac/np/images/c/cd/Capricorn_Ornament_NH_DIY_Icon.png",
-    "serial_id": 2309,
-    "sell": 200,
-    "recipes_to_unlock": 0,
-    "materials": [
-      {
-        "name": "Star Fragment",
-        "count": 3
-      },
-      {
-        "name": "Capricorn Fragment",
-        "count": 2
-      },
-      {
-        "name": "Gold Nugget",
-        "count": 2
-      },
-      {
-        "name": "Stone",
-        "count": 12
-      }
-    ],
-    "availability": [
-      {
-        "from": "Celeste",
-        "note": ""
-      }
-    ],
-    "buy": []
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Cherry-Blossom_Pond_Stone_(New_Horizons)",
-    "name": "Cherry-Blossom Pond Stone",
-    "image_url": "https://dodo.ac/np/images/c/c2/Cherry-Blossom_Pond_Stone_NH_DIY_Icon.png",
-    "serial_id": 820,
-    "sell": 200,
-    "recipes_to_unlock": 0,
-    "materials": [
-      {
-        "name": "Stone",
-        "count": 10
-      },
-      {
-        "name": "Cherry-Blossom Petal",
-        "count": 3
-      }
-    ],
-    "availability": [
-      {
-        "from": "Balloons",
-        "note": "Only available during Cherry-Blossom Season"
-      }
-    ],
-    "buy": []
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Deer_Scare_(New_Horizons)",
-    "name": "Deer Scare",
-    "image_url": "https://dodo.ac/np/images/7/7d/Deer_Scare_NH_DIY_Icon.png",
-    "serial_id": 2408,
-    "sell": 200,
-    "recipes_to_unlock": 50,
-    "materials": [
-      {
-        "name": "Bamboo Piece",
-        "count": 3
-      },
-      {
-        "name": "Stone",
-        "count": 8
-      },
-      {
-        "name": "Clump of Weeds",
-        "count": 3
-      }
-    ],
-    "availability": [
-      {
-        "from": "Cranky villager",
-        "note": ""
-      }
-    ],
-    "buy": []
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Drinking_Fountain_(New_Horizons)",
-    "name": "Drinking Fountain",
-    "image_url": "https://dodo.ac/np/images/2/27/Drinking_Fountain_NH_DIY_Icon.png",
-    "serial_id": 803,
-    "sell": 200,
-    "recipes_to_unlock": 0,
-    "materials": [
-      {
-        "name": "Stone",
-        "count": 8
-      },
-      {
-        "name": "Iron Nugget",
-        "count": 2
-      }
-    ],
-    "availability": [
-      {
-        "from": "Nook Miles Redemption",
-        "note": ""
-      }
-    ],
-    "buy": [
-      {
-        "price": 800,
-        "currency": "Nook Miles"
-      }
-    ]
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Falling-Snow_Wall_(New_Horizons)",
-    "name": "Falling-Snow Wall",
-    "image_url": "https://dodo.ac/np/images/0/0e/Falling-Snow_Wall_NH_DIY_Icon.png",
-    "serial_id": 0,
-    "sell": 200,
-    "recipes_to_unlock": 0,
-    "materials": [
-      {
-        "name": "Snowflake",
-        "count": 3
-      },
-      {
-        "name": "Stone",
-        "count": 10
-      }
-    ],
-    "availability": [
-      {
-        "from": "Balloons",
-        "note": "Only available during winter"
-      }
-    ],
-    "buy": []
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Flat_Garden_Rock_(New_Horizons)",
-    "name": "Flat Garden Rock",
-    "image_url": "https://dodo.ac/np/images/7/7c/Flat_Garden_Rock_NH_DIY_Icon.png",
-    "serial_id": 806,
-    "sell": 200,
-    "recipes_to_unlock": 0,
-    "materials": [
-      {
-        "name": "Stone",
-        "count": 20
-      }
-    ],
-    "availability": [
-      {
-        "from": "Snooty villager",
-        "note": ""
-      }
-    ],
-    "buy": []
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Flimsy_Axe_(New_Horizons)",
-    "name": "Flimsy Axe",
-    "image_url": "https://dodo.ac/np/images/a/ac/Flimsy_Axe_NH_DIY_Icon.png",
-    "serial_id": 100,
-    "sell": 200,
-    "recipes_to_unlock": 0,
-    "materials": [
-      {
-        "name": "Tree Branch",
-        "count": 5
-      },
-      {
-        "name": "Stone",
-        "count": 1
-      }
-    ],
-    "availability": [
-      {
-        "from": "Tom Nook",
-        "note": "Obtained through Tom Nook's DIY Workshop at the beginning of the game"
-      },
-      {
-        "from": "Nook's Cranny",
-        "note": ""
-      }
-    ],
-    "buy": [
-      {
-        "price": 280,
-        "currency": "Bells"
-      }
-    ]
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Fossil_Doorplate_(New_Horizons)",
-    "name": "Fossil Doorplate",
-    "image_url": "https://dodo.ac/np/images/8/84/Fossil_Doorplate_NH_DIY_Icon.png",
-    "serial_id": 840,
-    "sell": 200,
-    "recipes_to_unlock": 50,
-    "materials": [
-      {
-        "name": "Fossil",
-        "count": 1
-      },
-      {
-        "name": "Stone",
-        "count": 2
-      }
-    ],
-    "availability": [
-      {
-        "from": "Jock villager",
-        "note": ""
-      }
-    ],
-    "buy": []
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Fountain_(New_Horizons)",
-    "name": "Fountain",
-    "image_url": "https://dodo.ac/np/images/a/a3/Fountain_NH_DIY_Icon.png",
-    "serial_id": 804,
-    "sell": 200,
-    "recipes_to_unlock": 0,
-    "materials": [
-      {
+    {
+        "url": "https://nookipedia.com/wiki/Item:Aquarius_Urn_(New_Horizons)",
+        "name": "Aquarius Urn",
+        "image_url": "https://dodo.ac/np/images/1/14/Aquarius_Urn_NH_DIY_Icon.png",
+        "serial_id": 2310,
+        "sell": 200,
+        "recipes_to_unlock": 0,
+        "materials": [
+            {
+                "name": "Star Fragment",
+                "count": 3
+            },
+            {
+                "name": "Aquarius Fragment",
+                "count": 2
+            },
+            {
+                "name": "Gold Nugget",
+                "count": 2
+            },
+            {
+                "name": "Stone",
+                "count": 5
+            }
+        ],
+        "availability": [
+            {
+                "from": "Celeste",
+                "note": ""
+            }
+        ],
+        "buy": []
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Aries_Rocking_Chair_(New_Horizons)",
+        "name": "Aries Rocking Chair",
+        "image_url": "https://dodo.ac/np/images/1/1b/Aries_Rocking_Chair_NH_DIY_Icon.png",
+        "serial_id": 2300,
+        "sell": 200,
+        "recipes_to_unlock": 0,
+        "materials": [
+            {
+                "name": "Star Fragment",
+                "count": 3
+            },
+            {
+                "name": "Aries Fragment",
+                "count": 2
+            },
+            {
+                "name": "Gold Nugget",
+                "count": 1
+            },
+            {
+                "name": "Stone",
+                "count": 5
+            }
+        ],
+        "availability": [
+            {
+                "from": "Celeste",
+                "note": ""
+            }
+        ],
+        "buy": []
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Asteroid_(New_Horizons)",
+        "name": "Asteroid",
+        "image_url": "https://dodo.ac/np/images/6/67/Asteroid_NH_DIY_Icon.png",
+        "serial_id": 2203,
+        "sell": 200,
+        "recipes_to_unlock": 0,
+        "materials": [
+            {
+                "name": "Star Fragment",
+                "count": 5
+            },
+            {
+                "name": "Stone",
+                "count": 10
+            }
+        ],
+        "availability": [
+            {
+                "from": "Celeste",
+                "note": ""
+            }
+        ],
+        "buy": []
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Bamboo_Partition_(New_Horizons)",
+        "name": "Bamboo Partition",
+        "image_url": "https://dodo.ac/np/images/e/ed/Bamboo_Partition_NH_DIY_Icon.png",
+        "serial_id": 2403,
+        "sell": 200,
+        "recipes_to_unlock": 50,
+        "materials": [
+            {
+                "name": "Bamboo Piece",
+                "count": 7
+            },
+            {
+                "name": "Stone",
+                "count": 6
+            }
+        ],
+        "availability": [
+            {
+                "from": "Cranky villager",
+                "note": ""
+            }
+        ],
+        "buy": []
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Basement_Flooring_(New_Horizons)",
+        "name": "Basement Flooring",
+        "image_url": "https://dodo.ac/np/images/3/3d/Basement_Flooring_NH_DIY_Icon.png",
+        "serial_id": 860,
+        "sell": 200,
+        "recipes_to_unlock": 0,
+        "materials": [
+            {
+                "name": "Stone",
+                "count": 10
+            }
+        ],
+        "availability": [
+            {
+                "from": "Smug villager",
+                "note": ""
+            }
+        ],
+        "buy": []
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Birdbath_(New_Horizons)",
+        "name": "Birdbath",
+        "image_url": "https://dodo.ac/np/images/a/aa/Birdbath_NH_DIY_Icon.png",
+        "serial_id": 802,
+        "sell": 200,
+        "recipes_to_unlock": 0,
+        "materials": [
+            {
+                "name": "Stone",
+                "count": 6
+            }
+        ],
+        "availability": [
+            {
+                "from": "Tom Nook",
+                "note": "50% chance of being obtained during the main storyline during the villager house development quest"
+            },
+            {
+                "from": "Snooty villager",
+                "note": ""
+            }
+        ],
+        "buy": []
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Bridge_Construction_Kit_(New_Horizons)",
+        "name": "Bridge Construction Kit",
+        "image_url": "https://dodo.ac/np/images/7/71/Bridge_Construction_Kit_NH_DIY_Icon.png",
+        "serial_id": 0,
+        "sell": 200,
+        "recipes_to_unlock": 0,
+        "materials": [
+            {
+                "name": "Log Stakes",
+                "count": 4
+            },
+            {
+                "name": "Clay",
+                "count": 4
+            },
+            {
+                "name": "Stone",
+                "count": 4
+            }
+        ],
+        "availability": [
+            {
+                "from": "Tom Nook",
+                "note": "after [[Nook's Cranny]] is opened"
+            }
+        ],
+        "buy": []
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Cancer_Table_(New_Horizons)",
+        "name": "Cancer Table",
+        "image_url": "https://dodo.ac/np/images/8/8f/Cancer_Table_NH_DIY_Icon.png",
+        "serial_id": 2303,
+        "sell": 200,
+        "recipes_to_unlock": 0,
+        "materials": [
+            {
+                "name": "Star Fragment",
+                "count": 3
+            },
+            {
+                "name": "Cancer Fragment",
+                "count": 2
+            },
+            {
+                "name": "Gold Nugget",
+                "count": 2
+            },
+            {
+                "name": "Stone",
+                "count": 3
+            }
+        ],
+        "availability": [
+            {
+                "from": "Celeste",
+                "note": ""
+            }
+        ],
+        "buy": []
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Capricorn_Ornament_(New_Horizons)",
+        "name": "Capricorn Ornament",
+        "image_url": "https://dodo.ac/np/images/c/cd/Capricorn_Ornament_NH_DIY_Icon.png",
+        "serial_id": 2309,
+        "sell": 200,
+        "recipes_to_unlock": 0,
+        "materials": [
+            {
+                "name": "Star Fragment",
+                "count": 3
+            },
+            {
+                "name": "Capricorn Fragment",
+                "count": 2
+            },
+            {
+                "name": "Gold Nugget",
+                "count": 2
+            },
+            {
+                "name": "Stone",
+                "count": 12
+            }
+        ],
+        "availability": [
+            {
+                "from": "Celeste",
+                "note": ""
+            }
+        ],
+        "buy": []
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Cherry-Blossom_Pond_Stone_(New_Horizons)",
+        "name": "Cherry-Blossom Pond Stone",
+        "image_url": "https://dodo.ac/np/images/c/c2/Cherry-Blossom_Pond_Stone_NH_DIY_Icon.png",
+        "serial_id": 820,
+        "sell": 200,
+        "recipes_to_unlock": 0,
+        "materials": [
+            {
+                "name": "Stone",
+                "count": 10
+            },
+            {
+                "name": "Cherry-Blossom Petal",
+                "count": 3
+            }
+        ],
+        "availability": [
+            {
+                "from": "Balloons",
+                "note": "Only available during Cherry-Blossom Season"
+            }
+        ],
+        "buy": []
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Deer_Scare_(New_Horizons)",
+        "name": "Deer Scare",
+        "image_url": "https://dodo.ac/np/images/7/7d/Deer_Scare_NH_DIY_Icon.png",
+        "serial_id": 2408,
+        "sell": 200,
+        "recipes_to_unlock": 50,
+        "materials": [
+            {
+                "name": "Bamboo Piece",
+                "count": 3
+            },
+            {
+                "name": "Stone",
+                "count": 8
+            },
+            {
+                "name": "Clump of Weeds",
+                "count": 3
+            }
+        ],
+        "availability": [
+            {
+                "from": "Cranky villager",
+                "note": ""
+            }
+        ],
+        "buy": []
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Drinking_Fountain_(New_Horizons)",
         "name": "Drinking Fountain",
-        "count": 1
-      },
-      {
-        "name": "Stone",
-        "count": 20
-      },
-      {
-        "name": "Iron Nugget",
-        "count": 8
-      }
-    ],
-    "availability": [
-      {
-        "from": "Nook Miles Redemption",
-        "note": ""
-      }
-    ],
-    "buy": [
-      {
-        "price": 3000,
-        "currency": "Nook Miles"
-      }
-    ]
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Garden_Rock_(New_Horizons)",
-    "name": "Garden Rock",
-    "image_url": "https://dodo.ac/np/images/b/be/Garden_Rock_NH_DIY_Icon.png",
-    "serial_id": 805,
-    "sell": 200,
-    "recipes_to_unlock": 0,
-    "materials": [
-      {
-        "name": "Stone",
-        "count": 15
-      }
-    ],
-    "availability": [
-      {
-        "from": "Lazy villager",
-        "note": ""
-      }
-    ],
-    "buy": []
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Gemini_Closet_(New_Horizons)",
-    "name": "Gemini Closet",
-    "image_url": "https://dodo.ac/np/images/a/ae/Gemini_Closet_NH_DIY_Icon.png",
-    "serial_id": 2302,
-    "sell": 200,
-    "recipes_to_unlock": 0,
-    "materials": [
-      {
-        "name": "Star Fragment",
-        "count": 3
-      },
-      {
-        "name": "Gemini Fragment",
-        "count": 2
-      },
-      {
-        "name": "Gold Nugget",
-        "count": 2
-      },
-      {
-        "name": "Stone",
-        "count": 6
-      }
-    ],
-    "availability": [
-      {
-        "from": "Celeste",
-        "note": ""
-      }
-    ],
-    "buy": []
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Hedge_(New_Horizons)",
-    "name": "Hedge",
-    "image_url": "https://dodo.ac/np/images/b/b2/Hedge_NH_DIY_Icon.png",
-    "serial_id": 0,
-    "sell": 200,
-    "recipes_to_unlock": 0,
-    "materials": [
-      {
-        "name": "Clump of Weeds",
-        "count": 10
-      },
-      {
-        "name": "Tree Branch",
-        "count": 5
-      },
-      {
-        "name": "Stone",
-        "count": 2
-      }
-    ],
-    "availability": [
-      {
-        "from": "Leif",
-        "note": ""
-      },
-      {
-        "from": "Tom Nook",
-        "note": "Only available during Nature Day"
-      }
-    ],
-    "buy": []
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Iron-and-Stone_Fence_(New_Horizons)",
-    "name": "Iron-and-Stone Fence",
-    "image_url": "https://dodo.ac/np/images/2/2b/Iron-and-Stone_Fence_NH_DIY_Icon.png",
-    "serial_id": 0,
-    "sell": 200,
-    "recipes_to_unlock": 0,
-    "materials": [
-      {
-        "name": "Stone",
-        "count": 6
-      },
-      {
-        "name": "Iron Nugget",
-        "count": 3
-      }
-    ],
-    "availability": [
-      {
-        "from": "Nook Miles Redemption",
-        "note": ""
-      }
-    ],
-    "buy": [
-      {
-        "price": 1000,
-        "currency": "Nook Miles"
-      }
-    ]
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Leo_Sculpture_(New_Horizons)",
-    "name": "Leo Sculpture",
-    "image_url": "https://dodo.ac/np/images/a/aa/Leo_Sculpture_NH_DIY_Icon.png",
-    "serial_id": 2304,
-    "sell": 200,
-    "recipes_to_unlock": 0,
-    "materials": [
-      {
-        "name": "Star Fragment",
-        "count": 3
-      },
-      {
-        "name": "Leo Fragment",
-        "count": 2
-      },
-      {
-        "name": "Gold Nugget",
-        "count": 2
-      },
-      {
-        "name": "Stone",
-        "count": 3
-      }
-    ],
-    "availability": [
-      {
-        "from": "Celeste",
-        "note": ""
-      }
-    ],
-    "buy": []
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Maple-Leaf_Pond_Stone_(New_Horizons)",
-    "name": "Maple-Leaf Pond Stone",
-    "image_url": "https://dodo.ac/np/images/1/16/Maple-Leaf_Pond_Stone_NH_DIY_Icon.png",
-    "serial_id": 821,
-    "sell": 200,
-    "recipes_to_unlock": 0,
-    "materials": [
-      {
-        "name": "Stone",
-        "count": 10
-      },
-      {
-        "name": "Maple Leaf",
-        "count": 3
-      }
-    ],
-    "availability": [
-      {
-        "from": "Balloons",
-        "note": "Only available during Maple Leaf Season"
-      }
-    ],
-    "buy": []
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Mermaid_Flooring_(New_Horizons)",
-    "name": "Mermaid Flooring",
-    "image_url": "https://dodo.ac/np/images/3/32/Mermaid_Flooring_NH_DIY_Icon.png",
-    "serial_id": 2761,
-    "sell": 200,
-    "recipes_to_unlock": 0,
-    "materials": [
-      {
-        "name": "Pearl",
-        "count": 2
-      },
-      {
-        "name": "Sand Dollar",
-        "count": 5
-      },
-      {
-        "name": "Stone",
-        "count": 5
-      }
-    ],
-    "availability": [
-      {
-        "from": "Pascal",
-        "note": ""
-      }
-    ],
-    "buy": []
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Mossy_Garden_Rock_(New_Horizons)",
-    "name": "Mossy Garden Rock",
-    "image_url": "https://dodo.ac/np/images/6/60/Mossy_Garden_Rock_NH_DIY_Icon.png",
-    "serial_id": 807,
-    "sell": 200,
-    "recipes_to_unlock": 0,
-    "materials": [
-      {
-        "name": "Stone",
-        "count": 15
-      },
-      {
-        "name": "Clump of Weeds",
-        "count": 15
-      }
-    ],
-    "availability": [
-      {
-        "from": "Lazy villager",
-        "note": ""
-      }
-    ],
-    "buy": []
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Oil-Barrel_Bathtub_(New_Horizons)",
-    "name": "Oil-Barrel Bathtub",
-    "image_url": "https://dodo.ac/np/images/7/7f/Oil-Barrel_Bathtub_NH_DIY_Icon.png",
-    "serial_id": 2150,
-    "sell": 200,
-    "recipes_to_unlock": 100,
-    "materials": [
-      {
-        "name": "Oil Barrel",
-        "count": 1
-      },
-      {
-        "name": "Campfire",
-        "count": 1
-      },
-      {
-        "name": "Stone",
-        "count": 2
-      }
-    ],
-    "availability": [
-      {
-        "from": "Jock villager",
-        "note": ""
-      }
-    ],
-    "buy": []
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Outdoor_Bath_(New_Horizons)",
-    "name": "Outdoor Bath",
-    "image_url": "https://dodo.ac/np/images/c/cd/Outdoor_Bath_NH_DIY_Icon.png",
-    "serial_id": 812,
-    "sell": 200,
-    "recipes_to_unlock": 0,
-    "materials": [
-      {
-        "name": "Stone",
-        "count": 20
-      },
-      {
-        "name": "Shovel",
-        "count": 1
-      }
-    ],
-    "availability": [
-      {
-        "from": "Nook Miles Redemption",
-        "note": ""
-      }
-    ],
-    "buy": [
-      {
-        "price": 3000,
-        "currency": "Nook Miles"
-      }
-    ]
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Pisces_Lamp_(New_Horizons)",
-    "name": "Pisces Lamp",
-    "image_url": "https://dodo.ac/np/images/5/54/Pisces_Lamp_NH_DIY_Icon.png",
-    "serial_id": 2311,
-    "sell": 200,
-    "recipes_to_unlock": 0,
-    "materials": [
-      {
-        "name": "Star Fragment",
-        "count": 3
-      },
-      {
-        "name": "Pisces Fragment",
-        "count": 2
-      },
-      {
-        "name": "Gold Nugget",
-        "count": 2
-      },
-      {
-        "name": "Stone",
-        "count": 4
-      }
-    ],
-    "availability": [
-      {
-        "from": "Celeste",
-        "note": ""
-      }
-    ],
-    "buy": []
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Pond_Stone_(New_Horizons)",
-    "name": "Pond Stone",
-    "image_url": "https://dodo.ac/np/images/4/4a/Pond_Stone_NH_DIY_Icon.png",
-    "serial_id": 819,
-    "sell": 200,
-    "recipes_to_unlock": 0,
-    "materials": [
-      {
-        "name": "Stone",
-        "count": 10
-      }
-    ],
-    "availability": [
-      {
-        "from": "Snooty villager",
-        "note": ""
-      }
-    ],
-    "buy": []
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Rustic-Stone_Wall_(New_Horizons)",
-    "name": "Rustic-Stone Wall",
-    "image_url": "https://dodo.ac/np/images/f/f0/Rustic-Stone_Wall_NH_DIY_Icon.png",
-    "serial_id": 851,
-    "sell": 200,
-    "recipes_to_unlock": 0,
-    "materials": [
-      {
-        "name": "Stone",
-        "count": 5
-      },
-      {
-        "name": "Clay",
-        "count": 5
-      }
-    ],
-    "availability": [
-      {
-        "from": "Snooty villager",
-        "note": ""
-      }
-    ],
-    "buy": []
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Sauna_Heater_(New_Horizons)",
-    "name": "Sauna Heater",
-    "image_url": "https://dodo.ac/np/images/a/ad/Sauna_Heater_NH_DIY_Icon.png",
-    "serial_id": 810,
-    "sell": 200,
-    "recipes_to_unlock": 0,
-    "materials": [
-      {
-        "name": "Stone",
-        "count": 6
-      },
-      {
-        "name": "Iron Nugget",
-        "count": 3
-      },
-      {
-        "name": "Wood",
-        "count": 3
-      }
-    ],
-    "availability": [
-      {
-        "from": "Lazy villager",
-        "note": ""
-      }
-    ],
-    "buy": []
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Scorpio_Lamp_(New_Horizons)",
-    "name": "Scorpio Lamp",
-    "image_url": "https://dodo.ac/np/images/c/c7/Scorpio_Lamp_NH_DIY_Icon.png",
-    "serial_id": 2307,
-    "sell": 200,
-    "recipes_to_unlock": 0,
-    "materials": [
-      {
-        "name": "Star Fragment",
-        "count": 3
-      },
-      {
-        "name": "Scorpius Fragment",
-        "count": 2
-      },
-      {
-        "name": "Gold Nugget",
-        "count": 2
-      },
-      {
-        "name": "Stone",
-        "count": 5
-      }
-    ],
-    "availability": [
-      {
-        "from": "Celeste",
-        "note": ""
-      }
-    ],
-    "buy": []
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Shell_Bed_(New_Horizons)",
-    "name": "Shell Bed",
-    "image_url": "https://dodo.ac/np/images/6/60/Shell_Bed_NH_DIY_Icon.png",
-    "serial_id": 2703,
-    "sell": 200,
-    "recipes_to_unlock": 0,
-    "materials": [
-      {
-        "name": "Giant Clam",
-        "count": 5
-      },
-      {
-        "name": "Clay",
-        "count": 3
-      },
-      {
-        "name": "Stone",
-        "count": 4
-      }
-    ],
-    "availability": [
-      {
-        "from": "Peppy villager",
-        "note": ""
-      }
-    ],
-    "buy": []
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Shell_Fountain_(New_Horizons)",
-    "name": "Shell Fountain",
-    "image_url": "https://dodo.ac/np/images/c/c0/Shell_Fountain_NH_DIY_Icon.png",
-    "serial_id": 2701,
-    "sell": 200,
-    "recipes_to_unlock": 0,
-    "materials": [
-      {
-        "name": "Giant Clam",
-        "count": 5
-      },
-      {
-        "name": "Stone",
-        "count": 3
-      }
-    ],
-    "availability": [
-      {
-        "from": "Lazy villager",
-        "note": ""
-      }
-    ],
-    "buy": []
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Silo_(New_Horizons)",
-    "name": "Silo",
-    "image_url": "https://dodo.ac/np/images/d/d0/Silo_NH_DIY_Icon.png",
-    "serial_id": 708,
-    "sell": 200,
-    "recipes_to_unlock": 0,
-    "materials": [
-      {
-        "name": "Iron Nugget",
-        "count": 12
-      },
-      {
-        "name": "Hardwood",
-        "count": 6
-      },
-      {
-        "name": "Clay",
-        "count": 12
-      },
-      {
-        "name": "Stone",
-        "count": 12
-      }
-    ],
-    "availability": [
-      {
-        "from": "Nook Miles Redemption",
-        "note": ""
-      }
-    ],
-    "buy": [
-      {
-        "price": 3000,
-        "currency": "Nook Miles"
-      }
-    ]
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Simple_Well_(New_Horizons)",
-    "name": "Simple Well",
-    "image_url": "https://dodo.ac/np/images/a/af/Simple_Well_NH_DIY_Icon.png",
-    "serial_id": 811,
-    "sell": 200,
-    "recipes_to_unlock": 0,
-    "materials": [
-      {
-        "name": "Stone",
-        "count": 15
-      },
-      {
-        "name": "Flimsy Shovel",
-        "count": 1
-      }
-    ],
-    "availability": [
-      {
-        "from": "Nook Miles Redemption",
-        "note": ""
-      }
-    ],
-    "buy": [
-      {
-        "price": 2000,
-        "currency": "Nook Miles"
-      }
-    ]
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Stone_Arch_(New_Horizons)",
-    "name": "Stone Arch",
-    "image_url": "https://dodo.ac/np/images/6/6e/Stone_Arch_NH_DIY_Icon.png",
-    "serial_id": 809,
-    "sell": 200,
-    "recipes_to_unlock": 0,
-    "materials": [
-      {
-        "name": "Stone",
-        "count": 90
-      }
-    ],
-    "availability": [
-      {
-        "from": "Nook Miles Redemption",
-        "note": ""
-      }
-    ],
-    "buy": [
-      {
-        "price": 2000,
-        "currency": "Nook Miles"
-      }
-    ]
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Stone_Fence_(New_Horizons)",
-    "name": "Stone Fence",
-    "image_url": "https://dodo.ac/np/images/0/0a/Stone_Fence_NH_DIY_Icon.png",
-    "serial_id": 0,
-    "sell": 200,
-    "recipes_to_unlock": 0,
-    "materials": [
-      {
-        "name": "Stone",
-        "count": 4
-      }
-    ],
-    "availability": [
-      {
-        "from": "Nook Miles Redemption",
-        "note": ""
-      }
-    ],
-    "buy": [
-      {
-        "price": 1000,
-        "currency": "Nook Miles"
-      }
-    ]
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Stone_Lion-Dog_(New_Horizons)",
-    "name": "Stone Lion-Dog",
-    "image_url": "https://dodo.ac/np/images/3/3a/Stone_Lion-Dog_NH_DIY_Icon.png",
-    "serial_id": 816,
-    "sell": 200,
-    "recipes_to_unlock": 100,
-    "materials": [
-      {
-        "name": "Stone",
-        "count": 24
-      }
-    ],
-    "availability": [
-      {
-        "from": "Smug villager",
-        "note": ""
-      }
-    ],
-    "buy": []
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Stone_Stool_(New_Horizons)",
-    "name": "Stone Stool",
-    "image_url": "https://dodo.ac/np/images/c/c9/Stone_Stool_NH_DIY_Icon.png",
-    "serial_id": 800,
-    "sell": 200,
-    "recipes_to_unlock": 0,
-    "materials": [
-      {
-        "name": "Stone",
-        "count": 3
-      }
-    ],
-    "availability": [
-      {
-        "from": "DIY for Beginners",
-        "note": ""
-      }
-    ],
-    "buy": [
-      {
-        "price": 480,
-        "currency": "Bells"
-      }
-    ]
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Stone_Table_(New_Horizons)",
-    "name": "Stone Table",
-    "image_url": "https://dodo.ac/np/images/a/a0/Stone_Table_NH_DIY_Icon.png",
-    "serial_id": 801,
-    "sell": 200,
-    "recipes_to_unlock": 0,
-    "materials": [
-      {
-        "name": "Stone",
-        "count": 8
-      }
-    ],
-    "availability": [
-      {
-        "from": "Tom Nook",
-        "note": "50% chance of being obtained during the main storyline during the villager house development quest"
-      },
-      {
-        "from": "Lazy villager",
-        "note": ""
-      }
-    ],
-    "buy": []
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Stone_Tablet_(New_Horizons)",
-    "name": "Stone Tablet",
-    "image_url": "https://dodo.ac/np/images/9/98/Stone_Tablet_NH_DIY_Icon.png",
-    "serial_id": 817,
-    "sell": 200,
-    "recipes_to_unlock": 0,
-    "materials": [
-      {
-        "name": "Stone",
-        "count": 12
-      }
-    ],
-    "availability": [
-      {
-        "from": "Nook Miles Redemption",
-        "note": ""
-      }
-    ],
-    "buy": [
-      {
-        "price": 800,
-        "currency": "Nook Miles"
-      }
-    ]
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Stone_Wall_(New_Horizons)",
-    "name": "Stone Wall",
-    "image_url": "https://dodo.ac/np/images/b/b1/Stone_Wall_NH_DIY_Icon.png",
-    "serial_id": 850,
-    "sell": 200,
-    "recipes_to_unlock": 0,
-    "materials": [
-      {
-        "name": "Stone",
-        "count": 10
-      }
-    ],
-    "availability": [
-      {
-        "from": "Smug villager",
-        "note": ""
-      }
-    ],
-    "buy": []
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Tall_Garden_Rock_(New_Horizons)",
-    "name": "Tall Garden Rock",
-    "image_url": "https://dodo.ac/np/images/4/4f/Tall_Garden_Rock_NH_DIY_Icon.png",
-    "serial_id": 808,
-    "sell": 200,
-    "recipes_to_unlock": 0,
-    "materials": [
-      {
-        "name": "Stone",
-        "count": 60
-      }
-    ],
-    "availability": [
-      {
-        "from": "Snooty villager",
-        "note": ""
-      }
-    ],
-    "buy": []
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Tall_Lantern_(New_Horizons)",
-    "name": "Tall Lantern",
-    "image_url": "https://dodo.ac/np/images/4/4a/Tall_Lantern_NH_DIY_Icon.png",
-    "serial_id": 818,
-    "sell": 200,
-    "recipes_to_unlock": 100,
-    "materials": [
-      {
-        "name": "Stone",
-        "count": 18
-      }
-    ],
-    "availability": [
-      {
-        "from": "Smug villager",
-        "note": ""
-      }
-    ],
-    "buy": []
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Taurus_Bathtub_(New_Horizons)",
-    "name": "Taurus Bathtub",
-    "image_url": "https://dodo.ac/np/images/5/54/Taurus_Bathtub_NH_DIY_Icon.png",
-    "serial_id": 2301,
-    "sell": 200,
-    "recipes_to_unlock": 0,
-    "materials": [
-      {
-        "name": "Star Fragment",
-        "count": 3
-      },
-      {
-        "name": "Taurus Fragment",
-        "count": 2
-      },
-      {
-        "name": "Gold Nugget",
-        "count": 1
-      },
-      {
-        "name": "Stone",
-        "count": 8
-      }
-    ],
-    "availability": [
-      {
-        "from": "Celeste",
-        "note": ""
-      }
-    ],
-    "buy": []
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Turkey_Day_Garden_Stand_(New_Horizons)",
-    "name": "Turkey Day Garden Stand",
-    "image_url": "https://dodo.ac/np/images/3/36/Turkey_Day_Garden_Stand_NH_DIY_Icon.png",
-    "serial_id": 0,
-    "sell": 200,
-    "recipes_to_unlock": 0,
-    "materials": [
-      {
-        "name": "Stone",
-        "count": 8
-      },
-      {
-        "name": "Clay",
-        "count": 3
-      }
-    ],
-    "availability": [
-      {
-        "from": "Cozy Turkey Day DIY",
-        "note": ""
-      }
-    ],
-    "buy": []
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Turkey_Day_Hearth_(New_Horizons)",
-    "name": "Turkey Day Hearth",
-    "image_url": "https://dodo.ac/np/images/9/9c/Turkey_Day_Hearth_NH_DIY_Icon.png",
-    "serial_id": 0,
-    "sell": 200,
-    "recipes_to_unlock": 0,
-    "materials": [
-      {
-        "name": "Campfire",
-        "count": 1
-      },
-      {
-        "name": "Stone",
-        "count": 30
-      },
-      {
-        "name": "Clay",
-        "count": 10
-      }
-    ],
-    "availability": [
-      {
-        "from": "Cozy Turkey Day DIY",
-        "note": ""
-      }
-    ],
-    "buy": []
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Virgo_Harp_(New_Horizons)",
-    "name": "Virgo Harp",
-    "image_url": "https://dodo.ac/np/images/3/30/Virgo_Harp_NH_DIY_Icon.png",
-    "serial_id": 2305,
-    "sell": 200,
-    "recipes_to_unlock": 0,
-    "materials": [
-      {
-        "name": "Star Fragment",
-        "count": 3
-      },
-      {
-        "name": "Virgo Fragment",
-        "count": 2
-      },
-      {
-        "name": "Gold Nugget",
-        "count": 2
-      },
-      {
-        "name": "Stone",
-        "count": 4
-      }
-    ],
-    "availability": [
-      {
-        "from": "Celeste",
-        "note": ""
-      }
-    ],
-    "buy": []
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Wave_Breaker_(New_Horizons)",
-    "name": "Wave Breaker",
-    "image_url": "https://dodo.ac/np/images/7/7c/Wave_Breaker_NH_DIY_Icon.png",
-    "serial_id": 813,
-    "sell": 200,
-    "recipes_to_unlock": 0,
-    "materials": [
-      {
-        "name": "Stone",
-        "count": 10
-      },
-      {
-        "name": "Clay",
-        "count": 10
-      }
-    ],
-    "availability": [
-      {
-        "from": "Nook Miles Redemption",
-        "note": ""
-      }
-    ],
-    "buy": [
-      {
-        "price": 1500,
-        "currency": "Nook Miles"
-      }
-    ]
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Western-Style_Stone_(New_Horizons)",
-    "name": "Western-Style Stone",
-    "image_url": "https://dodo.ac/np/images/d/d8/Western-Style_Stone_NH_DIY_Icon.png",
-    "serial_id": 814,
-    "sell": 200,
-    "recipes_to_unlock": 100,
-    "materials": [
-      {
-        "name": "Stone",
-        "count": 30
-      }
-    ],
-    "availability": [
-      {
-        "from": "Normal villager",
-        "note": ""
-      }
-    ],
-    "buy": []
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Zen_Fence_(New_Horizons)",
-    "name": "Zen Fence",
-    "image_url": "https://dodo.ac/np/images/b/bc/Zen_Fence_NH_DIY_Icon.png",
-    "serial_id": 0,
-    "sell": 200,
-    "recipes_to_unlock": 0,
-    "materials": [
-      {
-        "name": "Iron Nugget",
-        "count": 3
-      },
-      {
-        "name": "Clay",
-        "count": 3
-      },
-      {
-        "name": "Stone",
-        "count": 3
-      }
-    ],
-    "availability": [
-      {
-        "from": "Nook Miles Redemption",
-        "note": ""
-      }
-    ],
-    "buy": [
-      {
-        "price": 1000,
-        "currency": "Nook Miles"
-      }
-    ]
-  },
-  {
-    "url": "https://nookipedia.com/wiki/Item:Zen-Style_Stone_(New_Horizons)",
-    "name": "Zen-Style Stone",
-    "image_url": "https://dodo.ac/np/images/d/da/Zen-Style_Stone_NH_DIY_Icon.png",
-    "serial_id": 815,
-    "sell": 200,
-    "recipes_to_unlock": 100,
-    "materials": [
-      {
-        "name": "Stone",
-        "count": 30
-      }
-    ],
-    "availability": [
-      {
-        "from": "Lazy villager",
-        "note": ""
-      }
-    ],
-    "buy": []
-  }
+        "image_url": "https://dodo.ac/np/images/2/27/Drinking_Fountain_NH_DIY_Icon.png",
+        "serial_id": 803,
+        "sell": 200,
+        "recipes_to_unlock": 0,
+        "materials": [
+            {
+                "name": "Stone",
+                "count": 8
+            },
+            {
+                "name": "Iron Nugget",
+                "count": 2
+            }
+        ],
+        "availability": [
+            {
+                "from": "Nook Miles Redemption",
+                "note": ""
+            }
+        ],
+        "buy": [
+            {
+                "price": 800,
+                "currency": "Nook Miles"
+            }
+        ]
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Falling-Snow_Wall_(New_Horizons)",
+        "name": "Falling-Snow Wall",
+        "image_url": "https://dodo.ac/np/images/0/0e/Falling-Snow_Wall_NH_DIY_Icon.png",
+        "serial_id": 0,
+        "sell": 200,
+        "recipes_to_unlock": 0,
+        "materials": [
+            {
+                "name": "Snowflake",
+                "count": 3
+            },
+            {
+                "name": "Stone",
+                "count": 10
+            }
+        ],
+        "availability": [
+            {
+                "from": "Balloons",
+                "note": "Only available during winter"
+            }
+        ],
+        "buy": []
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Flat_Garden_Rock_(New_Horizons)",
+        "name": "Flat Garden Rock",
+        "image_url": "https://dodo.ac/np/images/7/7c/Flat_Garden_Rock_NH_DIY_Icon.png",
+        "serial_id": 806,
+        "sell": 200,
+        "recipes_to_unlock": 0,
+        "materials": [
+            {
+                "name": "Stone",
+                "count": 20
+            }
+        ],
+        "availability": [
+            {
+                "from": "Snooty villager",
+                "note": ""
+            }
+        ],
+        "buy": []
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Flimsy_Axe_(New_Horizons)",
+        "name": "Flimsy Axe",
+        "image_url": "https://dodo.ac/np/images/a/ac/Flimsy_Axe_NH_DIY_Icon.png",
+        "serial_id": 100,
+        "sell": 200,
+        "recipes_to_unlock": 0,
+        "materials": [
+            {
+                "name": "Tree Branch",
+                "count": 5
+            },
+            {
+                "name": "Stone",
+                "count": 1
+            }
+        ],
+        "availability": [
+            {
+                "from": "Tom Nook",
+                "note": "Obtained through Tom Nook's DIY Workshop at the beginning of the game"
+            },
+            {
+                "from": "Nook's Cranny",
+                "note": ""
+            }
+        ],
+        "buy": [
+            {
+                "price": 280,
+                "currency": "Bells"
+            }
+        ]
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Fossil_Doorplate_(New_Horizons)",
+        "name": "Fossil Doorplate",
+        "image_url": "https://dodo.ac/np/images/8/84/Fossil_Doorplate_NH_DIY_Icon.png",
+        "serial_id": 840,
+        "sell": 200,
+        "recipes_to_unlock": 50,
+        "materials": [
+            {
+                "name": "Fossil",
+                "count": 1
+            },
+            {
+                "name": "Stone",
+                "count": 2
+            }
+        ],
+        "availability": [
+            {
+                "from": "Jock villager",
+                "note": ""
+            }
+        ],
+        "buy": []
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Fountain_(New_Horizons)",
+        "name": "Fountain",
+        "image_url": "https://dodo.ac/np/images/a/a3/Fountain_NH_DIY_Icon.png",
+        "serial_id": 804,
+        "sell": 200,
+        "recipes_to_unlock": 0,
+        "materials": [
+            {
+                "name": "Drinking Fountain",
+                "count": 1
+            },
+            {
+                "name": "Stone",
+                "count": 20
+            },
+            {
+                "name": "Iron Nugget",
+                "count": 8
+            }
+        ],
+        "availability": [
+            {
+                "from": "Nook Miles Redemption",
+                "note": ""
+            }
+        ],
+        "buy": [
+            {
+                "price": 3000,
+                "currency": "Nook Miles"
+            }
+        ]
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Garden_Rock_(New_Horizons)",
+        "name": "Garden Rock",
+        "image_url": "https://dodo.ac/np/images/b/be/Garden_Rock_NH_DIY_Icon.png",
+        "serial_id": 805,
+        "sell": 200,
+        "recipes_to_unlock": 0,
+        "materials": [
+            {
+                "name": "Stone",
+                "count": 15
+            }
+        ],
+        "availability": [
+            {
+                "from": "Lazy villager",
+                "note": ""
+            }
+        ],
+        "buy": []
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Gemini_Closet_(New_Horizons)",
+        "name": "Gemini Closet",
+        "image_url": "https://dodo.ac/np/images/a/ae/Gemini_Closet_NH_DIY_Icon.png",
+        "serial_id": 2302,
+        "sell": 200,
+        "recipes_to_unlock": 0,
+        "materials": [
+            {
+                "name": "Star Fragment",
+                "count": 3
+            },
+            {
+                "name": "Gemini Fragment",
+                "count": 2
+            },
+            {
+                "name": "Gold Nugget",
+                "count": 2
+            },
+            {
+                "name": "Stone",
+                "count": 6
+            }
+        ],
+        "availability": [
+            {
+                "from": "Celeste",
+                "note": ""
+            }
+        ],
+        "buy": []
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Hedge_(New_Horizons)",
+        "name": "Hedge",
+        "image_url": "https://dodo.ac/np/images/b/b2/Hedge_NH_DIY_Icon.png",
+        "serial_id": 0,
+        "sell": 200,
+        "recipes_to_unlock": 0,
+        "materials": [
+            {
+                "name": "Clump of Weeds",
+                "count": 10
+            },
+            {
+                "name": "Tree Branch",
+                "count": 5
+            },
+            {
+                "name": "Stone",
+                "count": 2
+            }
+        ],
+        "availability": [
+            {
+                "from": "Leif",
+                "note": ""
+            },
+            {
+                "from": "Tom Nook",
+                "note": "Only available during Nature Day"
+            }
+        ],
+        "buy": []
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Iron-and-Stone_Fence_(New_Horizons)",
+        "name": "Iron-and-Stone Fence",
+        "image_url": "https://dodo.ac/np/images/2/2b/Iron-and-Stone_Fence_NH_DIY_Icon.png",
+        "serial_id": 0,
+        "sell": 200,
+        "recipes_to_unlock": 0,
+        "materials": [
+            {
+                "name": "Stone",
+                "count": 6
+            },
+            {
+                "name": "Iron Nugget",
+                "count": 3
+            }
+        ],
+        "availability": [
+            {
+                "from": "Nook Miles Redemption",
+                "note": ""
+            }
+        ],
+        "buy": [
+            {
+                "price": 1000,
+                "currency": "Nook Miles"
+            }
+        ]
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Leo_Sculpture_(New_Horizons)",
+        "name": "Leo Sculpture",
+        "image_url": "https://dodo.ac/np/images/a/aa/Leo_Sculpture_NH_DIY_Icon.png",
+        "serial_id": 2304,
+        "sell": 200,
+        "recipes_to_unlock": 0,
+        "materials": [
+            {
+                "name": "Star Fragment",
+                "count": 3
+            },
+            {
+                "name": "Leo Fragment",
+                "count": 2
+            },
+            {
+                "name": "Gold Nugget",
+                "count": 2
+            },
+            {
+                "name": "Stone",
+                "count": 3
+            }
+        ],
+        "availability": [
+            {
+                "from": "Celeste",
+                "note": ""
+            }
+        ],
+        "buy": []
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Maple-Leaf_Pond_Stone_(New_Horizons)",
+        "name": "Maple-Leaf Pond Stone",
+        "image_url": "https://dodo.ac/np/images/1/16/Maple-Leaf_Pond_Stone_NH_DIY_Icon.png",
+        "serial_id": 821,
+        "sell": 200,
+        "recipes_to_unlock": 0,
+        "materials": [
+            {
+                "name": "Stone",
+                "count": 10
+            },
+            {
+                "name": "Maple Leaf",
+                "count": 3
+            }
+        ],
+        "availability": [
+            {
+                "from": "Balloons",
+                "note": "Only available during Maple Leaf Season"
+            }
+        ],
+        "buy": []
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Mermaid_Flooring_(New_Horizons)",
+        "name": "Mermaid Flooring",
+        "image_url": "https://dodo.ac/np/images/3/32/Mermaid_Flooring_NH_DIY_Icon.png",
+        "serial_id": 2761,
+        "sell": 200,
+        "recipes_to_unlock": 0,
+        "materials": [
+            {
+                "name": "Pearl",
+                "count": 2
+            },
+            {
+                "name": "Sand Dollar",
+                "count": 5
+            },
+            {
+                "name": "Stone",
+                "count": 5
+            }
+        ],
+        "availability": [
+            {
+                "from": "Pascal",
+                "note": ""
+            }
+        ],
+        "buy": []
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Mossy_Garden_Rock_(New_Horizons)",
+        "name": "Mossy Garden Rock",
+        "image_url": "https://dodo.ac/np/images/6/60/Mossy_Garden_Rock_NH_DIY_Icon.png",
+        "serial_id": 807,
+        "sell": 200,
+        "recipes_to_unlock": 0,
+        "materials": [
+            {
+                "name": "Stone",
+                "count": 15
+            },
+            {
+                "name": "Clump of Weeds",
+                "count": 15
+            }
+        ],
+        "availability": [
+            {
+                "from": "Lazy villager",
+                "note": ""
+            }
+        ],
+        "buy": []
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Oil-Barrel_Bathtub_(New_Horizons)",
+        "name": "Oil-Barrel Bathtub",
+        "image_url": "https://dodo.ac/np/images/7/7f/Oil-Barrel_Bathtub_NH_DIY_Icon.png",
+        "serial_id": 2150,
+        "sell": 200,
+        "recipes_to_unlock": 100,
+        "materials": [
+            {
+                "name": "Oil Barrel",
+                "count": 1
+            },
+            {
+                "name": "Campfire",
+                "count": 1
+            },
+            {
+                "name": "Stone",
+                "count": 2
+            }
+        ],
+        "availability": [
+            {
+                "from": "Jock villager",
+                "note": ""
+            }
+        ],
+        "buy": []
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Outdoor_Bath_(New_Horizons)",
+        "name": "Outdoor Bath",
+        "image_url": "https://dodo.ac/np/images/c/cd/Outdoor_Bath_NH_DIY_Icon.png",
+        "serial_id": 812,
+        "sell": 200,
+        "recipes_to_unlock": 0,
+        "materials": [
+            {
+                "name": "Stone",
+                "count": 20
+            },
+            {
+                "name": "Shovel",
+                "count": 1
+            }
+        ],
+        "availability": [
+            {
+                "from": "Nook Miles Redemption",
+                "note": ""
+            }
+        ],
+        "buy": [
+            {
+                "price": 3000,
+                "currency": "Nook Miles"
+            }
+        ]
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Pisces_Lamp_(New_Horizons)",
+        "name": "Pisces Lamp",
+        "image_url": "https://dodo.ac/np/images/5/54/Pisces_Lamp_NH_DIY_Icon.png",
+        "serial_id": 2311,
+        "sell": 200,
+        "recipes_to_unlock": 0,
+        "materials": [
+            {
+                "name": "Star Fragment",
+                "count": 3
+            },
+            {
+                "name": "Pisces Fragment",
+                "count": 2
+            },
+            {
+                "name": "Gold Nugget",
+                "count": 2
+            },
+            {
+                "name": "Stone",
+                "count": 4
+            }
+        ],
+        "availability": [
+            {
+                "from": "Celeste",
+                "note": ""
+            }
+        ],
+        "buy": []
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Pond_Stone_(New_Horizons)",
+        "name": "Pond Stone",
+        "image_url": "https://dodo.ac/np/images/4/4a/Pond_Stone_NH_DIY_Icon.png",
+        "serial_id": 819,
+        "sell": 200,
+        "recipes_to_unlock": 0,
+        "materials": [
+            {
+                "name": "Stone",
+                "count": 10
+            }
+        ],
+        "availability": [
+            {
+                "from": "Snooty villager",
+                "note": ""
+            }
+        ],
+        "buy": []
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Rustic-Stone_Wall_(New_Horizons)",
+        "name": "Rustic-Stone Wall",
+        "image_url": "https://dodo.ac/np/images/f/f0/Rustic-Stone_Wall_NH_DIY_Icon.png",
+        "serial_id": 851,
+        "sell": 200,
+        "recipes_to_unlock": 0,
+        "materials": [
+            {
+                "name": "Stone",
+                "count": 5
+            },
+            {
+                "name": "Clay",
+                "count": 5
+            }
+        ],
+        "availability": [
+            {
+                "from": "Snooty villager",
+                "note": ""
+            }
+        ],
+        "buy": []
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Sauna_Heater_(New_Horizons)",
+        "name": "Sauna Heater",
+        "image_url": "https://dodo.ac/np/images/a/ad/Sauna_Heater_NH_DIY_Icon.png",
+        "serial_id": 810,
+        "sell": 200,
+        "recipes_to_unlock": 0,
+        "materials": [
+            {
+                "name": "Stone",
+                "count": 6
+            },
+            {
+                "name": "Iron Nugget",
+                "count": 3
+            },
+            {
+                "name": "Wood",
+                "count": 3
+            }
+        ],
+        "availability": [
+            {
+                "from": "Lazy villager",
+                "note": ""
+            }
+        ],
+        "buy": []
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Scorpio_Lamp_(New_Horizons)",
+        "name": "Scorpio Lamp",
+        "image_url": "https://dodo.ac/np/images/c/c7/Scorpio_Lamp_NH_DIY_Icon.png",
+        "serial_id": 2307,
+        "sell": 200,
+        "recipes_to_unlock": 0,
+        "materials": [
+            {
+                "name": "Star Fragment",
+                "count": 3
+            },
+            {
+                "name": "Scorpius Fragment",
+                "count": 2
+            },
+            {
+                "name": "Gold Nugget",
+                "count": 2
+            },
+            {
+                "name": "Stone",
+                "count": 5
+            }
+        ],
+        "availability": [
+            {
+                "from": "Celeste",
+                "note": ""
+            }
+        ],
+        "buy": []
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Shell_Bed_(New_Horizons)",
+        "name": "Shell Bed",
+        "image_url": "https://dodo.ac/np/images/6/60/Shell_Bed_NH_DIY_Icon.png",
+        "serial_id": 2703,
+        "sell": 200,
+        "recipes_to_unlock": 0,
+        "materials": [
+            {
+                "name": "Giant Clam",
+                "count": 5
+            },
+            {
+                "name": "Clay",
+                "count": 3
+            },
+            {
+                "name": "Stone",
+                "count": 4
+            }
+        ],
+        "availability": [
+            {
+                "from": "Peppy villager",
+                "note": ""
+            }
+        ],
+        "buy": []
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Shell_Fountain_(New_Horizons)",
+        "name": "Shell Fountain",
+        "image_url": "https://dodo.ac/np/images/c/c0/Shell_Fountain_NH_DIY_Icon.png",
+        "serial_id": 2701,
+        "sell": 200,
+        "recipes_to_unlock": 0,
+        "materials": [
+            {
+                "name": "Giant Clam",
+                "count": 5
+            },
+            {
+                "name": "Stone",
+                "count": 3
+            }
+        ],
+        "availability": [
+            {
+                "from": "Lazy villager",
+                "note": ""
+            }
+        ],
+        "buy": []
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Silo_(New_Horizons)",
+        "name": "Silo",
+        "image_url": "https://dodo.ac/np/images/d/d0/Silo_NH_DIY_Icon.png",
+        "serial_id": 708,
+        "sell": 200,
+        "recipes_to_unlock": 0,
+        "materials": [
+            {
+                "name": "Iron Nugget",
+                "count": 12
+            },
+            {
+                "name": "Hardwood",
+                "count": 6
+            },
+            {
+                "name": "Clay",
+                "count": 12
+            },
+            {
+                "name": "Stone",
+                "count": 12
+            }
+        ],
+        "availability": [
+            {
+                "from": "Nook Miles Redemption",
+                "note": ""
+            }
+        ],
+        "buy": [
+            {
+                "price": 3000,
+                "currency": "Nook Miles"
+            }
+        ]
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Simple_Well_(New_Horizons)",
+        "name": "Simple Well",
+        "image_url": "https://dodo.ac/np/images/a/af/Simple_Well_NH_DIY_Icon.png",
+        "serial_id": 811,
+        "sell": 200,
+        "recipes_to_unlock": 0,
+        "materials": [
+            {
+                "name": "Stone",
+                "count": 15
+            },
+            {
+                "name": "Flimsy Shovel",
+                "count": 1
+            }
+        ],
+        "availability": [
+            {
+                "from": "Nook Miles Redemption",
+                "note": ""
+            }
+        ],
+        "buy": [
+            {
+                "price": 2000,
+                "currency": "Nook Miles"
+            }
+        ]
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Stone_Arch_(New_Horizons)",
+        "name": "Stone Arch",
+        "image_url": "https://dodo.ac/np/images/6/6e/Stone_Arch_NH_DIY_Icon.png",
+        "serial_id": 809,
+        "sell": 200,
+        "recipes_to_unlock": 0,
+        "materials": [
+            {
+                "name": "Stone",
+                "count": 90
+            }
+        ],
+        "availability": [
+            {
+                "from": "Nook Miles Redemption",
+                "note": ""
+            }
+        ],
+        "buy": [
+            {
+                "price": 2000,
+                "currency": "Nook Miles"
+            }
+        ]
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Stone_Fence_(New_Horizons)",
+        "name": "Stone Fence",
+        "image_url": "https://dodo.ac/np/images/0/0a/Stone_Fence_NH_DIY_Icon.png",
+        "serial_id": 0,
+        "sell": 200,
+        "recipes_to_unlock": 0,
+        "materials": [
+            {
+                "name": "Stone",
+                "count": 4
+            }
+        ],
+        "availability": [
+            {
+                "from": "Nook Miles Redemption",
+                "note": ""
+            }
+        ],
+        "buy": [
+            {
+                "price": 1000,
+                "currency": "Nook Miles"
+            }
+        ]
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Stone_Lion-Dog_(New_Horizons)",
+        "name": "Stone Lion-Dog",
+        "image_url": "https://dodo.ac/np/images/3/3a/Stone_Lion-Dog_NH_DIY_Icon.png",
+        "serial_id": 816,
+        "sell": 200,
+        "recipes_to_unlock": 100,
+        "materials": [
+            {
+                "name": "Stone",
+                "count": 24
+            }
+        ],
+        "availability": [
+            {
+                "from": "Smug villager",
+                "note": ""
+            }
+        ],
+        "buy": []
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Stone_Stool_(New_Horizons)",
+        "name": "Stone Stool",
+        "image_url": "https://dodo.ac/np/images/c/c9/Stone_Stool_NH_DIY_Icon.png",
+        "serial_id": 800,
+        "sell": 200,
+        "recipes_to_unlock": 0,
+        "materials": [
+            {
+                "name": "Stone",
+                "count": 3
+            }
+        ],
+        "availability": [
+            {
+                "from": "DIY for Beginners",
+                "note": ""
+            }
+        ],
+        "buy": [
+            {
+                "price": 480,
+                "currency": "Bells"
+            }
+        ]
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Stone_Table_(New_Horizons)",
+        "name": "Stone Table",
+        "image_url": "https://dodo.ac/np/images/a/a0/Stone_Table_NH_DIY_Icon.png",
+        "serial_id": 801,
+        "sell": 200,
+        "recipes_to_unlock": 0,
+        "materials": [
+            {
+                "name": "Stone",
+                "count": 8
+            }
+        ],
+        "availability": [
+            {
+                "from": "Tom Nook",
+                "note": "50% chance of being obtained during the main storyline during the villager house development quest"
+            },
+            {
+                "from": "Lazy villager",
+                "note": ""
+            }
+        ],
+        "buy": []
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Stone_Tablet_(New_Horizons)",
+        "name": "Stone Tablet",
+        "image_url": "https://dodo.ac/np/images/9/98/Stone_Tablet_NH_DIY_Icon.png",
+        "serial_id": 817,
+        "sell": 200,
+        "recipes_to_unlock": 0,
+        "materials": [
+            {
+                "name": "Stone",
+                "count": 12
+            }
+        ],
+        "availability": [
+            {
+                "from": "Nook Miles Redemption",
+                "note": ""
+            }
+        ],
+        "buy": [
+            {
+                "price": 800,
+                "currency": "Nook Miles"
+            }
+        ]
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Stone_Wall_(New_Horizons)",
+        "name": "Stone Wall",
+        "image_url": "https://dodo.ac/np/images/b/b1/Stone_Wall_NH_DIY_Icon.png",
+        "serial_id": 850,
+        "sell": 200,
+        "recipes_to_unlock": 0,
+        "materials": [
+            {
+                "name": "Stone",
+                "count": 10
+            }
+        ],
+        "availability": [
+            {
+                "from": "Smug villager",
+                "note": ""
+            }
+        ],
+        "buy": []
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Tall_Garden_Rock_(New_Horizons)",
+        "name": "Tall Garden Rock",
+        "image_url": "https://dodo.ac/np/images/4/4f/Tall_Garden_Rock_NH_DIY_Icon.png",
+        "serial_id": 808,
+        "sell": 200,
+        "recipes_to_unlock": 0,
+        "materials": [
+            {
+                "name": "Stone",
+                "count": 60
+            }
+        ],
+        "availability": [
+            {
+                "from": "Snooty villager",
+                "note": ""
+            }
+        ],
+        "buy": []
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Tall_Lantern_(New_Horizons)",
+        "name": "Tall Lantern",
+        "image_url": "https://dodo.ac/np/images/4/4a/Tall_Lantern_NH_DIY_Icon.png",
+        "serial_id": 818,
+        "sell": 200,
+        "recipes_to_unlock": 100,
+        "materials": [
+            {
+                "name": "Stone",
+                "count": 18
+            }
+        ],
+        "availability": [
+            {
+                "from": "Smug villager",
+                "note": ""
+            }
+        ],
+        "buy": []
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Taurus_Bathtub_(New_Horizons)",
+        "name": "Taurus Bathtub",
+        "image_url": "https://dodo.ac/np/images/5/54/Taurus_Bathtub_NH_DIY_Icon.png",
+        "serial_id": 2301,
+        "sell": 200,
+        "recipes_to_unlock": 0,
+        "materials": [
+            {
+                "name": "Star Fragment",
+                "count": 3
+            },
+            {
+                "name": "Taurus Fragment",
+                "count": 2
+            },
+            {
+                "name": "Gold Nugget",
+                "count": 1
+            },
+            {
+                "name": "Stone",
+                "count": 8
+            }
+        ],
+        "availability": [
+            {
+                "from": "Celeste",
+                "note": ""
+            }
+        ],
+        "buy": []
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Turkey_Day_Garden_Stand_(New_Horizons)",
+        "name": "Turkey Day Garden Stand",
+        "image_url": "https://dodo.ac/np/images/3/36/Turkey_Day_Garden_Stand_NH_DIY_Icon.png",
+        "serial_id": 0,
+        "sell": 200,
+        "recipes_to_unlock": 0,
+        "materials": [
+            {
+                "name": "Stone",
+                "count": 8
+            },
+            {
+                "name": "Clay",
+                "count": 3
+            }
+        ],
+        "availability": [
+            {
+                "from": "Cozy Turkey Day DIY",
+                "note": ""
+            }
+        ],
+        "buy": []
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Turkey_Day_Hearth_(New_Horizons)",
+        "name": "Turkey Day Hearth",
+        "image_url": "https://dodo.ac/np/images/9/9c/Turkey_Day_Hearth_NH_DIY_Icon.png",
+        "serial_id": 0,
+        "sell": 200,
+        "recipes_to_unlock": 0,
+        "materials": [
+            {
+                "name": "Campfire",
+                "count": 1
+            },
+            {
+                "name": "Stone",
+                "count": 30
+            },
+            {
+                "name": "Clay",
+                "count": 10
+            }
+        ],
+        "availability": [
+            {
+                "from": "Cozy Turkey Day DIY",
+                "note": ""
+            }
+        ],
+        "buy": []
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Virgo_Harp_(New_Horizons)",
+        "name": "Virgo Harp",
+        "image_url": "https://dodo.ac/np/images/3/30/Virgo_Harp_NH_DIY_Icon.png",
+        "serial_id": 2305,
+        "sell": 200,
+        "recipes_to_unlock": 0,
+        "materials": [
+            {
+                "name": "Star Fragment",
+                "count": 3
+            },
+            {
+                "name": "Virgo Fragment",
+                "count": 2
+            },
+            {
+                "name": "Gold Nugget",
+                "count": 2
+            },
+            {
+                "name": "Stone",
+                "count": 4
+            }
+        ],
+        "availability": [
+            {
+                "from": "Celeste",
+                "note": ""
+            }
+        ],
+        "buy": []
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Wave_Breaker_(New_Horizons)",
+        "name": "Wave Breaker",
+        "image_url": "https://dodo.ac/np/images/7/7c/Wave_Breaker_NH_DIY_Icon.png",
+        "serial_id": 813,
+        "sell": 200,
+        "recipes_to_unlock": 0,
+        "materials": [
+            {
+                "name": "Stone",
+                "count": 10
+            },
+            {
+                "name": "Clay",
+                "count": 10
+            }
+        ],
+        "availability": [
+            {
+                "from": "Nook Miles Redemption",
+                "note": ""
+            }
+        ],
+        "buy": [
+            {
+                "price": 1500,
+                "currency": "Nook Miles"
+            }
+        ]
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Western-Style_Stone_(New_Horizons)",
+        "name": "Western-Style Stone",
+        "image_url": "https://dodo.ac/np/images/d/d8/Western-Style_Stone_NH_DIY_Icon.png",
+        "serial_id": 814,
+        "sell": 200,
+        "recipes_to_unlock": 100,
+        "materials": [
+            {
+                "name": "Stone",
+                "count": 30
+            }
+        ],
+        "availability": [
+            {
+                "from": "Normal villager",
+                "note": ""
+            }
+        ],
+        "buy": []
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Zen_Fence_(New_Horizons)",
+        "name": "Zen Fence",
+        "image_url": "https://dodo.ac/np/images/b/bc/Zen_Fence_NH_DIY_Icon.png",
+        "serial_id": 0,
+        "sell": 200,
+        "recipes_to_unlock": 0,
+        "materials": [
+            {
+                "name": "Iron Nugget",
+                "count": 3
+            },
+            {
+                "name": "Clay",
+                "count": 3
+            },
+            {
+                "name": "Stone",
+                "count": 3
+            }
+        ],
+        "availability": [
+            {
+                "from": "Nook Miles Redemption",
+                "note": ""
+            }
+        ],
+        "buy": [
+            {
+                "price": 1000,
+                "currency": "Nook Miles"
+            }
+        ]
+    },
+    {
+        "url": "https://nookipedia.com/wiki/Item:Zen-Style_Stone_(New_Horizons)",
+        "name": "Zen-Style Stone",
+        "image_url": "https://dodo.ac/np/images/d/da/Zen-Style_Stone_NH_DIY_Icon.png",
+        "serial_id": 815,
+        "sell": 200,
+        "recipes_to_unlock": 100,
+        "materials": [
+            {
+                "name": "Stone",
+                "count": 30
+            }
+        ],
+        "availability": [
+            {
+                "from": "Lazy villager",
+                "note": ""
+            }
+        ],
+        "buy": []
+    }
 ]
