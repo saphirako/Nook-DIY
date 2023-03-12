@@ -1,9 +1,10 @@
+import { useContext } from 'react'
 import { FilterPresetType } from './filters'
 import ItemCard from './ItemCard'
 import { MaterialName, Recipe } from './Recipe'
+import { RecipeContext } from './Contexts/RecipeContext'
 
 interface RecipesProps {
-    recipes: Array<Recipe>
     filterBy: Partial<Record<MaterialName, number | null>>
     filterPresets: FilterPresetType
 }
@@ -19,8 +20,9 @@ const includesMaterialFilter = (
 }
 
 export default function Recipes(props: RecipesProps) {
+    const { recipes } = useContext(RecipeContext);
     // Detect if we have Nookipedia data or if we should render a loading screen
-    const { recipes, filterBy, filterPresets } = props
+    const { filterBy, filterPresets } = props
 
     const filterRecipes = (materialsToFilter: Partial<Record<MaterialName, number | null>>) => {
         // Get recipes that have the provided materials in them at all

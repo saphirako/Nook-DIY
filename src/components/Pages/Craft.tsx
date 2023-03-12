@@ -1,18 +1,12 @@
-import React, { useState } from 'react'
-import { Transition } from '@headlessui/react'
+import { useState } from 'react'
 import Menu from 'components/Menu'
-import Recipes from 'components/Recipes'
 import SimpleBar from 'simplebar-react'
 import 'static/stylesheets/simplebar.css'
-import { MaterialName, Recipe } from 'components/Recipe'
+import { MaterialName } from 'components/Recipe'
 import { FilterPresetType, DefaultFilterPresets, FilterPresetName } from 'components/filters'
+import Recipes from 'components/Recipes'
 
-interface CraftProps {
-    recipes: Array<Recipe>
-}
-
-export default function Craft(props: CraftProps) {
-    const { recipes } = props
+export default function Craft() {
     // State Management
     const [selectedMaterials, setSelectedMaterials] = useState<
         Partial<Record<MaterialName, number | null>>
@@ -44,11 +38,7 @@ export default function Craft(props: CraftProps) {
             </p>
             <div className="hidden lg:flex flex-1 basis-96 justify-between gap-x-10 overflow-hidden">
                 <SimpleBar className="w-full" autoHide={false}>
-                    <Recipes
-                        recipes={recipes}
-                        filterBy={selectedMaterials}
-                        filterPresets={filterPresets}
-                    />
+                    <Recipes filterBy={selectedMaterials} filterPresets={filterPresets} />
                 </SimpleBar>
                 <Menu
                     updateMaterialFilterList={updateMaterialFilterList}
