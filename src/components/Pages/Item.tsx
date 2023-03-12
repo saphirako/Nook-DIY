@@ -1,22 +1,24 @@
-import { Fragment, ReactElement, useContext } from 'react'
+import { Fragment, useContext } from 'react'
 import { Transition } from '@headlessui/react'
 import Tippy from '@tippyjs/react'
 import 'tippy.js/dist/tippy.css'
 import { Link } from 'react-router-dom'
 import * as MaterialIcon from 'data/materials.json'
-import { useLocation } from 'react-router-dom'
 import { Currency, Ingredient, MaterialName } from 'components/Recipe'
 import { sourceMap } from 'components/Item'
-import { ReactComponent as Hammer } from 'static/image/Hammer.svg'
 import { RecipeContext } from 'components/Contexts/RecipeContext'
+import { ArrowLeftIcon, InformationCircleIcon, LockClosedIcon } from '@heroicons/react/20/solid'
 
 interface BannerProps {
     className: string
-    children: ReactElement | ReactElement[]
+    label: string
     tooltip?: string
     onClick?: Function
+    icon?: any
+
 }
-function Banner(props: BannerProps) {
+const Banner = (props: BannerProps) => {
+    const Icon = props.icon
     const bannerInternals = (
         <div
             className={
@@ -24,7 +26,8 @@ function Banner(props: BannerProps) {
                 props.className
             }
         >
-            {props.children}
+            {props.icon ? <Icon className="w-12 fill-current" /> : ''}
+            <p>{props.label}</p>
         </div>
     )
 
@@ -34,7 +37,7 @@ function Banner(props: BannerProps) {
             className="font-bold text-xl"
             content={props.tooltip ? props.tooltip : ''}
             placement="right"
-            delay={[100, 0]}
+            delay={[500, 0]}
             duration={0}
         >
             {bannerInternals}
@@ -78,17 +81,15 @@ function RecipeIngredient(props: Ingredient) {
 
 function getSourceImage(source: string) {
     if (Object.keys(sourceMap).includes(source)) return sourceMap[source]
-    if (source.includes(' diy') || source.includes('recipe'))
-        return sourceMap.DIY
+    if (source.includes(' diy') || source.includes('recipe')) return sourceMap.DIY
     return sourceMap.DEFAULT
 }
 
 export default function Item() {
-    const location = useLocation()
     const { selectedRecipe } = useContext(RecipeContext)
 
-    return (
-        <div className="h-3/4 py-12 bg-brown-200 flex flex-row justify-between text-brown-600 overflow-hidden">
+    return selectedRecipe !== null ? (
+        <div className="h-3/4 py-12 bg-brown-200 flex flex-row justify-between text-brown-600 overflow-hidden rounded-md">
             {/*  Left: banners and external links */}
             <div className="h-auto flex flex-col justify-between w-1/4 xl:w-1/5">
                 {/*Banner Bar */}
@@ -98,9 +99,11 @@ export default function Item() {
                         to="/"
                         // onClick={(event) => forceTransition(event)}
                     >
-                        <Banner className="bg-red-500">
-                            <p>{'<- Back to the craft page'}</p>
-                        </Banner>
+                        <Banner
+                            className="bg-red-500"
+                            label="Back to the craft page"
+                            icon={ArrowLeftIcon}
+                        />
                     </Link>
 
                     {/* If there's an unlock pre-req, display it here*/}
@@ -108,12 +111,9 @@ export default function Item() {
                         <Banner
                             className="bg-brown-600"
                             tooltip="The required number of recipes you need to know to be able to unlock this DIY recipe. (Unless you unlocked it from Tom Nook in early-game.)"
-                        >
-                            <Hammer className="w-12 fill-current" />
-                            <p className="text-5xl">
-                                {selectedRecipe.recipes_to_unlock.toString()}
-                            </p>
-                        </Banner>
+                            icon={LockClosedIcon}
+                            label={selectedRecipe.recipes_to_unlock.toString()}
+                        />
                     ) : null}
 
                     {/* Nookipedia Link */}
@@ -121,13 +121,9 @@ export default function Item() {
                         <Banner
                             className="bg-nookipedia pb-3"
                             tooltip="View this item's article on Nookipedia"
-                        >
-                            <img
-                                src="https://dodo.ac/np/images/1/1e/Nookipedia_Logo_Outlined.png"
-                                className="w-32"
-                                alt="Nookipedia Logo"
-                            />
-                        </Banner>
+                            label="Nookipedia"
+                            icon={InformationCircleIcon}
+                        />
                     </a>
                     {/* <a className="w-4/5" href={props.state.url}><img src="https://dodo.ac/np/images/1/1e/Nookipedia_Logo_Outlined.png" alt="Nookipedia logo" /></a> */}
                 </div>
@@ -142,15 +138,7 @@ export default function Item() {
                                 className="font-bold"
                                 placement="bottom-end"
                                 content={
-                                    [
-                                        'Tom Nook',
-                                        'Balloons',
-                                        'Cyrus',
-                                        'Gulliver',
-                                        'Gullivarrr',
-                                        'Harvey',
-                                        'Reese',
-                                    ].includes(source.from)
+                                    source.note !== ''
                                         ? `${source.from} (${source.note})`
                                         : source.from
                                 }
@@ -197,5 +185,7 @@ export default function Item() {
                 ))}
             </div>
         </div>
+    ) : (
+        <p>loading</p>
     )
 }
