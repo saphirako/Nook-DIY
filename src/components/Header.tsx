@@ -35,7 +35,7 @@ export default function Header() {
 
     return (
         <>
-            <div className="flex flex-row items-center justify-between p-8">
+            <div className="flex flex-row items-center justify-between p-8 shrink-0">
                 <NookDIYLogo className="w-48 lg:w-72 z-20" />
                 <MobileIcon
                     className="w-10 text-brown-700 lg:hidden z-20"

@@ -9,43 +9,42 @@ import { Item as ItemType } from 'components/Item'
 
 import card_colors from 'data/colors.json'
 import local_recipes from 'data/temp_recipes.json' // Dummy data to test locally without hitting Nookipedia API
-import { defaultTransitionTime } from 'utils'
 import { useState } from 'react'
-import Recipes from 'components/Recipes'
 import { Ingredient, MaterialName, NookipediaRecipe, Recipe } from 'components/Recipe'
 import { Color } from 'components/Colors'
+import Footer from 'components/Footer'
 
 const NOOKIPEDIA_TOKEN = process.env.REACT_APP_NOOKIPEDIA_TOKEN
 const isLocalTest = process.env.REACT_APP_USE_LOCAL_DATA === 'true'
 
+const cardColorMap = card_colors as Record<Recipe['name'], Color>
+
+// Add in color data to recipes
+const cleanseAPIAndAddLocalData = (recipes: Array<ItemType>) => {
+    let cleanedData: Recipe[] = []
+    let alreadySeen: Record<Recipe['name'], boolean> = {}
+    let recipe_materials: Partial<Record<MaterialName, number>> = {}
+
+    recipes.forEach((recipe: NookipediaRecipe & ItemType) => {
+        recipe.card_color = cardColorMap[recipe.name]
+        if (!alreadySeen[recipe.name]) {
+            recipe_materials = {}
+            recipe.materials.map(
+                (material: Ingredient) => (recipe_materials[material.name] = material.count)
+            )
+            cleanedData.push({
+                ...recipe,
+                materials: recipe_materials,
+            })
+            alreadySeen[recipe.name] = true
+        }
+    })
+    return cleanedData
+}
+
 export default function App() {
     // const [nookipediaDataRetrieved, setNookipediaDataRetrieved] = useState(false)
     const [recipes, setRecipes] = useState<Array<Recipe>>([])
-
-    const cardColorMap = card_colors as Record<Recipe['name'], Color>
-
-    // Add in color data to recipes
-    const cleanseAPIAndAddLocalData = (recipes: Array<ItemType>) => {
-        let cleanedData: Recipe[] = []
-        let alreadySeen: Record<Recipe['name'], boolean> = {}
-        let recipe_materials: Partial<Record<MaterialName, number>> = {}
-
-        recipes.forEach((recipe: NookipediaRecipe & ItemType) => {
-            recipe.card_color = cardColorMap[recipe.name]
-            if (!alreadySeen[recipe.name]) {
-                recipe_materials = {}
-                recipe.materials.map(
-                    (material: Ingredient) => (recipe_materials[material.name] = material.count)
-                )
-                cleanedData.push({
-                    ...recipe,
-                    materials: recipe_materials,
-                })
-                alreadySeen[recipe.name] = true
-            }
-        })
-        return cleanedData
-    }
 
     useEffect(() => {
         if (isLocalTest) {
@@ -68,7 +67,7 @@ export default function App() {
     }, [])
 
     return (
-        <div className="font-semibold text-brown-600 w-full max-w-screen-hd h-screen mx-auto">
+        <div className="font-semibold text-brown-600 w-full h-screen max-w-screen-hd flex flex-col justify-between mx-auto">
             <Router>
                 <Header />
                 <Routes>
@@ -77,6 +76,7 @@ export default function App() {
                     {/* <Route exact path="/plan" render={props => ()} /> */}
                     <Route path="about" element={<About />} />
                 </Routes>
+                <Footer />
             </Router>
         </div>
     )

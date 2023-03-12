@@ -51,9 +51,6 @@ module.exports = {
                 'acnh-silver': '#9e9fa3',
                 'acnh-silver-border': '#787B7A',
             },
-            gridAutoRows: {
-                recipes: '15rem',
-            },
             lineHeight: {
                 11: '2.75rem',
                 12: '3rem',

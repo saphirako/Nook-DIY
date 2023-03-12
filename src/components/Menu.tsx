@@ -63,7 +63,7 @@ export default function Menu(props: MenuProps) {
         ) : null
 
     return (
-        <div className="hidden h-96 justify-between sticky top-4 lg:flex flex-col gap-y-4 justify-items-start w-full max-w-xs 2xl:max-w-lg my-4">
+        <div className="justify-start sticky mt-4 pr-12 flex flex-col gap-y-4 justify-items-start w-full max-w-lg">
             <div>
                 <p className="text-2xl my-4">Select Materials</p>
                 <Combobox
