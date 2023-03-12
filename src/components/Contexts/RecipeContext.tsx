@@ -1,6 +1,6 @@
 import { Ingredient, MaterialName, NookipediaRecipe, Recipe } from 'components/Recipe'
 import { createContext, useEffect, useMemo, useState } from 'react'
-import { Item as ItemType } from 'components/Item'
+import { Item, Item as ItemType } from 'components/Item'
 import card_colors from 'data/colors.json'
 import { Color } from 'components/Colors'
 import local_recipes from 'data/temp_recipes.json' // Dummy data to test locally without hitting Nookipedia API
@@ -33,18 +33,23 @@ const cleanseAPIAndAddLocalData = (recipes: Array<ItemType>) => {
 }
 
 type RecipeContextType = {
-    recipes: Recipe[]
+    recipes: Recipe[],
+    selectedRecipe: Item & Recipe;
+    selectRecipe: (item: Item & Recipe) => void
 }
 export const RecipeContext = createContext<RecipeContextType | undefined>(undefined)
 
 export const RecipeContextProvider = ({ children }: any) => {
     const [recipes, setRecipes] = useState<Recipe[]>([])
+    const [selectedRecipe, setSelectedRecipe] = useState<Item & Recipe>(null);
 
     const contextObject = useMemo(
         () => ({
             recipes,
+            selectedRecipe,
+            selectRecipe: (item: typeof selectedRecipe) => setSelectedRecipe(item),
         }),
-        [recipes]
+        [recipes, selectedRecipe]
     )
 
     useEffect(() => {

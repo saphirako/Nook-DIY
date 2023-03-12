@@ -1,35 +1,33 @@
 // import { Transition } from '@headlessui/react'
-import Tippy from '@tippyjs/react'
-import { MouseEvent } from 'react'
-import { useNavigate } from 'react-router-dom'
-import 'tippy.js/dist/tippy.css'
-import { mapACNHDataToTailwind } from './Colors'
-import { Item } from './Item'
+import Tippy from "@tippyjs/react";
+import { MouseEvent, useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import "tippy.js/dist/tippy.css";
+import { mapACNHDataToTailwind } from "./Colors";
+import { Item } from "./Item";
+import { Recipe } from "./Recipe";
+import { RecipeContext } from "./Contexts/RecipeContext";
 
 interface ItemCardProps {
-    itemData: Item
-    isShowing: boolean
+    itemData: Item & Recipe;
+    isShowing: boolean;
 }
 
 export default function ItemCard(props: ItemCardProps) {
-    const navigate = useNavigate()
-    const selectItem = () => {
-        navigate('item', {
-            state: {
-                ...props.itemData,
-                isShowing: props.isShowing,
-            },
-        })
-    }
+    const navigate = useNavigate();
+    const { selectRecipe } = useContext(RecipeContext);
 
     return (
         <Tippy className="font-bold" content={props.itemData.name} delay={[100, 0]} duration={0}>
             <div
                 className={
-                    'border-8 border-brown-100 h-60 shadow-recipecard rounded-xl w-44 relative bg-cover bg-diyrecipe transition-transform transform hover:-rotate-3 hover:scale-110 ' +
+                    "border-8 border-brown-100 h-60 shadow-recipecard rounded-xl w-44 relative bg-cover bg-diyrecipe transition-transform transform hover:-rotate-3 hover:scale-110 " +
                     mapACNHDataToTailwind(props.itemData.card_color)
                 }
-                onClick={() => selectItem()}
+                onClick={() => {
+                    selectRecipe(props.itemData);
+                    navigate("item");
+                }}
             >
                 <img
                     alt={props.itemData.name}
@@ -38,5 +36,5 @@ export default function ItemCard(props: ItemCardProps) {
                 />
             </div>
         </Tippy>
-    )
+    );
 }

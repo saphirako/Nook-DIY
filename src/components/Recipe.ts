@@ -1,3 +1,5 @@
+import { Source, Transaction } from "./Item"
+
 export type MaterialName =
     | 'acorn'
     | 'softwood'
@@ -167,22 +169,15 @@ export type MaterialName =
     | 'gold armor'
     | 'sandy-beach flooring'
 
-export type RecipeSource =
-    | 'Tom Nook'
-    | 'Balloons'
-    | 'Cyrus'
-    | 'Gulliver'
-    | 'Gullivarrr'
-    | 'Harvey'
-    | 'Reese'
-
-export interface Recipe {
+    export interface Recipe {
     name: string
     recipes_to_unlock: number
-    availability: {}
+    availability: Array<Source>
     image_url: string
+    buy: Array<Transaction>
     sell: number
     materials: Partial<Record<MaterialName, number | null>>
+    url: string
 }
 
 export interface NookipediaRecipe extends Omit<Recipe, 'materials'> {
