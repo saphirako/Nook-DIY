@@ -11,6 +11,7 @@
         "@types/react": "^18.0.15",
         "@types/react-dom": "^18.0.6",
         "@types/react-router-dom": "^5.3.3",
+        "animal-crossing": "^8.2.0",
         "axios": "^0.27.2",
         "prettier": "^2.7.1",
         "react": "^18.2.0",
