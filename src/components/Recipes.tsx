@@ -1,13 +1,8 @@
 import { useContext } from 'react'
-import { FilterPresetType } from './filters'
 import ItemCard from './ItemCard'
 import { MaterialName, Recipe } from './Recipe'
 import { RecipeContext } from './Contexts/RecipeContext'
-
-interface RecipesProps {
-    filterBy: Partial<Record<MaterialName, number | null>>
-    filterPresets: FilterPresetType
-}
+import { CraftContext } from './Contexts/CraftContext'
 
 const includesMaterialFilter = (
     filterMaterials: Partial<Record<MaterialName, number | null>>,
@@ -19,10 +14,9 @@ const includesMaterialFilter = (
     return tmp.length >= Object.keys(filterMaterials).length && tmp.length > 0
 }
 
-export default function Recipes(props: RecipesProps) {
-    const { recipes } = useContext(RecipeContext);
-    // Detect if we have Nookipedia data or if we should render a loading screen
-    const { filterBy, filterPresets } = props
+export default function Recipes() {
+    const { recipes } = useContext(RecipeContext)
+    const { filterBy, filterPresets } = useContext(CraftContext)
 
     const filterRecipes = (materialsToFilter: Partial<Record<MaterialName, number | null>>) => {
         // Get recipes that have the provided materials in them at all
@@ -31,17 +25,16 @@ export default function Recipes(props: RecipesProps) {
         )
 
         // Craftable preset filter:
-        if (filterPresets.craftable.value) {
+        if (filterPresets.craftable.isOn) {
             Object.keys(materialsToFilter).forEach((mtfMaterialName: MaterialName) => {
-                if (typeof mtfMaterialName !== 'undefined') {
-                    filtered = filtered.filter(
-                        (recipe) =>
-                            recipe.materials[mtfMaterialName] <=
-                                materialsToFilter[mtfMaterialName] &&
+                if (materialsToFilter[mtfMaterialName] !== null) {
+                    filtered = filtered.filter((recipe) => {
+                        console.log(recipe)
+                        recipe.materials[mtfMaterialName] <= materialsToFilter[mtfMaterialName] &&
                             Object.keys(materialsToFilter).some((material) =>
                                 Object.keys(recipe.materials).includes(material)
                             )
-                    )
+                    })
                 }
             })
         }
