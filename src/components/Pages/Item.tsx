@@ -1,12 +1,11 @@
 import { useContext } from "react";
-import Tippy from "@tippyjs/react";
-import "tippy.js/dist/tippy.css";
 import { Link } from "react-router-dom";
 import * as MaterialIcon from "data/materials.json";
 import { Currency, Ingredient, MaterialName } from "components/Recipe";
 import { sourceMap } from "components/Item";
 import { RecipeContext } from "components/Contexts/RecipeContext";
 import { ArrowLeftIcon, InformationCircleIcon, LockClosedIcon } from "@heroicons/react/20/solid";
+import { Tooltip } from "components/Tooltip";
 
 interface BannerProps {
     className: string;
@@ -17,31 +16,17 @@ interface BannerProps {
 }
 const Banner = (props: BannerProps) => {
     const Icon = props.icon;
-    const bannerInternals = (
+    return (
         <div
             className={
-                "flex flex-row justify-end -ml-4 py-4 px-8 h-16 text-white rounded-2xl min-w-min max-w-max items-center gap-4 transition transform hover:scale-110 " +
+                "flex flex-row justify-end -ml-4 py-4 px-8 h-16 text-white rounded-2xl min-w-min max-w-max items-center gap-4 transition transform hover:scale-110 group " +
                 props.className
             }
         >
             {props.icon ? <Icon className="w-12 fill-current" /> : ""}
             <p>{props.label}</p>
+            {props.tooltip ? <Tooltip label={props.tooltip} position="right" /> : null}
         </div>
-    );
-
-    // If this Banner has a tooltip, wrap it. Otherwise just display the banner.
-    return props.tooltip ? (
-        <Tippy
-            className="font-bold text-xl"
-            content={props.tooltip ? props.tooltip : ""}
-            placement="right"
-            delay={[500, 0]}
-            duration={0}
-        >
-            {bannerInternals}
-        </Tippy>
-    ) : (
-        bannerInternals
     );
 };
 
@@ -131,22 +116,23 @@ export default function Item() {
                     <p className="text-xl">Obtained from:</p>
                     <div className="flex flex-row gap-2">
                         {selectedRecipe.availability.map((source) => (
-                            <Tippy
-                                key={source.from}
-                                className="font-bold"
-                                placement="bottom-end"
-                                content={
-                                    source.note !== ""
-                                        ? `${source.from} (${source.note})`
-                                        : source.from
-                                }
-                            >
+                            <div className="group">
                                 <img
-                                    className="w-1/4"
+                                    className="w-12 "
                                     src={getSourceImage(source.from.toLowerCase())}
                                     alt={source.from + " icon"}
                                 />
-                            </Tippy>
+
+                                <Tooltip
+                                    label={
+                                        source.note !== ""
+                                            ? `${source.from} (${source.note})`
+                                            : source.from
+                                    }
+                                    position="right"
+                                    keyLabel={source.from}
+                                />
+                            </div>
                         ))}
                     </div>
                 </div>

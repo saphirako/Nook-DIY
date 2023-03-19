@@ -70,18 +70,13 @@ export default function Menu() {
                     value={match}
                     onChange={(material: MaterialName) => {
                         changeFilterBy({ [material]: null });
-                        setMatch(material);
+                        setMatch(null);
                         setPossibleMatches(materialsList);
                     }}
                 >
                     <div className="relative mt-1">
                         <div className="relative w-full cursor-default overflow-hidden rounded-lg text-left shadow-sm outline-none focus:outline-none sm:text-sm">
                             <Combobox.Input
-                                // displayValue={(displayMaterials: Array<MaterialName>) =>
-                                //     possibleMatches.length > 0
-                                //         ? 'Enter a material name to filter results'
-                                //         : possibleMatches.join(',')
-                                // }
                                 className={
                                     "w-full border-none py-2 pl-3 pr-10 text-sm leading-5 bg-brown text-gray-900 focus:outline-none outline-none"
                                 }
@@ -109,15 +104,24 @@ export default function Menu() {
                         >
                             {possibleMatches
                                 .filter((pm: MaterialName) => !selectedMaterials.includes(pm))
-                                .map((material) => (
-                                    <Combobox.Option
-                                        className={"cursor-pointer"}
-                                        key={material}
-                                        value={material as MaterialName}
-                                    >
-                                        {material}
-                                    </Combobox.Option>
-                                ))}
+                                .map((material) => {
+                                    return (
+                                        <Combobox.Option
+                                            className={
+                                                "cursor-pointer flex flex-row items-center gap-4 odd:bg-brown-500 odd:bg-opacity-40 px-2 hover:font-extrabold"
+                                            }
+                                            key={material}
+                                            value={material as MaterialName}
+                                        >
+                                            <img
+                                                className="w-12"
+                                                src={materialImageMap[material as MaterialName]}
+                                                alt={material}
+                                            />
+                                            <p className="capitalize">{material}</p>
+                                        </Combobox.Option>
+                                    );
+                                })}
                         </Combobox.Options>
                     </div>
                 </Combobox>
