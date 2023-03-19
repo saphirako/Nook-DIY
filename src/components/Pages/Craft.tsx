@@ -1,8 +1,8 @@
-import Menu from 'components/Menu'
-import SimpleBar from 'simplebar-react'
-import 'static/stylesheets/simplebar.css'
-import Recipes from 'components/Recipes'
-import { CraftContextProvider } from 'components/Contexts/CraftContext'
+import Menu from "components/Menu";
+import SimpleBar from "simplebar-react";
+import "static/stylesheets/simplebar.css";
+import Recipes from "components/Recipes";
+import { CraftContextProvider } from "components/Contexts/CraftContext";
 
 export default function Craft() {
     // Render
@@ -19,5 +19,5 @@ export default function Craft() {
                 <Menu />
             </div>
         </CraftContextProvider>
-    )
+    );
 }

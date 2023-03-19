@@ -1,1 +1,1 @@
-export const defaultTransitionTime = 300
+export const defaultTransitionTime = 300;

@@ -1,41 +1,40 @@
-import { Fragment, useContext } from 'react'
-import { Transition } from '@headlessui/react'
-import Tippy from '@tippyjs/react'
-import 'tippy.js/dist/tippy.css'
-import { Link } from 'react-router-dom'
-import * as MaterialIcon from 'data/materials.json'
-import { Currency, Ingredient, MaterialName } from 'components/Recipe'
-import { sourceMap } from 'components/Item'
-import { RecipeContext } from 'components/Contexts/RecipeContext'
-import { ArrowLeftIcon, InformationCircleIcon, LockClosedIcon } from '@heroicons/react/20/solid'
+import { Fragment, useContext } from "react";
+import { Transition } from "@headlessui/react";
+import Tippy from "@tippyjs/react";
+import "tippy.js/dist/tippy.css";
+import { Link } from "react-router-dom";
+import * as MaterialIcon from "data/materials.json";
+import { Currency, Ingredient, MaterialName } from "components/Recipe";
+import { sourceMap } from "components/Item";
+import { RecipeContext } from "components/Contexts/RecipeContext";
+import { ArrowLeftIcon, InformationCircleIcon, LockClosedIcon } from "@heroicons/react/20/solid";
 
 interface BannerProps {
-    className: string
-    label: string
-    tooltip?: string
-    onClick?: Function
-    icon?: any
-
+    className: string;
+    label: string;
+    tooltip?: string;
+    onClick?: Function;
+    icon?: any;
 }
 const Banner = (props: BannerProps) => {
-    const Icon = props.icon
+    const Icon = props.icon;
     const bannerInternals = (
         <div
             className={
-                'flex flex-row justify-end -ml-4 py-4 px-8 h-16 text-white rounded-2xl min-w-min max-w-max items-center gap-4 transition transform hover:scale-110 ' +
+                "flex flex-row justify-end -ml-4 py-4 px-8 h-16 text-white rounded-2xl min-w-min max-w-max items-center gap-4 transition transform hover:scale-110 " +
                 props.className
             }
         >
-            {props.icon ? <Icon className="w-12 fill-current" /> : ''}
+            {props.icon ? <Icon className="w-12 fill-current" /> : ""}
             <p>{props.label}</p>
         </div>
-    )
+    );
 
     // If this Banner has a tooltip, wrap it. Otherwise just display the banner.
     return props.tooltip ? (
         <Tippy
             className="font-bold text-xl"
-            content={props.tooltip ? props.tooltip : ''}
+            content={props.tooltip ? props.tooltip : ""}
             placement="right"
             delay={[500, 0]}
             duration={0}
@@ -44,8 +43,8 @@ const Banner = (props: BannerProps) => {
         </Tippy>
     ) : (
         bannerInternals
-    )
-}
+    );
+};
 
 function ItemBuySell(props: Currency) {
     return (
@@ -54,15 +53,15 @@ function ItemBuySell(props: Currency) {
             <img
                 className="w-1/2"
                 src={
-                    props.currency === 'Bells'
-                        ? 'https://acnhcdn.com/latest/MenuIcon/MoneyBag010.png'
-                        : 'https://dodo.ac/np/images/1/10/Nook_Miles_NH_Icon.png'
+                    props.currency === "Bells"
+                        ? "https://acnhcdn.com/latest/MenuIcon/MoneyBag010.png"
+                        : "https://dodo.ac/np/images/1/10/Nook_Miles_NH_Icon.png"
                 }
                 alt={`${props.type} ${props.currency} icon}`}
             />
             <p className="font-light">{props.value}</p>
         </div>
-    )
+    );
 }
 
 function RecipeIngredient(props: Ingredient) {
@@ -76,17 +75,17 @@ function RecipeIngredient(props: Ingredient) {
             <p className="pl-16 capitalize">{props.name}</p>
             <p className="w-12 text-center">x{props.count}</p>
         </div>
-    )
+    );
 }
 
 function getSourceImage(source: string) {
-    if (Object.keys(sourceMap).includes(source)) return sourceMap[source]
-    if (source.includes(' diy') || source.includes('recipe')) return sourceMap.DIY
-    return sourceMap.DEFAULT
+    if (Object.keys(sourceMap).includes(source)) return sourceMap[source];
+    if (source.includes(" diy") || source.includes("recipe")) return sourceMap.DIY;
+    return sourceMap.DEFAULT;
 }
 
 export default function Item() {
-    const { selectedRecipe } = useContext(RecipeContext)
+    const { selectedRecipe } = useContext(RecipeContext);
 
     return selectedRecipe !== null ? (
         <div className="h-3/4 py-12 bg-brown-200 flex flex-row justify-between text-brown-600 overflow-hidden rounded-md">
@@ -138,7 +137,7 @@ export default function Item() {
                                 className="font-bold"
                                 placement="bottom-end"
                                 content={
-                                    source.note !== ''
+                                    source.note !== ""
                                         ? `${source.from} (${source.note})`
                                         : source.from
                                 }
@@ -146,7 +145,7 @@ export default function Item() {
                                 <img
                                     className="w-1/4"
                                     src={getSourceImage(source.from.toLowerCase())}
-                                    alt={source.from + ' icon'}
+                                    alt={source.from + " icon"}
                                 />
                             </Tippy>
                         ))}
@@ -169,7 +168,7 @@ export default function Item() {
                     {selectedRecipe.sell > 0 ? (
                         <ItemBuySell type="Sell" value={selectedRecipe.sell} currency="Bells" />
                     ) : (
-                        ''
+                        ""
                     )}
                 </div>
             </div>
@@ -187,5 +186,5 @@ export default function Item() {
         </div>
     ) : (
         <p>loading</p>
-    )
+    );
 }

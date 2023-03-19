@@ -1,10 +1,10 @@
-import { Combobox, Switch } from '@headlessui/react'
-import { useContext, useState } from 'react'
-import { MaterialName } from './Recipe'
-import { FilterByType, FilterPresetName } from './filters'
-import materialImageMap from 'data/materials.json'
-import { ChevronUpDownIcon, XCircleIcon } from '@heroicons/react/20/solid'
-import { CraftContext } from './Contexts/CraftContext'
+import { Combobox, Switch } from "@headlessui/react";
+import { useContext, useState } from "react";
+import { MaterialName } from "./Recipe";
+import { FilterByType, FilterPresetName } from "./filters";
+import materialImageMap from "data/materials.json";
+import { ChevronUpDownIcon, XCircleIcon } from "@heroicons/react/20/solid";
+import { CraftContext } from "./Contexts/CraftContext";
 
 function MenuItem(materialName: MaterialName, changeMaterialCount: (filter: FilterByType) => void) {
     return (
@@ -12,7 +12,7 @@ function MenuItem(materialName: MaterialName, changeMaterialCount: (filter: Filt
             <img
                 className="w-16 h-auto"
                 src={materialImageMap[materialName]}
-                alt={'Inventory icon for ' + materialName + ' material.'}
+                alt={"Inventory icon for " + materialName + " material."}
             />
             <input
                 type="number"
@@ -20,8 +20,8 @@ function MenuItem(materialName: MaterialName, changeMaterialCount: (filter: Filt
                 onBlur={(inputElement) => {
                     let materialCount = isNaN(inputElement.target.valueAsNumber)
                         ? null
-                        : inputElement.target.valueAsNumber
-                    changeMaterialCount({ [materialName]: materialCount })
+                        : inputElement.target.valueAsNumber;
+                    changeMaterialCount({ [materialName]: materialCount });
                 }}
             />
             <XCircleIcon
@@ -29,16 +29,17 @@ function MenuItem(materialName: MaterialName, changeMaterialCount: (filter: Filt
                 onClick={() => changeMaterialCount({ [materialName]: 0 })}
             />
         </div>
-    )
+    );
 }
 
 export default function Menu() {
-    const { filterBy, filterPresets, toggleFilterPreset, changeFilterBy } = useContext(CraftContext)
-    const materialsList = Object.keys(materialImageMap).sort()
-    const selectedMaterials = Object.keys(filterBy) as MaterialName[]
+    const { filterBy, filterPresets, toggleFilterPreset, changeFilterBy } =
+        useContext(CraftContext);
+    const materialsList = Object.keys(materialImageMap).sort();
+    const selectedMaterials = Object.keys(filterBy) as MaterialName[];
 
-    const [possibleMatches, setPossibleMatches] = useState(materialsList)
-    const [match, setMatch] = useState<MaterialName>()
+    const [possibleMatches, setPossibleMatches] = useState(materialsList);
+    const [match, setMatch] = useState<MaterialName>();
 
     // Filter presents (toggles) options for further filtering query results
     const filterPresetSwitches = Object.keys(filterPresets).map((preset: FilterPresetName) => (
@@ -47,19 +48,19 @@ export default function Menu() {
                 checked={filterPresets[preset].isOn}
                 onChange={(isOn) => toggleFilterPreset(preset, isOn)}
                 className={`${
-                    filterPresets[preset].isOn ? 'bg-brown-600' : 'bg-brown'
+                    filterPresets[preset].isOn ? "bg-brown-600" : "bg-brown"
                 } relative inline-flex items-center h-6 rounded-full w-11 hover:bg-brown-400  focus:outline-none`}
             >
                 <span className="sr-only" />
                 <span
                     className={`${
-                        filterPresets[preset].isOn ? 'translate-x-6' : 'translate-x-1'
+                        filterPresets[preset].isOn ? "translate-x-6" : "translate-x-1"
                     } inline-block w-4 h-4 transform transition ease-in-out duration-200 bg-gray-100 rounded-full`}
                 />
             </Switch>
             <p className="w-auto font-light max-w-md">{filterPresets[preset].desc}</p>
         </div>
-    ))
+    ));
 
     return (
         <div className="justify-start sticky mt-4 pr-12 flex flex-col gap-y-4 justify-items-start w-full max-w-lg">
@@ -68,9 +69,9 @@ export default function Menu() {
                 <Combobox
                     value={match}
                     onChange={(material: MaterialName) => {
-                        changeFilterBy({ [material]: null })
-                        setMatch(material)
-                        setPossibleMatches(materialsList)
+                        changeFilterBy({ [material]: null });
+                        setMatch(material);
+                        setPossibleMatches(materialsList);
                     }}
                 >
                     <div className="relative mt-1">
@@ -82,7 +83,7 @@ export default function Menu() {
                                 //         : possibleMatches.join(',')
                                 // }
                                 className={
-                                    'w-full border-none py-2 pl-3 pr-10 text-sm leading-5 bg-brown text-gray-900 focus:outline-none outline-none'
+                                    "w-full border-none py-2 pl-3 pr-10 text-sm leading-5 bg-brown text-gray-900 focus:outline-none outline-none"
                                 }
                                 onChange={(event) =>
                                     setPossibleMatches(
@@ -103,14 +104,14 @@ export default function Menu() {
                         </div>
                         <Combobox.Options
                             className={
-                                'absolute mt-1 max-h-60 z-10 w-full overflow-auto rounded-md bg-brown py-1 text-base shadow-lg ring-1focus:outline-none sm:text-sm'
+                                "absolute mt-1 max-h-60 z-10 w-full overflow-auto rounded-md bg-brown py-1 text-base shadow-lg ring-1focus:outline-none sm:text-sm"
                             }
                         >
                             {possibleMatches
                                 .filter((pm: MaterialName) => !selectedMaterials.includes(pm))
                                 .map((material) => (
                                     <Combobox.Option
-                                        className={'cursor-pointer'}
+                                        className={"cursor-pointer"}
                                         key={material}
                                         value={material as MaterialName}
                                     >
@@ -133,5 +134,5 @@ export default function Menu() {
                 </div>
             ) : null}
         </div>
-    )
+    );
 }

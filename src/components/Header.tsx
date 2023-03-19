@@ -1,13 +1,13 @@
-import { Transition } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/20/solid'
-import { Fragment, useState } from 'react'
-import { Link } from 'react-router-dom'
-import { ReactComponent as NookDIYLogo } from 'static/image/NookDIY.svg'
+import { Transition } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/20/solid";
+import { Fragment, useState } from "react";
+import { Link } from "react-router-dom";
+import { ReactComponent as NookDIYLogo } from "static/image/NookDIY.svg";
 
-const navLinkStyling = 'transition scale-90 hover:scale-100 duration-150'
+const navLinkStyling = "transition scale-90 hover:scale-100 duration-150";
 interface IMobileNavLink {
-    label: string
-    target: string
+    label: string;
+    target: string;
 }
 const MobileNavLink = (props: IMobileNavLink) => {
     return (
@@ -24,14 +24,14 @@ const MobileNavLink = (props: IMobileNavLink) => {
                 {props.label}
             </Link>
         </Transition.Child>
-    )
-}
+    );
+};
 
 export default function Header() {
-    const [mobileNavbarIsOpen, setMobilebavbarIsOpen] = useState(false)
-    const MobileIcon = mobileNavbarIsOpen ? XMarkIcon : Bars3Icon
+    const [mobileNavbarIsOpen, setMobilebavbarIsOpen] = useState(false);
+    const MobileIcon = mobileNavbarIsOpen ? XMarkIcon : Bars3Icon;
 
-    const toggleMobileMenu = () => setMobilebavbarIsOpen(!mobileNavbarIsOpen)
+    const toggleMobileMenu = () => setMobilebavbarIsOpen(!mobileNavbarIsOpen);
 
     return (
         <>
@@ -69,5 +69,5 @@ export default function Header() {
                 {/* <Link className="py-16 w-2/12 " onClick={() => this.setState(prevState => ({ ...prevState, mobileNavbarIsOpen: false}))} to="/plan">plan</Link> */}
             </Transition>
         </>
-    )
+    );
 }

@@ -1,9 +1,9 @@
-import { ReactElement } from 'react'
+import { ReactElement } from "react";
 
 interface SpeechBubbleProps {
-    color: string
-    speaker: string
-    children: ReactElement
+    color: string;
+    speaker: string;
+    children: ReactElement;
 }
 
 export default function SpeechBubble(props: SpeechBubbleProps) {
@@ -13,7 +13,7 @@ export default function SpeechBubble(props: SpeechBubbleProps) {
             <div className="absolute mx-auto left-8 right-8 self-center w-auto bottom-0 bg-white rounded-full h-2/5" />
             <p
                 className={
-                    'w-2/5 lg:w-56 ml-8 rounded-full capitalize p-4 text-xl lg:text-3xl text-white text-center transform -rotate-3 ' +
+                    "w-2/5 lg:w-56 ml-8 rounded-full capitalize p-4 text-xl lg:text-3xl text-white text-center transform -rotate-3 " +
                     props.color
                 }
             >
@@ -25,5 +25,5 @@ export default function SpeechBubble(props: SpeechBubbleProps) {
             {/* Background bubbles  */}
             <div></div>
         </div>
-    )
+    );
 }

@@ -1,11 +1,11 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Header from 'components/Header'
-import Craft from 'components/Pages/Craft'
-import Item from 'components/Pages/Item'
-import About from 'components/Pages/About'
-import Footer from 'components/Footer'
-import { RecipeContextProvider } from 'components/Contexts/RecipeContext'
+import Header from "components/Header";
+import Craft from "components/Pages/Craft";
+import Item from "components/Pages/Item";
+import About from "components/Pages/About";
+import Footer from "components/Footer";
+import { RecipeContextProvider } from "components/Contexts/RecipeContext";
 
 export default function App() {
     return (
@@ -23,5 +23,5 @@ export default function App() {
                 <Footer />
             </Router>
         </div>
-    )
+    );
 }
