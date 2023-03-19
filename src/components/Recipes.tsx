@@ -52,7 +52,7 @@ export default function Recipes() {
     return recipes.length ? (
         <div
             id="recipes"
-            className="w-full my-4 pl-16 pr-24 relative place-items-center justify-around inline-flex flex-wrap basis-full gap-16"
+            className="w-full my-4 pl-16 pr-24 relative place-items-center justify-around inline-flex flex-wrap basis-full gap-12"
         >
             {renderChoice.map((recipe) => (
                 <ItemCard key={recipe.name} itemData={recipe} isShowing={true} />

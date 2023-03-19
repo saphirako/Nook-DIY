@@ -1,6 +1,6 @@
 // import { Transition } from '@headlessui/react'
 import Tippy from "@tippyjs/react";
-import { MouseEvent, useContext } from "react";
+import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import "tippy.js/dist/tippy.css";
 import { mapACNHDataToTailwind } from "./Colors";

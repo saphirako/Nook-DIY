@@ -5,7 +5,7 @@ import {
     FilterPresetName,
     FilterPresetType,
 } from "components/filters";
-import { createContext, useEffect, useMemo, useState } from "react";
+import { createContext, useMemo, useState } from "react";
 
 interface ICraftContext {
     filterBy: FilterByType;
