@@ -29,11 +29,15 @@ export default function Recipes() {
             Object.keys(materialsToFilter).forEach((mtfMaterialName: MaterialName) => {
                 if (materialsToFilter[mtfMaterialName] !== null) {
                     filtered = filtered.filter((recipe) => {
-                        console.log(recipe)
-                        recipe.materials[mtfMaterialName] <= materialsToFilter[mtfMaterialName] &&
+                        console.log(recipe.materials)
+                        console.log(materialsToFilter)
+                        return (
+                            recipe.materials[mtfMaterialName] <=
+                                materialsToFilter[mtfMaterialName] &&
                             Object.keys(materialsToFilter).some((material) =>
                                 Object.keys(recipe.materials).includes(material)
                             )
+                        )
                     })
                 }
             })

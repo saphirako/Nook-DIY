@@ -5,7 +5,7 @@ import {
     FilterPresetName,
     FilterPresetType,
 } from 'components/filters'
-import { createContext, useMemo, useState } from 'react'
+import { createContext, useEffect, useMemo, useState } from 'react'
 
 interface ICraftContext {
     filterBy: FilterByType
@@ -20,7 +20,6 @@ export const CraftContextProvider = ({ children }: any) => {
     const [filterBy, setFilterBy] = useState<FilterByType>({})
 
     const toggleFilterPreset = (presetToToggle: FilterPresetName, newValue: boolean) => {
-        console.log('hey, listen! ')
         setFilterPresets((prevFilterPresets) => ({
             ...prevFilterPresets,
             [presetToToggle]: { isOn: newValue, desc: prevFilterPresets[presetToToggle].desc },
@@ -35,7 +34,7 @@ export const CraftContextProvider = ({ children }: any) => {
             // If the value is null, it means to remove the object from the filter list
             // Otherwise, we just update the number
             Object.keys(filtersObject).forEach((material: MaterialName) => {
-                if (newFilterBy[material] === null) delete newFilterBy[material]
+                if (newFilterBy[material] === 0) delete newFilterBy[material]
                 else newFilterBy[material] = filtersObject[material]
             })
 

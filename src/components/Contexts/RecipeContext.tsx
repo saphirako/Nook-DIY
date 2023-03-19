@@ -33,15 +33,15 @@ const cleanseAPIAndAddLocalData = (recipes: Array<ItemType>) => {
 }
 
 type RecipeContextType = {
-    recipes: Recipe[],
-    selectedRecipe: Item & Recipe;
+    recipes: Recipe[]
+    selectedRecipe: Item & Recipe
     selectRecipe: (item: Item & Recipe) => void
 }
 export const RecipeContext = createContext<RecipeContextType | undefined>(undefined)
 
 export const RecipeContextProvider = ({ children }: any) => {
     const [recipes, setRecipes] = useState<Recipe[]>([])
-    const [selectedRecipe, setSelectedRecipe] = useState<Item & Recipe>(null);
+    const [selectedRecipe, setSelectedRecipe] = useState<Item & Recipe>(null)
 
     const contextObject = useMemo(
         () => ({
@@ -57,7 +57,6 @@ export const RecipeContextProvider = ({ children }: any) => {
             console.log('simulating request to Nookipedia API for recipes')
             setRecipes({ ...cleanseAPIAndAddLocalData(local_recipes) })
         } else {
-            console.log('making request to Nookipedia API for recipes')
             fetch('https://api.nookipedia.com/nh/recipes', {
                 method: 'GET',
                 headers: {

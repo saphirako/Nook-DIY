@@ -18,8 +18,10 @@ function MenuItem(materialName: MaterialName, changeMaterialCount: (filter: Filt
                 type="number"
                 className="rounded-md bg-brown text-center text-brown-700 font-semibold m-1 p-2 w-16 text-xl outline-none focus:outline-none peer hover:appearance-none"
                 onBlur={(inputElement) => {
-                    console.log(`setting ${materialName} to ${inputElement.target.valueAsNumber}`)
-                    changeMaterialCount({ [materialName]: inputElement.target.valueAsNumber })
+                    let materialCount = isNaN(inputElement.target.valueAsNumber)
+                        ? null
+                        : inputElement.target.valueAsNumber
+                    changeMaterialCount({ [materialName]: materialCount })
                 }}
             />
             <XCircleIcon
