@@ -8,6 +8,7 @@ const navLinkStyling = "transition scale-90 hover:scale-100 duration-150";
 interface IMobileNavLink {
     label: string;
     target: string;
+    closeMenu: () => void;
 }
 const MobileNavLink = (props: IMobileNavLink) => {
     return (
@@ -20,7 +21,7 @@ const MobileNavLink = (props: IMobileNavLink) => {
             leaveTo="-translate-x-64 scale-75 opacity-0"
             as={Fragment}
         >
-            <Link className={navLinkStyling} to={props.target}>
+            <Link onClick={props.closeMenu} className={navLinkStyling} to={props.target}>
                 {props.label}
             </Link>
         </Transition.Child>
@@ -64,8 +65,16 @@ export default function Header() {
                 as="nav"
                 className="flex flex-col absolute w-full gap-64 font-bold text-2xl text-brown-700 justify-center text-center lg:hidden bg-brown-300 top-0 bottom-0 overflow-x-hidden z-10"
             >
-                <MobileNavLink label="craft" target="/" />
-                <MobileNavLink label="about" target="/about" />
+                <MobileNavLink
+                    closeMenu={() => setMobilebavbarIsOpen(false)}
+                    label="craft"
+                    target="/"
+                />
+                <MobileNavLink
+                    closeMenu={() => setMobilebavbarIsOpen(false)}
+                    label="about"
+                    target="/about"
+                />
                 {/* <Link className="py-16 w-2/12 " onClick={() => this.setState(prevState => ({ ...prevState, mobileNavbarIsOpen: false}))} to="/plan">plan</Link> */}
             </Transition>
         </>
